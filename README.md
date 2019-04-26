@@ -3,9 +3,9 @@
 # App - _Insert app name_
 
 ## Team structure and roles 
-+ Name1 u1234567 - team leader, help page code, morale builder
-+ Name2 u7654321 - note taker, documentation checker, user input
-+ Name3 u3425167 - tricky android code, app state, graphics rendering
++ Yishun Shi u6598369 - Puzzle levels
++ Natalie phan u6671390 - Storyboard, Rewards, etc
++ Marc Hollis uu6668610 - Controls, Setting, Instructions & Information, Timer(?), Feedback, Music, etc
 
 ## App Overview 
 
