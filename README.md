@@ -34,7 +34,7 @@ assignment is entirely my own work, with exceptions given below.
 
 ### Inspiration
 
-_add references from where you obtained the idea form the app and ideas about aspects of the app_
+_The idea of the app as from a popular puzzle game Words Story - Addictive Word Game_
 
 ### Code
 
