@@ -8,6 +8,12 @@
 + Marc Hollis u6668610 - Controls, Setting, Instructions & Information, Timer(?), Feedback, Music, etc
 
 ## App Overview 
+Crossword puzzle or word guess puzzle linking to a story which
+contains a "prizes" to achieve, progress in the story.
+
+_The App contains various types of puzzles which all link to a story. The puzzles must be completed to progress in the story and medals and "prizes" can be won. TBC_
+
+_The story takes form in a platform style game, the main character will encounter puzzles whist in the platform game and must complete the puzzle in order to continue_
 
 _Add a paragraph the gives a summary of the app you implemented. Include a small screen shot here._
 
@@ -26,7 +32,7 @@ _Add a paragraph the gives a summary of the app you implemented. Include a small
 I _Yishun Shi_ declare that everything I have submitted in this
 assignment is entirely my own work, with exceptions given below.
 
-I _insert name 2_ declare that everything I have submitted in this
+I _Natalie Phan_ declare that everything I have submitted in this
 assignment is entirely my own work, with exceptions given below.
 
 I _insert name 3_ declare that everything I have submitted in this
@@ -34,7 +40,7 @@ assignment is entirely my own work, with exceptions given below.
 
 ### Inspiration
 
-_The idea of the app is from a popular puzzle game Words Story - Addictive Word Game_
+_The idea of the app is from a popular puzzle game Words Story - Addictive Word Game, the idea of the story is from the famous Nintendo Mario platform game_
 
 ### Code
 
