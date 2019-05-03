@@ -8,10 +8,6 @@
 + Marc Hollis u6668610 - Controls, Setting, Instructions & Information, Timer(?), Feedback, Music, etc
 
 ## App Overview 
-Crossword puzzle or word guess puzzle linking to a story which
-contains a "prizes" to achieve, progress in the story.
-
-_The App is a crossword puzzle or a word guess puzzle which links to a story. The puzzles must be completed to progress in the story and medals and "prizes" can be won. TBC_
 
 _Add a paragraph the gives a summary of the app you implemented. Include a small screen shot here._
 
@@ -30,7 +26,7 @@ _Add a paragraph the gives a summary of the app you implemented. Include a small
 I _Yishun Shi_ declare that everything I have submitted in this
 assignment is entirely my own work, with exceptions given below.
 
-I _Natalie Phan_ declare that everything I have submitted in this
+I _insert name 2_ declare that everything I have submitted in this
 assignment is entirely my own work, with exceptions given below.
 
 I _insert name 3_ declare that everything I have submitted in this
