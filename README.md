@@ -1,6 +1,6 @@
 # AssignApp2019s1
 
-# App - _Insert app name_
+# App - _Bo's Puzzle World_
 
 ## Team structure and roles 
 + Yishun Shi u6598369 - Puzzle levels
@@ -15,7 +15,7 @@ _The App contains various types of puzzles which all link to a story. The puzzle
 
 _The story takes form in a platform style game, the main character will encounter puzzles whist in the platform game and must complete the puzzle in order to continue_
 
-_Add a paragraph the gives a summary of the app you implemented. Include a small screen shot here._
+_The story is about a boy named Bo who is whisked away into a world full of puzzles. Bo must navigate within the world in order to find a complete all the puzzles and collect pieces(or rewards) to finish the game and return back to his own world._
 
 ## Design Documentation 
 + [Design Summary](designsummary)
