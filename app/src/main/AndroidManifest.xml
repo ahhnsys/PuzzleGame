@@ -10,7 +10,8 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".puzzles.PuzzleOneActivity"></activity>
+        <activity android:name=".Storyboard.StartStoryActivity"></activity>
+        <activity android:name=".puzzles.PuzzleOneActivity" />
         <activity android:name=".AppActivity" />
         <activity android:name=".WelcomeActivity">
             <intent-filter>
