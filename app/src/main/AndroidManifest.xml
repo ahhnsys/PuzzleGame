@@ -12,6 +12,8 @@
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".Storyboard.StartStoryActivity"></activity>
         <activity android:name=".puzzles.PuzzleOneActivity" />
+        <activity android:name=".puzzles.PuzzleTwoActivity" />
+        <activity android:name=".puzzles.PuzzleThreeActivity" />
         <activity android:name=".AppActivity" />
         <activity android:name=".WelcomeActivity">
             <intent-filter>

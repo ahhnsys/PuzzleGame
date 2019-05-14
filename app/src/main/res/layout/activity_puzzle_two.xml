@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".puzzles.PuzzleTwoActivity">
+
+    <TextView
+        android:id="@+id/textViewLevelTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="61dp"
+        android:layout_marginLeft="61dp"
+        android:layout_marginTop="61dp"
+        android:text="Level 2"
+        android:textColor="#3F51B5"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewLevelTwoInstruction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="Use the six letters of the letters provided to form a word (Each letter can only be used once)"
+        android:textColor="#3F51B5"
+        android:textSize="14sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLevelTwo"
+        app:layout_constraintStart_toEndOf="@+id/textViewLevelTwo"
+        app:layout_constraintTop_toTopOf="@+id/textViewLevelTwo" />
+
+    <TextView
+        android:id="@+id/textViewLevelTwoHint"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="16dp"
+        android:text=""
+        android:textColor="#03A9F4"
+        app:layout_constraintStart_toStartOf="@+id/textViewLevelTwo"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLevelTwo" />
+
+    <TextView
+        android:id="@+id/answerScreen2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@+id/textViewLevelTwoHint" />
+
+    <!--<LinearLayout-->
+        <!--android:id="@+id/inputBox"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginTop="32dp"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:orientation="horizontal"-->
+        <!--app:layout_constraintEnd_toEndOf="parent"-->
+        <!--app:layout_constraintHorizontal_bias="0.5"-->
+        <!--app:layout_constraintStart_toStartOf="parent"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/textViewLevelOneHint">-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewLetterOne"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="1"-->
+            <!--tools:layout_editor_absoluteX="99dp"-->
+            <!--tools:layout_editor_absoluteY="143dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewLetterTwo"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="2"-->
+            <!--tools:layout_editor_absoluteX="115dp"-->
+            <!--tools:layout_editor_absoluteY="143dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewLetterThree"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="3"-->
+            <!--tools:layout_editor_absoluteX="131dp"-->
+            <!--tools:layout_editor_absoluteY="143dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewLetterFour"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="4"-->
+            <!--tools:layout_editor_absoluteX="147dp"-->
+            <!--tools:layout_editor_absoluteY="143dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewLetterFive"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="5"-->
+            <!--tools:layout_editor_absoluteX="163dp"-->
+            <!--tools:layout_editor_absoluteY="143dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewLetterSix"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="6"-->
+            <!--tools:layout_editor_absoluteX="179dp"-->
+            <!--tools:layout_editor_absoluteY="143dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewLetterSeven"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="7"-->
+            <!--tools:layout_editor_absoluteX="195dp"-->
+            <!--tools:layout_editor_absoluteY="143dp" />-->
+
+        <!--<TextView-->
+            <!--android:id="@+id/textViewLetterEight"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:text="8"-->
+            <!--tools:layout_editor_absoluteX="211dp"-->
+            <!--tools:layout_editor_absoluteY="143dp" />-->
+
+    <!--</LinearLayout>-->
+
+    <LinearLayout
+        android:id="@+id/lettersProvided2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/answerScreen2">
+
+        <Button
+            android:id="@+id/LetterA2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonA2"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="A"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="31dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/letterE2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonE2"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="E"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="127dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/buttonF2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonF2"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="F"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="223dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/buttonO2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonO2"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="O"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="683dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/buttonR2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonR2"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="R"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="319dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/buttonS2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonS2"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="S"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="590dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/buttonT2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonT2"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="T"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="415dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/buttonW2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonW2"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="W"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="515dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/controlButtons"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lettersProvided2">
+
+        <Button
+            android:id="@+id/buttonClear2"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButtonClear2"
+            android:text="clear"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="333dp" />
+
+        <Button
+            android:id="@+id/buttonBack2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButtonBack2"
+            android:text="back"
+            tools:layout_editor_absoluteX="178dp"
+            tools:layout_editor_absoluteY="332dp"
+            style="?android:attr/buttonBarButtonStyle"/>
+
+        <Button
+            android:id="@+id/buttonHelp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButtonHelp2"
+            android:text="help"
+            style="?android:attr/buttonBarButtonStyle"/>
+
+        <Button
+            android:id="@+id/buttonSkip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButtonSkip2"
+            android:text="skip"
+            tools:layout_editor_absoluteX="297dp"
+            tools:layout_editor_absoluteY="333dp"
+            style="?android:attr/buttonBarButtonStyle"/>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
