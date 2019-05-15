@@ -280,7 +280,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lettersProvided2">
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimer2">
 
         <Button
             android:id="@+id/buttonClear2"
@@ -322,5 +322,19 @@
 
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewTimer2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:text="seconds remaining: 300"
+        android:textColor="#FF5722"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/controlButtons"
+        app:layout_constraintTop_toBottomOf="@+id/lettersProvided2"
+        tools:layout_editor_absoluteX="87dp" />
+
 
 </android.support.constraint.ConstraintLayout>

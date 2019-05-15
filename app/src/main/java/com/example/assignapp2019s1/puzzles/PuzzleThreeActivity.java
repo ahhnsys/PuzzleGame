@@ -2,6 +2,7 @@ package com.example.assignapp2019s1.puzzles;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -39,11 +40,44 @@ public class PuzzleThreeActivity extends AppCompatActivity {
 
     private String currentAnswer = "";
 
+    public CountDownTimer mCountDownTimer3;
+
+    public boolean timeCancel3 = false;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puzzle_three);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        iniTimer();
+    }
+
+    public void iniTimer(){
+
+        if (mCountDownTimer3!=null){
+            mCountDownTimer3.cancel();
+        }
+
+        mCountDownTimer3 = new CountDownTimer(300000+500, 1000) {
+
+            TextView tvt3 = findViewById(R.id.textViewTimer3) ;
+
+            public void onTick(long millisUntilFinished) {
+                if(!PuzzleThreeActivity.this.isFinishing()){
+                    tvt3.setText("seconds remaining: " + millisUntilFinished / 1000);
+                    if (timeCancel3==true)
+                        this.cancel();
+                }
+            }
+
+            public void onFinish() {
+                tvt3.setText("Time is up!");
+                Toast.makeText(getApplicationContext(),"Time is up and you haven't solved this puzzle yet. Try it again!",Toast.LENGTH_LONG).show();
+                finish();
+            }
+        };
+        mCountDownTimer3.start();
     }
 
     public void onClickButtonA3(View view){
@@ -108,6 +142,8 @@ public class PuzzleThreeActivity extends AppCompatActivity {
         clear();
         if (answers.size() >= 5){
             Toast.makeText(getApplicationContext(),"Congratulations! You have found enough words. You have passed this level.",Toast.LENGTH_LONG).show();
+            mCountDownTimer3.cancel();
+            timeCancel3 = true;
             finish();
         }
     }
@@ -127,10 +163,14 @@ public class PuzzleThreeActivity extends AppCompatActivity {
     }
 
     public void onClickButtonBack3(View view){
+        mCountDownTimer3.cancel();
+        timeCancel3 = true;
         finish();
     }
 
     public void onClickButtonSkip3(View view){
+        mCountDownTimer3.cancel();
+        timeCancel3 = true;
         finish();
     }
 
@@ -139,5 +179,13 @@ public class PuzzleThreeActivity extends AppCompatActivity {
         tv.setText(currentAnswer);
     }
 
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        if (mCountDownTimer3 != null){
+            timeCancel3 = true;
+            mCountDownTimer3.cancel();
+        }
+    }
 
 }

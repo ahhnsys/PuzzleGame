@@ -2,6 +2,7 @@ package com.example.assignapp2019s1.puzzles;
 
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
@@ -15,11 +16,43 @@ public class PuzzleTwoActivity extends AppCompatActivity {
 
     private String answer = "";
 
+    public CountDownTimer mCountDownTimer2;
+
+    public boolean timeCancel2 = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puzzle_two);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        iniTimer();
+    }
+
+    public void iniTimer(){
+
+        if (mCountDownTimer2!=null){
+            mCountDownTimer2.cancel();
+        }
+
+        mCountDownTimer2 = new CountDownTimer(300000+500, 1000) {
+
+            TextView tvt2 = findViewById(R.id.textViewTimer2) ;
+
+            public void onTick(long millisUntilFinished) {
+                if(!PuzzleTwoActivity.this.isFinishing()){
+                    tvt2.setText("seconds remaining: " + millisUntilFinished / 1000);
+                    if (timeCancel2==true)
+                        this.cancel();
+                }
+            }
+
+            public void onFinish() {
+                tvt2.setText("Time is up!");
+                Toast.makeText(getApplicationContext(),"Time is up and you haven't solved this puzzle yet. Try it again!",Toast.LENGTH_LONG).show();
+                finish();
+            }
+        };
+        mCountDownTimer2.start();
     }
 
     public void onClickButtonA2(View view){
@@ -83,6 +116,8 @@ public class PuzzleTwoActivity extends AppCompatActivity {
 
     public void checkedRightAnswer(){
         Toast.makeText(getApplicationContext(),"Congratulations! Your answer(FOREST) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
+        mCountDownTimer2.cancel();
+        timeCancel2 = true;
         finish();
     }
 
@@ -101,6 +136,8 @@ public class PuzzleTwoActivity extends AppCompatActivity {
     }
 
     public void onClickButtonBack2(View view){
+        mCountDownTimer2.cancel();
+        timeCancel2 = true;
         finish();
     }
 
@@ -118,5 +155,13 @@ public class PuzzleTwoActivity extends AppCompatActivity {
         tv.setText(answer);
     }
 
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        if (mCountDownTimer2 != null){
+            timeCancel2 = true;
+            mCountDownTimer2.cancel();
+        }
+    }
 
 }
