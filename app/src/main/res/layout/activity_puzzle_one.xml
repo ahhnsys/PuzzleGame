@@ -274,13 +274,13 @@
         android:id="@+id/controlButtons"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/lettersProvided">
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimer">
 
         <Button
             android:id="@+id/buttonClear"
@@ -294,33 +294,46 @@
 
         <Button
             android:id="@+id/buttonBack"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClickButtonBack"
             android:text="back"
             tools:layout_editor_absoluteX="178dp"
-            tools:layout_editor_absoluteY="332dp"
-            style="?android:attr/buttonBarButtonStyle"/>
+            tools:layout_editor_absoluteY="332dp" />
 
         <Button
             android:id="@+id/buttonHelp"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClickButtonHelp"
-            android:text="help"
-            style="?android:attr/buttonBarButtonStyle"/>
+            android:text="help" />
 
         <Button
             android:id="@+id/buttonSkip"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClickButtonSkip"
             android:text="skip"
             tools:layout_editor_absoluteX="297dp"
-            tools:layout_editor_absoluteY="333dp"
-            style="?android:attr/buttonBarButtonStyle"/>
+            tools:layout_editor_absoluteY="333dp" />
 
 
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewTimer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:text="seconds remaining: 300"
+        android:textColor="#FF5722"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/controlButtons"
+        app:layout_constraintTop_toBottomOf="@+id/lettersProvided"
+        tools:layout_editor_absoluteX="87dp" />
 
 </android.support.constraint.ConstraintLayout>

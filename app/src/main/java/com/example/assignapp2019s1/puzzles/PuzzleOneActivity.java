@@ -1,6 +1,7 @@
 package com.example.assignapp2019s1.puzzles;
 
 import android.content.pm.ActivityInfo;
+import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,11 +16,43 @@ public class PuzzleOneActivity extends AppCompatActivity {
 
     private String answer = "";
 
+    public CountDownTimer mCountDownTimer;
+
+    public boolean timeCancel = false;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_puzzle_one);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        iniTimer();
+    }
+
+    public void iniTimer(){
+
+        if (mCountDownTimer!=null){
+            mCountDownTimer.cancel();
+        }
+
+        mCountDownTimer = new CountDownTimer(300000+500, 1000) {
+
+            TextView tvt = findViewById(R.id.textViewTimer) ;
+
+            public void onTick(long millisUntilFinished) {
+                if(!PuzzleOneActivity.this.isFinishing()){
+                    tvt.setText("seconds remaining: " + millisUntilFinished / 1000);
+                    if (timeCancel==true)
+                        this.cancel();
+                }
+            }
+
+            public void onFinish() {
+                tvt.setText("Time is up!");
+                Toast.makeText(getApplicationContext(),"Time is up and you haven't solved this puzzle yet. Try it again!",Toast.LENGTH_LONG).show();
+                finish();
+            }
+        };
+        mCountDownTimer.start();
     }
 
     public void onClickButtonA(View view){
@@ -83,6 +116,8 @@ public class PuzzleOneActivity extends AppCompatActivity {
 
     public void checkedRightAnswer(){
         Toast.makeText(getApplicationContext(),"Congratulations! Your answer(SOFTWARE) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
+        mCountDownTimer.cancel();
+        timeCancel = true;
         finish();
     }
 
@@ -101,6 +136,8 @@ public class PuzzleOneActivity extends AppCompatActivity {
     }
 
     public void onClickButtonBack(View view){
+        mCountDownTimer.cancel();
+        timeCancel = true;
         finish();
     }
 
@@ -116,6 +153,15 @@ public class PuzzleOneActivity extends AppCompatActivity {
     public void updateScreen(View view){
         TextView tv = view.findViewById(R.id.answerScreen);
         tv.setText(answer);
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        if (mCountDownTimer != null){
+            timeCancel = true;
+            mCountDownTimer.cancel();
+        }
     }
 
 
