@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".puzzles.PuzzleOneActivity">
+    tools:context=".puzzles.PuzzleFiveActivity">
 
     <TextView
-        android:id="@+id/textViewLevelOne"
+        android:id="@+id/textViewLevelFive"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="61dp"
         android:layout_marginLeft="61dp"
         android:layout_marginTop="61dp"
-        android:text="Level 1"
+        android:text="Level 5"
         android:textColor="#3F51B5"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -21,21 +21,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewLevelOneInstruction"
+        android:id="@+id/textViewLevelFiveInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:text="Use all eight letters provided to form a word (Each letter can only be used once)"
+        android:text="Use all ten letters provided to form a word (Each letter can only be used once)"
         android:textColor="#3F51B5"
         android:textSize="14sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewLevelOne"
-        app:layout_constraintStart_toEndOf="@+id/textViewLevelOne"
-        app:layout_constraintTop_toTopOf="@+id/textViewLevelOne" />
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLevelFive"
+        app:layout_constraintStart_toEndOf="@+id/textViewLevelFive"
+        app:layout_constraintTop_toTopOf="@+id/textViewLevelFive" />
 
     <TextView
-        android:id="@+id/textViewLevelOneHint"
+        android:id="@+id/textViewLevelFiveHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -43,97 +43,19 @@
         android:layout_marginTop="16dp"
         android:text=""
         android:textColor="#03A9F4"
-        app:layout_constraintStart_toStartOf="@+id/textViewLevelOne"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLevelOne" />
+        app:layout_constraintStart_toStartOf="@+id/textViewLevelFive"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLevelFive" />
 
     <TextView
-        android:id="@+id/answerScreen"
+        android:id="@+id/answerScreen5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text=""
-        app:layout_constraintTop_toBottomOf="@+id/textViewLevelOneHint" />
-
-    <!--<LinearLayout-->
-        <!--android:id="@+id/inputBox"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:layout_marginTop="32dp"-->
-        <!--android:gravity="center_horizontal"-->
-        <!--android:orientation="horizontal"-->
-        <!--app:layout_constraintEnd_toEndOf="parent"-->
-        <!--app:layout_constraintHorizontal_bias="0.5"-->
-        <!--app:layout_constraintStart_toStartOf="parent"-->
-        <!--app:layout_constraintTop_toBottomOf="@+id/textViewLevelOneHint">-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/textViewLetterOne"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="1"-->
-            <!--tools:layout_editor_absoluteX="99dp"-->
-            <!--tools:layout_editor_absoluteY="143dp" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/textViewLetterTwo"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="2"-->
-            <!--tools:layout_editor_absoluteX="115dp"-->
-            <!--tools:layout_editor_absoluteY="143dp" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/textViewLetterThree"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="3"-->
-            <!--tools:layout_editor_absoluteX="131dp"-->
-            <!--tools:layout_editor_absoluteY="143dp" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/textViewLetterFour"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="4"-->
-            <!--tools:layout_editor_absoluteX="147dp"-->
-            <!--tools:layout_editor_absoluteY="143dp" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/textViewLetterFive"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="5"-->
-            <!--tools:layout_editor_absoluteX="163dp"-->
-            <!--tools:layout_editor_absoluteY="143dp" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/textViewLetterSix"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="6"-->
-            <!--tools:layout_editor_absoluteX="179dp"-->
-            <!--tools:layout_editor_absoluteY="143dp" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/textViewLetterSeven"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="7"-->
-            <!--tools:layout_editor_absoluteX="195dp"-->
-            <!--tools:layout_editor_absoluteY="143dp" />-->
-
-        <!--<TextView-->
-            <!--android:id="@+id/textViewLetterEight"-->
-            <!--android:layout_width="wrap_content"-->
-            <!--android:layout_height="wrap_content"-->
-            <!--android:text="8"-->
-            <!--tools:layout_editor_absoluteX="211dp"-->
-            <!--tools:layout_editor_absoluteY="143dp" />-->
-
-    <!--</LinearLayout>-->
+        app:layout_constraintTop_toBottomOf="@+id/textViewLevelFiveHint" />
 
     <LinearLayout
-        android:id="@+id/lettersProvided"
+        android:id="@+id/lettersProvided5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -146,15 +68,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answerScreen">
+        app:layout_constraintTop_toBottomOf="@+id/answerScreen5">
 
         <Button
-            android:id="@+id/buttonA"
+            android:id="@+id/buttonA5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonA"
+            android:onClick="onClickButtonA5"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -164,12 +86,12 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonE"
+            android:id="@+id/buttonE5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonE"
+            android:onClick="onClickButtonE5"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -179,12 +101,12 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonF"
+            android:id="@+id/buttonH5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonF"
+            android:onClick="onClickButtonH5"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -194,12 +116,42 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonO"
+            android:id="@+id/buttonM5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonO"
+            android:onClick="onClickButtonM5"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="M"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="223dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/buttonN5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonN5"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="N"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="223dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/buttonO5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonO5"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -209,27 +161,42 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonR"
+            android:id="@+id/buttonP5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonR"
+            android:onClick="onClickButtonP5"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
-            android:text="R"
+            android:text="P"
             android:textColor="#2196F3"
             tools:layout_editor_absoluteX="319dp"
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonS"
+            android:id="@+id/buttonR5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonS"
+            android:onClick="onClickButtonR5"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="R"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="223dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/buttonS5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonS5"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -239,12 +206,12 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonT"
+            android:id="@+id/buttonT5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonT"
+            android:onClick="onClickButtonT5"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -253,25 +220,11 @@
             tools:layout_editor_absoluteX="415dp"
             tools:layout_editor_absoluteY="221dp" />
 
-        <Button
-            android:id="@+id/buttonW"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_button"
-            android:onClick="onClickButtonW"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="10"
-            android:shadowDy="20"
-            android:text="W"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="515dp"
-            tools:layout_editor_absoluteY="221dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/controlButtons"
+        android:id="@+id/controlButtons5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -280,43 +233,43 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimer">
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimer5">
 
         <Button
-            android:id="@+id/buttonClear"
+            android:id="@+id/buttonClear5"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonClear"
+            android:onClick="onClickButtonClear5"
             android:text="clear"
             tools:layout_editor_absoluteX="60dp"
             tools:layout_editor_absoluteY="333dp" />
 
         <Button
-            android:id="@+id/buttonBack"
+            android:id="@+id/buttonBack5"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonBack"
+            android:onClick="onClickButtonBack5"
             android:text="back"
             tools:layout_editor_absoluteX="178dp"
             tools:layout_editor_absoluteY="332dp" />
 
         <Button
-            android:id="@+id/buttonHelp"
+            android:id="@+id/buttonHelp5"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonHelp"
+            android:onClick="onClickButtonHelp5"
             android:text="help" />
 
         <Button
-            android:id="@+id/buttonSkip"
+            android:id="@+id/buttonSkip5"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonSkip"
-            android:text="skip"
+            android:onClick="onClickButtonSkip5"
+            android:text="skip5"
             tools:layout_editor_absoluteX="297dp"
             tools:layout_editor_absoluteY="333dp" />
 
@@ -324,7 +277,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textViewTimer"
+        android:id="@+id/textViewTimer5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -332,8 +285,8 @@
         android:text="seconds remaining: 300"
         android:textColor="#FF5722"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/controlButtons"
-        app:layout_constraintTop_toBottomOf="@+id/lettersProvided"
+        app:layout_constraintBottom_toTopOf="@+id/controlButtons5"
+        app:layout_constraintTop_toBottomOf="@+id/lettersProvided5"
         tools:layout_editor_absoluteX="87dp" />
 
 </android.support.constraint.ConstraintLayout>
