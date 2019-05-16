@@ -14,6 +14,13 @@
         <activity android:name=".puzzles.PuzzleOneActivity" />
         <activity android:name=".puzzles.PuzzleTwoActivity" />
         <activity android:name=".puzzles.PuzzleThreeActivity" />
+        <activity android:name=".puzzles.PuzzleFourActivity" />
+        <activity android:name=".puzzles.PuzzleFiveActivity" />
+        <activity android:name=".puzzles.PuzzleSixActivity" />
+        <activity android:name=".puzzles.PuzzleSevenActivity" />
+        <activity android:name=".puzzles.PuzzleEightActivity" />
+        <activity android:name=".puzzles.PuzzleNineActivity" />
+        <activity android:name=".puzzles.PuzzleTenActivity" />
         <activity android:name=".AppActivity" />
         <activity android:name=".WelcomeActivity">
             <intent-filter>
