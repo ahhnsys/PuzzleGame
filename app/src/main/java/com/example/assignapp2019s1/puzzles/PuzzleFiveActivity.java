@@ -23,7 +23,7 @@ public class PuzzleFiveActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_puzzle_one);
+        setContentView(R.layout.activity_puzzle_five);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         iniTimer();
     }

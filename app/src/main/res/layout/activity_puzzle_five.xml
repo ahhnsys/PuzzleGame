@@ -110,7 +110,7 @@
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
-            android:text="F"
+            android:text="H"
             android:textColor="#2196F3"
             tools:layout_editor_absoluteX="223dp"
             tools:layout_editor_absoluteY="221dp" />
@@ -269,7 +269,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="onClickButtonSkip5"
-            android:text="skip5"
+            android:text="skip"
             tools:layout_editor_absoluteX="297dp"
             tools:layout_editor_absoluteY="333dp" />
 

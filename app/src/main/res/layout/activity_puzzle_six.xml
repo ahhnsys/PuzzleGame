@@ -7,13 +7,13 @@
     tools:context=".puzzles.PuzzleSixActivity">
 
     <TextView
-        android:id="@+id/textViewLevelTwo"
+        android:id="@+id/textViewLevelSix"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="61dp"
         android:layout_marginLeft="61dp"
         android:layout_marginTop="61dp"
-        android:text="Level 2"
+        android:text="Level 6"
         android:textColor="#3F51B5"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewLevelTwoInstruction"
+        android:id="@+id/textViewLevelSixInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
@@ -30,12 +30,12 @@
         android:textColor="#3F51B5"
         android:textSize="14sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewLevelTwo"
-        app:layout_constraintStart_toEndOf="@+id/textViewLevelTwo"
-        app:layout_constraintTop_toTopOf="@+id/textViewLevelTwo" />
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLevelSix"
+        app:layout_constraintStart_toEndOf="@+id/textViewLevelSix"
+        app:layout_constraintTop_toTopOf="@+id/textViewLevelSix" />
 
     <TextView
-        android:id="@+id/textViewLevelTwoHint"
+        android:id="@+id/textViewLevelSixHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -43,19 +43,19 @@
         android:layout_marginTop="16dp"
         android:text=""
         android:textColor="#03A9F4"
-        app:layout_constraintStart_toStartOf="@+id/textViewLevelTwo"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLevelTwo" />
+        app:layout_constraintStart_toStartOf="@+id/textViewLevelSix"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLevelSix" />
 
     <TextView
-        android:id="@+id/answerScreen2"
+        android:id="@+id/answerScreen6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text=""
-        app:layout_constraintTop_toBottomOf="@+id/textViewLevelTwoHint" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewLevelSixHint" />
 
     <LinearLayout
-        android:id="@+id/lettersProvided2"
+        android:id="@+id/lettersProvided6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -68,15 +68,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answerScreen2">
+        app:layout_constraintTop_toBottomOf="@+id/answerScreen6">
 
         <Button
-            android:id="@+id/buttonA2"
+            android:id="@+id/buttonA6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonA2"
+            android:onClick="onClickButtonA6"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -86,12 +86,12 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonE2"
+            android:id="@+id/buttonE6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonE2"
+            android:onClick="onClickButtonE6"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -101,27 +101,57 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonF2"
+            android:id="@+id/buttonH6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonF2"
+            android:onClick="onClickButtonH6"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
-            android:text="F"
+            android:text="H"
             android:textColor="#2196F3"
             tools:layout_editor_absoluteX="223dp"
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonO2"
+            android:id="@+id/buttonM6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonO2"
+            android:onClick="onClickButtonM6"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="M"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="223dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/buttonN6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonN6"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="N"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="223dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/buttonO6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonO6"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -131,27 +161,42 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonR2"
+            android:id="@+id/buttonP6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonR2"
+            android:onClick="onClickButtonP6"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
-            android:text="R"
+            android:text="P"
             android:textColor="#2196F3"
             tools:layout_editor_absoluteX="319dp"
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonS2"
+            android:id="@+id/buttonR6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonS2"
+            android:onClick="onClickButtonR6"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="R"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="223dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/buttonS6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonS6"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -161,12 +206,12 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonT2"
+            android:id="@+id/buttonT6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonT2"
+            android:onClick="onClickButtonT6"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -175,25 +220,10 @@
             tools:layout_editor_absoluteX="415dp"
             tools:layout_editor_absoluteY="221dp" />
 
-        <Button
-            android:id="@+id/buttonW2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_button"
-            android:onClick="onClickButtonW2"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="10"
-            android:shadowDy="20"
-            android:text="W"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="515dp"
-            tools:layout_editor_absoluteY="221dp" />
-
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/controlButtons"
+        android:id="@+id/controlButtons6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -202,41 +232,41 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimer2">
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimer6">
 
         <Button
-            android:id="@+id/buttonClear2"
+            android:id="@+id/buttonClear6"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonClear2"
+            android:onClick="onClickButtonClear6"
             android:text="clear"
             tools:layout_editor_absoluteX="60dp"
             tools:layout_editor_absoluteY="333dp" />
 
         <Button
-            android:id="@+id/buttonBack2"
+            android:id="@+id/buttonBack6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonBack2"
+            android:onClick="onClickButtonBack6"
             android:text="back"
             tools:layout_editor_absoluteX="178dp"
             tools:layout_editor_absoluteY="332dp"
             style="?android:attr/buttonBarButtonStyle"/>
 
         <Button
-            android:id="@+id/buttonHelp2"
+            android:id="@+id/buttonHelp6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonHelp2"
+            android:onClick="onClickButtonHelp6"
             android:text="help"
             style="?android:attr/buttonBarButtonStyle"/>
 
         <Button
-            android:id="@+id/buttonSkip2"
+            android:id="@+id/buttonSkip6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonSkip2"
+            android:onClick="onClickButtonSkip6"
             android:text="skip"
             tools:layout_editor_absoluteX="297dp"
             tools:layout_editor_absoluteY="333dp"
@@ -246,7 +276,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textViewTimer2"
+        android:id="@+id/textViewTimer6"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -254,8 +284,8 @@
         android:text="seconds remaining: 300"
         android:textColor="#FF5722"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/controlButtons"
-        app:layout_constraintTop_toBottomOf="@+id/lettersProvided2"
+        app:layout_constraintBottom_toTopOf="@+id/controlButtons6"
+        app:layout_constraintTop_toBottomOf="@+id/lettersProvided6"
         tools:layout_editor_absoluteX="87dp" />
 
     <ImageButton
@@ -271,8 +301,8 @@
         android:scaleType="centerInside"
         android:src="@drawable/bomb"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/controlButtons"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimer2" />
+        app:layout_constraintStart_toEndOf="@+id/controlButtons6"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimer6" />
 
 
 </android.support.constraint.ConstraintLayout>
