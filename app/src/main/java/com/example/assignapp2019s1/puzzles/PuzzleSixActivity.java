@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
 
-public class PuzzleTwoActivity extends AppCompatActivity {
+public class PuzzleSixActivity extends AppCompatActivity {
 
     private String solution = "FOREST";
 
@@ -40,7 +40,7 @@ public class PuzzleTwoActivity extends AppCompatActivity {
             TextView tvt2 = findViewById(R.id.textViewTimer2) ;
 
             public void onTick(long millisUntilFinished) {
-                if(!PuzzleTwoActivity.this.isFinishing()){
+                if(!PuzzleSixActivity.this.isFinishing()){
                     tvt2.setText("seconds remaining: " + millisUntilFinished / 1000);
                     if (timeCancel2==true)
                         this.cancel();
@@ -156,7 +156,7 @@ public class PuzzleTwoActivity extends AppCompatActivity {
         tv.setText(answer);
     }
 
-    public void onClickImageButton(View view){
+    public void onClickImageButton6(View view){
         Button btnA = findViewById(R.id.buttonA2);
         btnA.setText("");
         Button btnW = findViewById(R.id.buttonW2);

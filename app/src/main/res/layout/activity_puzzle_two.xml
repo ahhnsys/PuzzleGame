@@ -149,7 +149,7 @@
         app:layout_constraintTop_toBottomOf="@+id/answerScreen2">
 
         <Button
-            android:id="@+id/LetterA2"
+            android:id="@+id/buttonA2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -164,7 +164,7 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/letterE2"
+            android:id="@+id/buttonE2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -335,6 +335,22 @@
         app:layout_constraintBottom_toTopOf="@+id/controlButtons"
         app:layout_constraintTop_toBottomOf="@+id/lettersProvided2"
         tools:layout_editor_absoluteX="87dp" />
+
+    <ImageButton
+        android:id="@+id/imageButton"
+        android:layout_width="91dp"
+        android:layout_height="85dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:layout_marginTop="32dp"
+        android:background="#FFFFFF"
+        android:onClick="onClickImageButton"
+        android:padding="0dp"
+        android:scaleType="centerInside"
+        android:src="@drawable/bomb"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/controlButtons"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimer2" />
 
 
 </android.support.constraint.ConstraintLayout>
