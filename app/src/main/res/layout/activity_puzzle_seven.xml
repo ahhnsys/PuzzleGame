@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".puzzles.PuzzleThreeActivity">
+    tools:context=".puzzles.PuzzleSevenActivity">
 
     <TextView
-        android:id="@+id/textViewLevelThree"
+        android:id="@+id/textViewLevelSeven"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="61dp"
         android:layout_marginLeft="61dp"
         android:layout_marginTop="61dp"
-        android:text="Level 3"
+        android:text="Level 7"
         android:textColor="#3F51B5"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -21,21 +21,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewLevelThreeInstruction"
+        android:id="@+id/textViewLevelSevenInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginLeft="24dp"
-        android:text="Use the four letters of the letters provided to form at least five words (Each letter can only be used once)"
+        android:text="Use the five letters of the letters provided to form at least five words (Each letter can only be used once)"
         android:textColor="#3F51B5"
         android:textSize="12sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewLevelThree"
-        app:layout_constraintStart_toEndOf="@+id/textViewLevelThree"
-        app:layout_constraintTop_toTopOf="@+id/textViewLevelThree" />
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLevelSeven"
+        app:layout_constraintStart_toEndOf="@+id/textViewLevelSeven"
+        app:layout_constraintTop_toTopOf="@+id/textViewLevelSeven" />
 
     <TextView
-        android:id="@+id/textViewLevelThreeCount"
+        android:id="@+id/textViewLevelSevenCount"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -43,19 +43,19 @@
         android:layout_marginTop="16dp"
         android:text="Number of words found: 0"
         android:textColor="#03A9F4"
-        app:layout_constraintStart_toStartOf="@+id/textViewLevelThree"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLevelThree" />
+        app:layout_constraintStart_toStartOf="@+id/textViewLevelSeven"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLevelSeven" />
 
     <TextView
-        android:id="@+id/answerScreen3"
+        android:id="@+id/answerScreen7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text=""
-        app:layout_constraintTop_toBottomOf="@+id/textViewLevelThreeCount" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewLevelSevenCount" />
 
     <LinearLayout
-        android:id="@+id/lettersProvided3"
+        android:id="@+id/lettersProvided7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -68,15 +68,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answerScreen3">
+        app:layout_constraintTop_toBottomOf="@+id/answerScreen7">
 
         <Button
-            android:id="@+id/buttonA3"
+            android:id="@+id/buttonA7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonA3"
+            android:onClick="onClickButtonA7"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -86,12 +86,12 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonE3"
+            android:id="@+id/buttonE7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonE3"
+            android:onClick="onClickButtonE7"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -100,43 +100,45 @@
             tools:layout_editor_absoluteX="127dp"
             tools:layout_editor_absoluteY="221dp" />
 
+
         <Button
-            android:id="@+id/buttonF3"
+            android:id="@+id/buttonM7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonF3"
+            android:onClick="onClickButtonM7"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
-            android:text="F"
+            android:text="M"
+            android:textColor="#2196F3"
+            tools:layout_editor_absoluteX="223dp"
+            tools:layout_editor_absoluteY="221dp" />
+
+
+        <Button
+            android:id="@+id/buttonR7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonR7"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="R"
             android:textColor="#2196F3"
             tools:layout_editor_absoluteX="223dp"
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonO3"
+            android:id="@+id/buttonS7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonO3"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="10"
-            android:shadowDy="20"
-            android:text="O"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="683dp"
-            tools:layout_editor_absoluteY="221dp" />
-
-        <Button
-            android:id="@+id/buttonS3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_button"
-            android:onClick="onClickButtonS3"
+            android:onClick="onClickButtonS7"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -146,12 +148,12 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonT3"
+            android:id="@+id/buttonT7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonT3"
+            android:onClick="onClickButtonT7"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -163,7 +165,7 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/controlButtons"
+        android:id="@+id/controlButtons7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -172,33 +174,33 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimer3">
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimer7">
 
         <Button
-            android:id="@+id/buttonClear3"
+            android:id="@+id/buttonClear7"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonClear3"
+            android:onClick="onClickButtonClear7"
             android:text="clear"
             tools:layout_editor_absoluteX="60dp"
             tools:layout_editor_absoluteY="333dp" />
 
         <Button
-            android:id="@+id/buttonBack3"
+            android:id="@+id/buttonBack7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonBack3"
+            android:onClick="onClickButtonBack7"
             android:text="back"
             tools:layout_editor_absoluteX="178dp"
             tools:layout_editor_absoluteY="332dp"
             style="?android:attr/buttonBarButtonStyle"/>
 
         <Button
-            android:id="@+id/buttonSkip3"
+            android:id="@+id/buttonSkip7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonSkip3"
+            android:onClick="onClickButtonSkip7"
             android:text="skip"
             tools:layout_editor_absoluteX="297dp"
             tools:layout_editor_absoluteY="333dp"
@@ -208,7 +210,7 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textViewTimer3"
+        android:id="@+id/textViewTimer7"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -216,8 +218,8 @@
         android:text="seconds remaining: 300"
         android:textColor="#FF5722"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/controlButtons"
-        app:layout_constraintTop_toBottomOf="@+id/lettersProvided3"
+        app:layout_constraintBottom_toTopOf="@+id/controlButtons7"
+        app:layout_constraintTop_toBottomOf="@+id/lettersProvided7"
         tools:layout_editor_absoluteX="87dp" />
 
 

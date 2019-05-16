@@ -16,109 +16,115 @@ import java.util.TreeSet;
 public class PuzzleSevenActivity extends AppCompatActivity {
 
     private Set<String> solutions = new TreeSet<String>(){{
-        add("EAST");
-        add("ETAS");
-        add("FAST");
-        add("FATE");
-        add("FATS");
-        add("FEAT");
-        add("FETA");
-        add("FOES");
-        add("OAFS");
-        add("OATS");
-        add("SAFE");
-        add("SATE");
-        add("SEAT");
-        add("SETA");
-        add("SOFA");
-        add("SOFT");
-        add("TEAS");
-        add("TOES");
+        add("ARMET");
+        add("ASTER");
+        add("MARES");
+        add("MARTS");
+        add("MATER");
+        add("MATES");
+        add("MEATS");
+        add("RAMET");
+        add("RATES");
+        add("REAMS");
+        add("REAST");
+        add("RESAT");
+        add("SMART");
+        add("SMEAR");
+        add("STARE");
+        add("STEAM");
+        add("TAMER");
+        add("TAMES");
+        add("TARES");
+        add("TASER");
+        add("TEAMS");
+        add("TEARS");
+        add("TERMS");
+        add("TRAMS");
     }};
 
     private Set<String> answers = new TreeSet<String>();
 
     private String currentAnswer = "";
 
-    public CountDownTimer mCountDownTimer3;
+    public CountDownTimer mCountDownTimer7;
 
-    public boolean timeCancel3 = false;
+    public boolean timeCancel7 = false;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_puzzle_three);
+        setContentView(R.layout.activity_puzzle_seven);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         iniTimer();
     }
 
     public void iniTimer(){
 
-        if (mCountDownTimer3!=null){
-            mCountDownTimer3.cancel();
+        if (mCountDownTimer7!=null){
+            mCountDownTimer7.cancel();
         }
 
-        mCountDownTimer3 = new CountDownTimer(300000+500, 1000) {
+        mCountDownTimer7 = new CountDownTimer(300000+500, 1000) {
 
-            TextView tvt3 = findViewById(R.id.textViewTimer3) ;
+            TextView tvt7 = findViewById(R.id.textViewTimer7) ;
 
             public void onTick(long millisUntilFinished) {
                 if(!PuzzleSevenActivity.this.isFinishing()){
-                    tvt3.setText("seconds remaining: " + millisUntilFinished / 1000);
-                    if (timeCancel3==true)
+                    tvt7.setText("seconds remaining: " + millisUntilFinished / 1000);
+                    if (timeCancel7==true)
                         this.cancel();
                 }
             }
 
             public void onFinish() {
-                tvt3.setText("Time is up!");
+                tvt7.setText("Time is up!");
                 Toast.makeText(getApplicationContext(),"Time is up and you haven't solved this puzzle yet. Try it again!",Toast.LENGTH_LONG).show();
                 finish();
             }
         };
-        mCountDownTimer3.start();
+        mCountDownTimer7.start();
     }
 
-    public void onClickButtonA3(View view){
+    public void onClickButtonA7(View view){
         currentAnswer = currentAnswer + 'A';
-        updateScreen(findViewById(R.id.answerScreen3));
+        updateScreen(findViewById(R.id.answerScreen7));
         check();
     }
 
-    public void onClickButtonE3(View view){
+    public void onClickButtonE7(View view){
         currentAnswer = currentAnswer + 'E';
-        updateScreen(findViewById(R.id.answerScreen3));
+        updateScreen(findViewById(R.id.answerScreen7));
         check();
     }
 
-    public void onClickButtonF3(View view){
-        currentAnswer = currentAnswer + 'F';
-        updateScreen(findViewById(R.id.answerScreen3));
+    public void onClickButtonM7(View view){
+        currentAnswer = currentAnswer + 'M';
+        updateScreen(findViewById(R.id.answerScreen7));
         check();
     }
 
-    public void onClickButtonO3(View view){
-        currentAnswer = currentAnswer + 'O';
-        updateScreen(findViewById(R.id.answerScreen3));
+    public void onClickButtonR7(View view){
+        currentAnswer = currentAnswer + 'R';
+        updateScreen(findViewById(R.id.answerScreen7));
         check();
     }
 
-    public void onClickButtonS3(View view){
+    public void onClickButtonS7(View view){
         currentAnswer = currentAnswer + 'S';
-        updateScreen(findViewById(R.id.answerScreen3));
+        updateScreen(findViewById(R.id.answerScreen7));
         check();
     }
 
-    public void onClickButtonT3(View view){
+    public void onClickButtonT7(View view){
         currentAnswer = currentAnswer + 'T';
-        updateScreen(findViewById(R.id.answerScreen3));
+        updateScreen(findViewById(R.id.answerScreen7));
         check();
     }
 
 
     public void check(){
-        if (currentAnswer.length() == 4){
+        if (currentAnswer.length() == 5){
             if (answers.contains(currentAnswer)){
                 Toast.makeText(getApplicationContext(),"Your have found this word.",Toast.LENGTH_SHORT).show();
                 clear();
@@ -137,13 +143,13 @@ public class PuzzleSevenActivity extends AppCompatActivity {
     public void checkedRightAnswer(){
         Toast.makeText(getApplicationContext(),"You find a new word "+currentAnswer,Toast.LENGTH_SHORT).show();
         answers.add(currentAnswer);
-        TextView tvc = findViewById(R.id.textViewLevelThreeCount);
+        TextView tvc = findViewById(R.id.textViewLevelSevenCount);
         tvc.setText("Number of words found: " + answers.size());
         clear();
         if (answers.size() >= 5){
             Toast.makeText(getApplicationContext(),"Congratulations! You have found enough words. You have passed this level.",Toast.LENGTH_LONG).show();
-            mCountDownTimer3.cancel();
-            timeCancel3 = true;
+            mCountDownTimer7.cancel();
+            timeCancel7 = true;
             finish();
         }
     }
@@ -153,38 +159,38 @@ public class PuzzleSevenActivity extends AppCompatActivity {
         clear();
     }
 
-    public void onClickButtonClear3(View view){
+    public void onClickButtonClear7(View view){
         clear();
     }
 
     public void clear(){
         currentAnswer = "";
-        updateScreen(findViewById(R.id.answerScreen3));
+        updateScreen(findViewById(R.id.answerScreen7));
     }
 
-    public void onClickButtonBack3(View view){
-        mCountDownTimer3.cancel();
-        timeCancel3 = true;
+    public void onClickButtonBack7(View view){
+        mCountDownTimer7.cancel();
+        timeCancel7 = true;
         finish();
     }
 
-    public void onClickButtonSkip3(View view){
-        mCountDownTimer3.cancel();
-        timeCancel3 = true;
+    public void onClickButtonSkip7(View view){
+        mCountDownTimer7.cancel();
+        timeCancel7 = true;
         finish();
     }
 
     public void updateScreen(View view){
-        TextView tv = view.findViewById(R.id.answerScreen3);
+        TextView tv = view.findViewById(R.id.answerScreen7);
         tv.setText(currentAnswer);
     }
 
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        if (mCountDownTimer3 != null){
-            timeCancel3 = true;
-            mCountDownTimer3.cancel();
+        if (mCountDownTimer7 != null){
+            timeCancel7 = true;
+            mCountDownTimer7.cancel();
         }
     }
 
