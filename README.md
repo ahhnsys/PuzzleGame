@@ -3,9 +3,8 @@
 # App - _Bo's Puzzle World_
 
 ## Team structure and roles 
-+ Yishun Shi u6598369 - Puzzle levels, Controls, Setting, Instructions & Information, Timer, Feedback, Music, etc
-+ Natalie phan u6671390 - Storyboard, Rewards, etc
-
++ Yishun Shi u6598369 - Puzzle levels, Setting, Timer, Feedback, Music, etc
++ Natalie phan u6671390 - Storyboard, Rewards, Controls, Instructions & Information, Music
 ## App Overview 
 Crossword puzzle or word guess puzzle linking to a story which
 contains a "prizes" to achieve, progress in the story.
