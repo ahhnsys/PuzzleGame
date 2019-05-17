@@ -46,7 +46,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimer4">
+        app:layout_constraintTop_toBottomOf="@+id/sudoku">
 
         <Button
             android:id="@+id/buttonClear4"
@@ -81,17 +81,17 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/textViewTimer4"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="seconds remaining: 300"
-        android:textColor="#FF5722"
-        android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/controlButtons4"
-        app:layout_constraintTop_toBottomOf="@+id/sudoku"
-        tools:layout_editor_absoluteX="87dp" />
+    <!--<TextView-->
+        <!--android:id="@+id/textViewTimer4"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_horizontal"-->
+        <!--android:text="seconds remaining: 300"-->
+        <!--android:textColor="#FF5722"-->
+        <!--android:textSize="24sp"-->
+        <!--app:layout_constraintBottom_toTopOf="@+id/controlButtons4"-->
+        <!--app:layout_constraintTop_toBottomOf="@+id/sudoku"-->
+        <!--tools:layout_editor_absoluteX="87dp" />-->
 
     <TableLayout
         android:id="@+id/sudoku"
@@ -104,7 +104,7 @@
         tools:layout_editor_absoluteX="5dp">
 
         <View
-            android:layout_height="2dip"
+            android:layout_height="2dp"
             android:background="#0F0000" />
 
         <TableRow
@@ -243,7 +243,7 @@
         </TableRow>
 
         <View
-            android:layout_height="2dip"
+            android:layout_height="2dp"
             android:background="#0F0000" />
 
         <TableRow
@@ -394,7 +394,7 @@
         </TableRow>
 
         <View
-            android:layout_height="2dip"
+            android:layout_height="2dp"
             android:background="#0F0000" />
 
         <TableRow
@@ -533,7 +533,7 @@
         </TableRow>
 
         <View
-            android:layout_height="2dip"
+            android:layout_height="2dp"
             android:background="#0F0000" />
     </TableLayout>
 
