@@ -1,0 +1,1 @@
+Our third meeting is on 16/05/2019. It starts at 11am and last for an hour.
