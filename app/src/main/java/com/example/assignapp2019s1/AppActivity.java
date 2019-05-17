@@ -9,6 +9,7 @@ import android.view.View;
 import com.example.assignapp2019s1.puzzles.PuzzleOneActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleTwoActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleThreeActivity;
+import com.example.assignapp2019s1.puzzles.PuzzleFourActivity;
 
 public class AppActivity extends AppCompatActivity {
 
@@ -31,6 +32,11 @@ public class AppActivity extends AppCompatActivity {
 
     public void onClickButtonLevelThree(View view){
         Intent intent = new Intent(this, PuzzleThreeActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickButtonLevelFour(View view){
+        Intent intent = new Intent(this, PuzzleFourActivity.class);
         startActivity(intent);
     }
 }
