@@ -7,15 +7,10 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
-import android.view.View.OnTouchListener;
-import android.view.View.OnClickListener;
-import android.widget.Toast;
 
 import com.example.assignapp2019s1.AppActivity;
+import com.example.assignapp2019s1.GameplayActivity;
 import com.example.assignapp2019s1.R;
-
-import java.util.Timer;
-import java.util.TimerTask;
 
 /*
     This activity will create an opening sequence when the start button in WelcomeActivity is pressed.

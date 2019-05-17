@@ -39,4 +39,9 @@ public class AppActivity extends AppCompatActivity {
         Intent intent = new Intent(this, PuzzleFourActivity.class);
         startActivity(intent);
     }
+
+    public void onClickButtonGameplay(View view){
+        Intent intent = new Intent(this, GameplayActivity.class);
+        startActivity(intent);
+    }
 }
