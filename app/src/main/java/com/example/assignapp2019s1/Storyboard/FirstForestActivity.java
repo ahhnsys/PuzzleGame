@@ -57,6 +57,7 @@ public class FirstForestActivity extends AppCompatActivity {
                     break;
                 default:
                     break;
+
             }
             return true;
         }
@@ -96,7 +97,6 @@ public class FirstForestActivity extends AppCompatActivity {
 
     public void onClickButtonA(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
-
     }
 
 
