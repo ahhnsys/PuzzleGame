@@ -1,18 +1,18 @@
-package com.example.assignapp2019s1;
+package com.example.assignapp2019s1.Storyboard;
 
 import android.content.pm.ActivityInfo;
-import android.media.Image;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
+import com.example.assignapp2019s1.R;
+
 //authored by Natalie
 //https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons
-public class GameplayActivity extends AppCompatActivity {
+public class FirstForestActivity extends AppCompatActivity {
 
     float characterX;
     float characterY;
@@ -20,7 +20,7 @@ public class GameplayActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gameplay);
+        setContentView(R.layout.activity_first_forest);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         ImageButton upButton = (ImageButton) findViewById(R.id.imageButtonUp);
@@ -51,6 +51,9 @@ public class GameplayActivity extends AppCompatActivity {
                     break;
                 case R.id.imageButtonRight:
                     onClickButtonRight(v);
+                    break;
+                case R.id.imageButtonA:
+                    onClickButtonA(v);
                     break;
                 default:
                     break;
@@ -89,6 +92,11 @@ public class GameplayActivity extends AppCompatActivity {
         characterX += 10;
         character.setX(characterX);
         character.setImageResource(R.drawable.character_bo_right);
+    }
+
+    public void onClickButtonA(View v) {
+        final ImageView character = (ImageView) findViewById(R.id.character);
+
     }
 
 

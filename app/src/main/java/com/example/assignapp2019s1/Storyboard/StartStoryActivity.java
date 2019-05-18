@@ -9,7 +9,6 @@ import android.view.View;
 import android.widget.RelativeLayout;
 
 import com.example.assignapp2019s1.AppActivity;
-import com.example.assignapp2019s1.GameplayActivity;
 import com.example.assignapp2019s1.R;
 
 /*

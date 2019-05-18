@@ -10,7 +10,10 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".GameplayActivity"></activity>
+        <activity android:name=".Storyboard.SecondCaveActivity"></activity>
+        <activity android:name=".Storyboard.FirstCaveActivity" />
+        <activity android:name=".Storyboard.SecondForestActivity" />
+        <activity android:name=".GameplayActivity" />
         <activity android:name=".Storyboard.StartStoryActivity" />
         <activity android:name=".puzzles.PuzzleOneActivity" />
         <activity android:name=".puzzles.PuzzleTwoActivity" />
