@@ -25,6 +25,7 @@
         <activity android:name=".puzzles.PuzzleEightActivity" />
         <activity android:name=".puzzles.PuzzleNineActivity" />
         <activity android:name=".puzzles.PuzzleTenActivity" />
+        <activity android:name=".puzzles.PuzzleElevenActivity" />
         <activity android:name=".AppActivity" />
         <activity android:name=".WelcomeActivity">
             <intent-filter>
