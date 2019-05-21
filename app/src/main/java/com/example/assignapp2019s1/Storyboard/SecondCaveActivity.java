@@ -15,7 +15,7 @@ public class SecondCaveActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_cave);
+        setContentView(R.layout.activity_second_cave);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         ImageButton upButton = (ImageButton) findViewById(R.id.imageButtonUp);

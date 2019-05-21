@@ -13,7 +13,7 @@
         <activity android:name=".Storyboard.SecondCaveActivity"></activity>
         <activity android:name=".Storyboard.FirstCaveActivity" />
         <activity android:name=".Storyboard.SecondForestActivity" />
-        <activity android:name=".GameplayActivity" />
+        <activity android:name=".Storyboard.FirstForestActivity" />
         <activity android:name=".Storyboard.StartStoryActivity" />
         <activity android:name=".puzzles.PuzzleOneActivity" />
         <activity android:name=".puzzles.PuzzleTwoActivity" />

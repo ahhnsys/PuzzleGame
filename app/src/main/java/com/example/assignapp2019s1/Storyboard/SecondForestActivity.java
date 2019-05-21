@@ -17,7 +17,7 @@ public class SecondForestActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_forest);
+        setContentView(R.layout.activity_second_forest);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         ImageButton upButton = (ImageButton) findViewById(R.id.imageButtonUp);
