@@ -49,7 +49,7 @@ public class PuzzleEightActivity extends AppCompatActivity {
 
         mCountDownTimer8 = new CountDownTimer(300000+500, 1000) {
 
-            TextView tvt8 = findViewById(R.id.textViewTimer) ;
+            TextView tvt8 = findViewById(R.id.textViewTimer8) ;
 
             public void onTick(long millisUntilFinished) {
                 if(!PuzzleEightActivity.this.isFinishing()){
@@ -79,7 +79,7 @@ public class PuzzleEightActivity extends AppCompatActivity {
         answer = etLevel8.getText().toString();
         result = parse(answer);
 
-        if (result.equals(rightResult)) {
+        if (result.equals(rightResult) && answer.contains("1") && answer.contains("4") && answer.contains("6") && answer.contains("7")){
             checkedRightAnswer();
         }
         else {

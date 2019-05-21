@@ -69,13 +69,13 @@ public class PuzzleFourActivity extends AppCompatActivity {
 
         mCountDownTimer4 = new CountDownTimer(1200000+500, 1000) {
 
-            TextView tvt4 = findViewById(R.id.textViewTimer) ;
+            TextView tvt4 = findViewById(R.id.textViewTimer4) ;
 
             public void onTick(long millisUntilFinished) {
                 if(!PuzzleFourActivity.this.isFinishing()){
                     tvt4.setText("seconds remaining: " + millisUntilFinished / 1000);
 //                    check();
-                    if (timeCancel4==true)
+                    if (timeCancel4)
                         this.cancel();
                 }
             }

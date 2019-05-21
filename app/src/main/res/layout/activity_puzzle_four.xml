@@ -156,7 +156,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <EditText
                 android:id="@+id/editText17"
@@ -166,7 +167,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -180,7 +182,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
         </TableRow>
 
         <TableRow
@@ -218,7 +221,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -232,7 +236,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <EditText
                 android:id="@+id/editText28"
@@ -242,7 +247,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -263,7 +269,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -277,7 +284,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <EditText
                 android:id="@+id/editText34"
@@ -287,7 +295,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -301,7 +310,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -332,7 +342,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <EditText
                 android:id="@+id/editText42"
@@ -342,7 +353,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <EditText
                 android:id="@+id/editText43"
@@ -352,7 +364,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <EditText
                 android:id="@+id/editText44"
@@ -362,7 +375,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -380,7 +394,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -394,7 +409,9 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:text=""
+                android:autofillHints=""
+                tools:targetApi="P"/>
         </TableRow>
 
         <TableRow
@@ -417,7 +434,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -431,7 +449,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -466,7 +485,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <EditText
                 android:id="@+id/editText63"
@@ -476,7 +496,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -490,7 +511,9 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:hint=""
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -504,7 +527,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <EditText
                 android:id="@+id/editText68"
@@ -514,7 +538,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -549,7 +574,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -571,7 +597,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -606,7 +633,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -624,7 +652,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <EditText
                 android:id="@+id/editText89"
@@ -634,7 +663,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
         </TableRow>
 
         <TableRow
@@ -651,7 +681,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <EditText
                 android:id="@+id/editText93"
@@ -661,7 +692,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <EditText
                 android:id="@+id/editText94"
@@ -671,7 +703,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <EditText
                 android:id="@+id/editText95"
@@ -681,7 +714,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <TextView
                 android:gravity="center"
@@ -699,7 +733,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
 
             <EditText
                 android:id="@+id/editText99"
@@ -709,7 +744,8 @@
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1"
-                android:autofillHints=""/>
+                android:autofillHints=""
+                tools:targetApi="P"/>
         </TableRow>
 
         <View
