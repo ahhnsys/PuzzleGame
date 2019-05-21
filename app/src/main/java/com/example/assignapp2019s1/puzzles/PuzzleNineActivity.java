@@ -13,99 +13,99 @@ import com.example.assignapp2019s1.R;
 
 public class PuzzleNineActivity extends AppCompatActivity {
 
-    private String solution = "FOREST";
+    private String solution = "STORE";
 
     private String answer = "";
 
-    public CountDownTimer mCountDownTimer2;
+    public CountDownTimer mCountDownTimer9;
 
-    public boolean timeCancel2 = false;
+    public boolean timeCancel9 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_puzzle_two);
+        setContentView(R.layout.activity_puzzle_nine);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         iniTimer();
     }
 
     public void iniTimer(){
 
-        if (mCountDownTimer2!=null){
-            mCountDownTimer2.cancel();
+        if (mCountDownTimer9!=null){
+            mCountDownTimer9.cancel();
         }
 
-        mCountDownTimer2 = new CountDownTimer(300000+500, 1000) {
+        mCountDownTimer9 = new CountDownTimer(300000+500, 1000) {
 
-            TextView tvt2 = findViewById(R.id.textViewTimer2) ;
+            TextView tvt9 = findViewById(R.id.textViewTimer9) ;
 
             public void onTick(long millisUntilFinished) {
                 if(!PuzzleNineActivity.this.isFinishing()){
-                    tvt2.setText("seconds remaining: " + millisUntilFinished / 1000);
-                    if (timeCancel2==true)
+                    tvt9.setText("seconds remaining: " + millisUntilFinished / 1000);
+                    if (timeCancel9)
                         this.cancel();
                 }
             }
 
             public void onFinish() {
-                tvt2.setText("Time is up!");
+                tvt9.setText("Time is up!");
                 Toast.makeText(getApplicationContext(),"Time is up and you haven't solved this puzzle yet. Try it again!",Toast.LENGTH_LONG).show();
                 finish();
             }
         };
-        mCountDownTimer2.start();
+        mCountDownTimer9.start();
     }
 
-    public void onClickButtonA2(View view){
+    public void onClickButtonA9(View view){
         answer = answer + 'A';
-        updateScreen(findViewById(R.id.answerScreen2));
+        updateScreen(findViewById(R.id.answerScreen9));
         check();
     }
 
-    public void onClickButtonE2(View view){
+    public void onClickButtonE9(View view){
         answer = answer + 'E';
-        updateScreen(findViewById(R.id.answerScreen2));
+        updateScreen(findViewById(R.id.answerScreen9));
         check();
     }
 
-    public void onClickButtonF2(View view){
+    public void onClickButtonF9(View view){
         answer = answer + 'F';
-        updateScreen(findViewById(R.id.answerScreen2));
+        updateScreen(findViewById(R.id.answerScreen9));
         check();
     }
 
-    public void onClickButtonO2(View view){
+    public void onClickButtonO9(View view){
         answer = answer + 'O';
-        updateScreen(findViewById(R.id.answerScreen2));
+        updateScreen(findViewById(R.id.answerScreen9));
         check();
     }
 
-    public void onClickButtonR2(View view){
+    public void onClickButtonR9(View view){
         answer = answer + 'R';
-        updateScreen(findViewById(R.id.answerScreen2));
+        updateScreen(findViewById(R.id.answerScreen9));
         check();
     }
 
-    public void onClickButtonS2(View view){
+    public void onClickButtonS9(View view){
         answer = answer + 'S';
-        updateScreen(findViewById(R.id.answerScreen2));
+        updateScreen(findViewById(R.id.answerScreen9));
         check();
     }
 
-    public void onClickButtonT2(View view){
+    public void onClickButtonT9(View view){
         answer = answer + 'T';
-        updateScreen(findViewById(R.id.answerScreen2));
+        updateScreen(findViewById(R.id.answerScreen9));
         check();
     }
 
-    public void onClickButtonW2(View view){
+    public void onClickButtonW9(View view){
         answer = answer + 'W';
-        updateScreen(findViewById(R.id.answerScreen2));
+        updateScreen(findViewById(R.id.answerScreen9));
         check();
     }
 
     public void check(){
-        if (answer.length() == 6){
+        if (answer.length() == 5){
             if (answer.equals(solution)){
                 checkedRightAnswer();
             }
@@ -116,9 +116,9 @@ public class PuzzleNineActivity extends AppCompatActivity {
     }
 
     public void checkedRightAnswer(){
-        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(FOREST) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
-        mCountDownTimer2.cancel();
-        timeCancel2 = true;
+        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(STORE) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
+        mCountDownTimer9.cancel();
+        timeCancel9 = true;
         finish();
     }
 
@@ -127,48 +127,50 @@ public class PuzzleNineActivity extends AppCompatActivity {
         clear();
     }
 
-    public void onClickButtonClear2(View view){
+    public void onClickButtonClear9(View view){
         clear();
     }
 
     public void clear(){
         answer = "";
-        updateScreen(findViewById(R.id.answerScreen2));
+        updateScreen(findViewById(R.id.answerScreen9));
     }
 
-    public void onClickButtonBack2(View view){
-        mCountDownTimer2.cancel();
-        timeCancel2 = true;
+    public void onClickButtonBack9(View view){
+        mCountDownTimer9.cancel();
+        timeCancel9 = true;
         finish();
     }
 
-    public void onClickButtonHelp2(View view){
-        TextView tv = findViewById(R.id.textViewLevelTwoHint);
-        tv.setText("Hint: This word may be used in the data structure");
+    public void onClickButtonHelp9(View view){
+        TextView tv = findViewById(R.id.textViewLevelNineHint);
+        tv.setText("Hint: The use of a disk.");
     }
 
-    public void onClickButtonSkip2(View view){
+    public void onClickButtonSkip9(View view){
         checkedRightAnswer();
     }
 
     public void updateScreen(View view){
-        TextView tv = view.findViewById(R.id.answerScreen2);
+        TextView tv = view.findViewById(R.id.answerScreen9);
         tv.setText(answer);
     }
 
-    public void onClickImageButton(View view){
-        Button btnA = findViewById(R.id.buttonA2);
+    public void onClickImageButton9(View view){
+        Button btnA = findViewById(R.id.buttonA9);
         btnA.setText("");
-        Button btnW = findViewById(R.id.buttonW2);
+        Button btnF = findViewById(R.id.buttonF9);
+        btnF.setText("");
+        Button btnW = findViewById(R.id.buttonW9);
         btnW.setText("");
     }
 
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        if (mCountDownTimer2 != null){
-            timeCancel2 = true;
-            mCountDownTimer2.cancel();
+        if (mCountDownTimer9 != null){
+            timeCancel9 = true;
+            mCountDownTimer9.cancel();
         }
     }
 
