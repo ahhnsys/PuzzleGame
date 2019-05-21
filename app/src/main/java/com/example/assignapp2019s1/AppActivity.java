@@ -8,10 +8,12 @@ import android.view.View;
 
 import com.example.assignapp2019s1.Storyboard.FirstForestActivity;
 import com.example.assignapp2019s1.Storyboard.SecondForestActivity;
+import com.example.assignapp2019s1.puzzles.PuzzleEightActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleOneActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleTwoActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleThreeActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleFourActivity;
+import com.example.assignapp2019s1.puzzles.PuzzleEightActivity;
 
 public class AppActivity extends AppCompatActivity {
 
@@ -44,6 +46,11 @@ public class AppActivity extends AppCompatActivity {
 
     public void onClickButtonGameplay(View view){
         Intent intent = new Intent(this, FirstForestActivity.class);
+        startActivity(intent);
+    }
+
+    public void onClickButtonLevelEight(View view){
+        Intent intent = new Intent(this, PuzzleEightActivity.class);
         startActivity(intent);
     }
 }
