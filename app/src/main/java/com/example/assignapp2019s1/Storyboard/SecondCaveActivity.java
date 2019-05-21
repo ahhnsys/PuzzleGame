@@ -99,7 +99,7 @@ public class SecondCaveActivity extends AppCompatActivity {
     }
 
 
-
+    //incomplete
     public void onClickButtonA(View v) {
 
         final ImageView character = (ImageView) findViewById(R.id.character);

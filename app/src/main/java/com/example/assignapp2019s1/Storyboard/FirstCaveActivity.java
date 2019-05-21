@@ -15,6 +15,8 @@ import com.example.assignapp2019s1.puzzles.PuzzleFiveActivity;
 
 public class FirstCaveActivity extends AppCompatActivity {
 
+    public ImageView orangeKey = (ImageView) findViewById(R.id.orangeKey);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +34,7 @@ public class FirstCaveActivity extends AppCompatActivity {
         leftButton.setOnTouchListener(touchListener);
         rightButton.setOnTouchListener(touchListener);
 
+        orangeKey.setVisibility(View.INVISIBLE);
     }
 
     float characterX;
@@ -97,6 +100,7 @@ public class FirstCaveActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_right);
     }
 
+    //incomplete
     public void onClickButtonA(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
 

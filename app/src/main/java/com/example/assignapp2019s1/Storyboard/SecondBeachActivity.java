@@ -21,6 +21,8 @@ public class SecondBeachActivity extends AppCompatActivity {
     float characterX;
     float characterY;
 
+    ImageView purpleKey = (ImageView) findViewById(R.id.purpleKey);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,8 @@ public class SecondBeachActivity extends AppCompatActivity {
         rightButton.setOnTouchListener(touchListener);
 
         ImageView imageView = (ImageView) findViewById(R.id.character);
+
+        purpleKey.setVisibility(View.INVISIBLE);
 
 
     }
@@ -109,6 +113,7 @@ public class SecondBeachActivity extends AppCompatActivity {
     }
 
 
+    //incomplete
     public void onClickButtonGreyA (View v) {
         ImageView character = (ImageView) findViewById(R.id.character);
 

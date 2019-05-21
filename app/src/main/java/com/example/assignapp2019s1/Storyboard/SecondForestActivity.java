@@ -109,8 +109,7 @@ public class SecondForestActivity extends AppCompatActivity {
     return false;
     }
 
-    //finding the image coordinates
-    //https://stackoverflow.com/questions/45360792/get-x-y-coordinates-on-imageview-touch
+    //incomplete
     public void onClickButtonA(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
 

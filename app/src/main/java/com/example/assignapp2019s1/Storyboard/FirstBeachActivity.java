@@ -22,11 +22,10 @@ import static android.view.View.VISIBLE;
 //https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons
 public class FirstBeachActivity extends AppCompatActivity {
 
-
-
     float characterX;
     float characterY;
 
+    ImageView yellowKey = (ImageView) findViewById(R.id.yellowKey);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +46,7 @@ public class FirstBeachActivity extends AppCompatActivity {
 
         ImageView imageView = (ImageView) findViewById(R.id.character);
 
+        yellowKey.setVisibility(View.INVISIBLE);
 
     }
 
@@ -115,7 +115,7 @@ public class FirstBeachActivity extends AppCompatActivity {
         return false;
     }
 
-
+    //incomplete
     public void onClickButtonGreyA (View v) {
         ImageView character = (ImageView) findViewById(R.id.character);
 
