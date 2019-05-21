@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -12,112 +13,84 @@ import com.example.assignapp2019s1.R;
 
 public class PuzzleEightActivity extends AppCompatActivity {
 
-    private String solution = "SOFTWARE";
+    private static Tokenizer tokenizer;
+    private static Parser parser;
+
+    private static Integer parse(String equation) {
+        System.out.println("Parsing equation: " + equation);
+        tokenizer.setBuffer(equation);
+        Exp exp = parser.parse();
+        if(exp==null) {
+            return null;
+        } else {
+            return exp.value();
+        }
+    }
 
     private String answer = "";
 
-    public CountDownTimer mCountDownTimer;
+    public CountDownTimer mCountDownTimer8;
 
-    public boolean timeCancel = false;
+    public boolean timeCancel8 = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_puzzle_one);
+        setContentView(R.layout.activity_puzzle_eight);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         iniTimer();
     }
 
     public void iniTimer(){
 
-        if (mCountDownTimer!=null){
-            mCountDownTimer.cancel();
+        if (mCountDownTimer8!=null){
+            mCountDownTimer8.cancel();
         }
 
-        mCountDownTimer = new CountDownTimer(300000+500, 1000) {
+        mCountDownTimer8 = new CountDownTimer(300000+500, 1000) {
 
-            TextView tvt = findViewById(R.id.textViewTimer) ;
+            TextView tvt8 = findViewById(R.id.textViewTimer8) ;
 
             public void onTick(long millisUntilFinished) {
                 if(!PuzzleEightActivity.this.isFinishing()){
-                    tvt.setText("seconds remaining: " + millisUntilFinished / 1000);
-                    if (timeCancel==true)
+                    tvt8.setText("seconds remaining: " + millisUntilFinished / 1000);
+                    if (timeCancel8==true)
                         this.cancel();
                 }
             }
 
             public void onFinish() {
-                tvt.setText("Time is up!");
+                tvt8.setText("Time is up!");
                 Toast.makeText(getApplicationContext(),"Time is up and you haven't solved this puzzle yet. Try it again!",Toast.LENGTH_LONG).show();
                 finish();
             }
         };
-        mCountDownTimer.start();
+        mCountDownTimer8.start();
     }
 
-    public void onClickButtonA(View view){
-        answer = answer + 'A';
-        updateScreen(findViewById(R.id.answerScreen));
-        check();
-    }
-
-    public void onClickButtonE(View view){
-        answer = answer + 'E';
-        updateScreen(findViewById(R.id.answerScreen));
-        check();
-    }
-
-    public void onClickButtonF(View view){
-        answer = answer + 'F';
-        updateScreen(findViewById(R.id.answerScreen));
-        check();
-    }
-
-    public void onClickButtonO(View view){
-        answer = answer + 'O';
-        updateScreen(findViewById(R.id.answerScreen));
-        check();
-    }
-
-    public void onClickButtonR(View view){
-        answer = answer + 'R';
-        updateScreen(findViewById(R.id.answerScreen));
-        check();
-    }
-
-    public void onClickButtonS(View view){
-        answer = answer + 'S';
-        updateScreen(findViewById(R.id.answerScreen));
-        check();
-    }
-
-    public void onClickButtonT(View view){
-        answer = answer + 'T';
-        updateScreen(findViewById(R.id.answerScreen));
-        check();
-    }
-
-    public void onClickButtonW(View view){
-        answer = answer + 'W';
-        updateScreen(findViewById(R.id.answerScreen));
-        check();
-    }
 
     public void check(){
-        if (answer.length() == 8){
-            if (answer.equals(solution)){
-                checkedRightAnswer();
-            }
-            else {
-                checkedWrongAnswer();
-            }
+        EditText etLevel8 = findViewById(R.id.answerInput);
+        tokenizer = new Tokenizer();
+        parser = new Parser(tokenizer);
+        Integer result;
+        Integer rightResult = Integer.valueOf(24);
+
+        answer = etLevel8.getText().toString();
+        result = parse(answer);
+
+        if (result.equals(rightResult) && answer.contains("1") && answer.contains("4") && answer.contains("6") && answer.contains("7")){
+            checkedRightAnswer();
+        }
+        else {
+            checkedWrongAnswer();
         }
     }
 
     public void checkedRightAnswer(){
-        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(SOFTWARE) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
-        mCountDownTimer.cancel();
-        timeCancel = true;
+        Toast.makeText(getApplicationContext(),"Congratulations! Your answer is correct. You have passed this level.",Toast.LENGTH_LONG).show();
+        mCountDownTimer8.cancel();
+        timeCancel8 = true;
         finish();
     }
 
@@ -126,41 +99,40 @@ public class PuzzleEightActivity extends AppCompatActivity {
         clear();
     }
 
-    public void onClickButtonClear(View view){
+    public void onClickButtonClear8(View view){
         clear();
     }
 
     public void clear(){
         answer = "";
-        updateScreen(findViewById(R.id.answerScreen));
+        updateScreen(findViewById(R.id.answerInput));
     }
 
-    public void onClickButtonBack(View view){
-        mCountDownTimer.cancel();
-        timeCancel = true;
+    public void onClickButtonBack8(View view){
+        mCountDownTimer8.cancel();
+        timeCancel8 = true;
         finish();
     }
 
-    public void onClickButtonHelp(View view){
-        TextView tv = findViewById(R.id.textViewLevelOneHint);
-        tv.setText("Hint: This word is related to the computer");
+    public void onClickButtonCheck8(View view){
+        check();
     }
 
-    public void onClickButtonSkip(View view){
+    public void onClickButtonSkip8(View view){
         checkedRightAnswer();
     }
 
     public void updateScreen(View view){
-        TextView tv = view.findViewById(R.id.answerScreen);
-        tv.setText(answer);
+        EditText et8 = view.findViewById(R.id.answerInput);
+        et8.setText(answer);
     }
 
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        if (mCountDownTimer != null){
-            timeCancel = true;
-            mCountDownTimer.cancel();
+        if (mCountDownTimer8 != null){
+            timeCancel8 = true;
+            mCountDownTimer8.cancel();
         }
     }
 
