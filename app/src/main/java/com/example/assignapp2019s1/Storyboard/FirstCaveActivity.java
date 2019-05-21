@@ -1,5 +1,6 @@
 package com.example.assignapp2019s1.Storyboard;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,10 +8,14 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
+import com.example.assignapp2019s1.puzzles.PuzzleFiveActivity;
 
 public class FirstCaveActivity extends AppCompatActivity {
+
+    public ImageView orangeKey = (ImageView) findViewById(R.id.orangeKey);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +34,7 @@ public class FirstCaveActivity extends AppCompatActivity {
         leftButton.setOnTouchListener(touchListener);
         rightButton.setOnTouchListener(touchListener);
 
+        orangeKey.setVisibility(View.INVISIBLE);
     }
 
     float characterX;
@@ -94,11 +100,24 @@ public class FirstCaveActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_right);
     }
 
+    //incomplete
     public void onClickButtonA(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
 
-    }
+        int[] imageCoordinates = new int[2];
+        character.getLocationOnScreen(imageCoordinates);
 
+        int x = imageCoordinates[0];
+        int y = imageCoordinates[1];
+
+        if (x >= 454 && x <= 477 && y >= 295 && y <= 325) {
+                Intent puzzle5 = new Intent(this, PuzzleFiveActivity.class);
+                startActivity(puzzle5);
+         } else if (x >=  1924 && x <= 2314 && y <= 50) {
+            Intent nextScreen = new Intent(this, SecondCaveActivity.class);
+            startActivity(nextScreen);
+        }
+    }
 
 }
 

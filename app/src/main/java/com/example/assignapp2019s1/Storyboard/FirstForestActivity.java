@@ -2,34 +2,32 @@ package com.example.assignapp2019s1.Storyboard;
 
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
-import android.media.Image;
-import android.os.Handler;
-import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
-import android.widget.ImageSwitcher;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
 import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.puzzles.PuzzleOneActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleTwoActivity;
 
-import java.lang.reflect.Array;
+
+import static android.view.View.VISIBLE;
 
 //authored by Natalie
 //https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons
 public class FirstForestActivity extends AppCompatActivity {
 
-
     float characterX;
     float characterY;
+
+    public ImageView redKey = (ImageView) findViewById(R.id.redKey);
+
+    ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -51,15 +49,9 @@ public class FirstForestActivity extends AppCompatActivity {
         ImageView imageView = (ImageView) findViewById(R.id.character);
 
 
-        int[] imageCoordinates = new int[2];
-        imageView.getLocationOnScreen(imageCoordinates);
+        redKey.setVisibility(View.INVISIBLE);
 
-        int x = imageCoordinates[0];
-        int y = imageCoordinates[1];
-        if (x >=  1924 && x <= 2314 && y <= 50) {
-            Intent nextScreen = new Intent(this, SecondForestActivity.class);
-            startActivity(nextScreen);
-        }
+        greenKey.setVisibility(View.INVISIBLE);
     }
 
 
@@ -123,8 +115,9 @@ public class FirstForestActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_right);
     }
 
-    public boolean gotKey() {
-        return false;
+    public boolean gotRedKey(View v) {
+        ImageView redKey = (ImageView) findViewById(R.id.redKey);
+        return redKey.getVisibility() == VISIBLE;
     }
 
 
@@ -141,12 +134,16 @@ public class FirstForestActivity extends AppCompatActivity {
             Intent puzzle1 = new Intent(this, PuzzleOneActivity.class);
             startActivity(puzzle1);
         } else if (x >= 1704 && x <= 1736 && y >= 494 && y <= 592) {
-            if (!gotKey()) {
-                Toast.makeText(getApplicationContext(), "I need a key...", Toast.LENGTH_SHORT).show();
-            } else {
+            if (gotRedKey(v)) {
                 Intent puzzle2 = new Intent(this, PuzzleTwoActivity.class);
                 startActivity(puzzle2);
+                redKey.setVisibility(View.GONE);
+            } else {
+                Toast.makeText(getApplicationContext(), "I need a red key...", Toast.LENGTH_SHORT).show();
             }
+        } else if (x >=  1924 && x <= 2314 && y <= 50) {
+            Intent nextScreen = new Intent(this, SecondForestActivity.class);
+            startActivity(nextScreen);
         }
     }
 }

@@ -8,18 +8,25 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
-import com.example.assignapp2019s1.puzzles.PuzzleFiveActivity;
-import com.example.assignapp2019s1.puzzles.PuzzleFourActivity;
+import com.example.assignapp2019s1.puzzles.PuzzleSixActivity;
 
-public class SecondCaveActivity extends AppCompatActivity {
+
+
+//authored by Natalie
+//https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons
+public class SecondBeachActivity extends AppCompatActivity {
+
+    float characterX;
+    float characterY;
+
+    ImageView purpleKey = (ImageView) findViewById(R.id.purpleKey);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second_cave);
+        setContentView(R.layout.activity_second_beach);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         ImageButton upButton = (ImageButton) findViewById(R.id.imageButtonUp);
@@ -27,17 +34,18 @@ public class SecondCaveActivity extends AppCompatActivity {
         ImageButton leftButton = (ImageButton) findViewById(R.id.imageButtonLeft);
         ImageButton rightButton = (ImageButton) findViewById(R.id.imageButtonRight);
 
-        SecondCaveActivity.MyTouchListener touchListener = new SecondCaveActivity.MyTouchListener();
+        MyTouchListener touchListener = new MyTouchListener();
         upButton.setOnTouchListener(touchListener);
         downButton.setOnTouchListener(touchListener);
         leftButton.setOnTouchListener(touchListener);
         rightButton.setOnTouchListener(touchListener);
 
+        ImageView imageView = (ImageView) findViewById(R.id.character);
+
+        purpleKey.setVisibility(View.INVISIBLE);
+
+
     }
-
-    float characterX;
-    float characterY;
-
 
 
     public class MyTouchListener implements View.OnTouchListener {
@@ -56,26 +64,28 @@ public class SecondCaveActivity extends AppCompatActivity {
                 case R.id.imageButtonRight:
                     onClickButtonRight(v);
                     break;
-                case R.id.imageButtonA:
-                    onClickButtonA(v);
-                    break;
                 default:
                     break;
+
             }
             return true;
         }
     }
+
 
     public void onClickButtonUp(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterY = character.getY();
         characterY -= 10;
         character.setY(characterY);
+        final int[] characterBackAnimation = new int[]{R.drawable.character_bo_back, R.drawable.character_bo_back_walking, R.drawable.character_bo_back_walking2};
         character.setImageResource(R.drawable.character_bo_back);
+
     }
 
+
     public void onClickButtonDown(View v) {
-        final ImageView character = (ImageView) findViewById(R.id.character);
+        ImageView character = (ImageView) findViewById(R.id.character);
         characterY = character.getY();
         characterY += 10;
         character.setY(characterY);
@@ -83,7 +93,7 @@ public class SecondCaveActivity extends AppCompatActivity {
     }
 
     public void onClickButtonLeft(View v) {
-        final ImageView character = (ImageView) findViewById(R.id.character);
+        ImageView character = (ImageView) findViewById(R.id.character);
         characterX = character.getX();
         characterX -= 10;
         character.setX(characterX);
@@ -91,18 +101,21 @@ public class SecondCaveActivity extends AppCompatActivity {
     }
 
     public void onClickButtonRight(View v) {
-        final ImageView character = (ImageView) findViewById(R.id.character);
+        ImageView character = (ImageView) findViewById(R.id.character);
         characterX = character.getX();
         characterX += 10;
         character.setX(characterX);
         character.setImageResource(R.drawable.character_bo_right);
     }
 
+    public boolean gotShovel(View v) {
+        return false;
+    }
+
 
     //incomplete
-    public void onClickButtonA(View v) {
-
-        final ImageView character = (ImageView) findViewById(R.id.character);
+    public void onClickButtonGreyA (View v) {
+        ImageView character = (ImageView) findViewById(R.id.character);
 
         int[] imageCoordinates = new int[2];
         character.getLocationOnScreen(imageCoordinates);
@@ -111,18 +124,9 @@ public class SecondCaveActivity extends AppCompatActivity {
         int y = imageCoordinates[1];
 
         if (x >= 454 && x <= 477 && y >= 295 && y <= 325) {
-            if (gotOrangeKey()) {
-                Intent puzzle5 = new Intent(this, PuzzleFiveActivity.class);
-                startActivity(puzzle5);
-            } else {
-                Toast.makeText(getApplicationContext(), "I need an orange key...", Toast.LENGTH_SHORT).show();
-            }
+            Intent puzzle6 = new Intent(this, PuzzleSixActivity.class);
+            startActivity(puzzle6);
+        } else if (x >=  1924 && x <= 2314 && y <= 50) {
         }
     }
-
-    private boolean gotOrangeKey() {
-        return false;
-    }
-
 }
-

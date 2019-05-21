@@ -90,7 +90,7 @@
         app:layout_constraintVertical_bias="0.85" />
 
     <ImageView
-        android:id="@+id/puzzleChest"
+        android:id="@+id/puzzleChest3"
         android:layout_width="37dp"
         android:layout_height="32dp"
         android:rotation="-90"
@@ -101,4 +101,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.234" />
+
+    <ImageView
+        android:id="@+id/greenKey"
+        android:layout_width="32dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.908"
+        app:srcCompat="@drawable/key_green" />
 </android.support.constraint.ConstraintLayout>

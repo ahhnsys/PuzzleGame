@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/cave_world2"
-    tools:context=".Storyboard.FirstCaveActivity">
+    android:background="@drawable/beach_world2"
+    tools:context=".Storyboard.SecondBeachActivity">
 
     <ImageView
         android:id="@+id/character"
@@ -13,10 +13,9 @@
         android:layout_height="49dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintHorizontal_bias="0.062"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.044"
         app:srcCompat="@drawable/character_bo" />
 
     <ImageButton
@@ -80,6 +79,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/a_button"
+        android:onClick="onClickButtonGreyA"
         android:scaleType="fitCenter"
         android:src="@drawable/a_button"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,20 +90,32 @@
         app:layout_constraintVertical_bias="0.85" />
 
     <ImageView
-        android:id="@+id/puzzleChest5"
+        android:id="@+id/puzzleChest8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/puzzle_chest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.042" />
+
+    <ImageView
+        android:id="@+id/puzzleChest9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:rotation="90"
         android:src="@drawable/puzzle_chest"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.857"
+        app:layout_constraintHorizontal_bias="0.52"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.702" />
+        app:layout_constraintVertical_bias="0.684" />
 
     <ImageView
-        android:id="@+id/orangeKey"
+        android:id="@+id/purpleKey"
         android:layout_width="29dp"
         android:layout_height="52dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -112,6 +124,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.908"
-        app:srcCompat="@drawable/key_orange" />
+        app:srcCompat="@drawable/key_purple" />
+
 
 </android.support.constraint.ConstraintLayout>
