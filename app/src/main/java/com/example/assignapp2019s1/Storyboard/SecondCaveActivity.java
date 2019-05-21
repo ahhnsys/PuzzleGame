@@ -1,5 +1,6 @@
 package com.example.assignapp2019s1.Storyboard;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,8 +8,11 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
+import com.example.assignapp2019s1.puzzles.PuzzleFiveActivity;
+import com.example.assignapp2019s1.puzzles.PuzzleFourActivity;
 
 public class SecondCaveActivity extends AppCompatActivity {
 
@@ -94,9 +98,30 @@ public class SecondCaveActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_right);
     }
 
+
+
     public void onClickButtonA(View v) {
+
         final ImageView character = (ImageView) findViewById(R.id.character);
 
+        int[] imageCoordinates = new int[2];
+        character.getLocationOnScreen(imageCoordinates);
+
+        int x = imageCoordinates[0];
+        int y = imageCoordinates[1];
+
+        if (x >= 454 && x <= 477 && y >= 295 && y <= 325) {
+            if (gotOrangeKey()) {
+                Intent puzzle5 = new Intent(this, PuzzleFiveActivity.class);
+                startActivity(puzzle5);
+            } else {
+                Toast.makeText(getApplicationContext(), "I need an orange key...", Toast.LENGTH_SHORT).show();
+            }
+        }
+    }
+
+    private boolean gotOrangeKey() {
+        return false;
     }
 
 }

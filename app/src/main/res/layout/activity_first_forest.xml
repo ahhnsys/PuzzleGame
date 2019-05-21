@@ -80,8 +80,8 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/a_button"
-        android:scaleType="fitCenter"
         android:onClick="onClickButtonGreyA"
+        android:scaleType="fitCenter"
         android:src="@drawable/a_button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -94,8 +94,8 @@
         android:id="@+id/puzzleChest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/puzzle_chest"
         android:rotation="-90"
+        android:src="@drawable/puzzle_chest"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.132"
@@ -115,5 +115,29 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.376" />
+
+    <ImageView
+        android:id="@+id/redKey"
+        android:layout_width="29dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.908"
+        app:srcCompat="@drawable/key_red" />
+
+    <ImageView
+        android:id="@+id/greenKey"
+        android:layout_width="32dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.908"
+        app:srcCompat="@drawable/key_green" />
 
 </android.support.constraint.ConstraintLayout>

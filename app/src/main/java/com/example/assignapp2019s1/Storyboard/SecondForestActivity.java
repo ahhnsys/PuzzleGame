@@ -1,14 +1,20 @@
 package com.example.assignapp2019s1.Storyboard;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
+import com.example.assignapp2019s1.puzzles.PuzzleOneActivity;
+import com.example.assignapp2019s1.puzzles.PuzzleThreeActivity;
+import com.example.assignapp2019s1.puzzles.PuzzleTwoActivity;
 
 public class SecondForestActivity extends AppCompatActivity {
     float characterX;
@@ -31,6 +37,10 @@ public class SecondForestActivity extends AppCompatActivity {
         leftButton.setOnTouchListener(touchListener);
         rightButton.setOnTouchListener(touchListener);
 
+        ImageView imageView = (ImageView) findViewById(R.id.character);
+        int[] values = new int[2];
+        imageView.getLocationOnScreen(values);
+        Log.d("X & Y",values[0]+" "+values[1]);
     }
 
     public class MyTouchListener implements View.OnTouchListener {
@@ -91,12 +101,42 @@ public class SecondForestActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_right);
     }
 
+    private boolean gotGreenKey() {
+        return false;
+    }
+
+    private boolean gotTorch() {
+    return false;
+    }
+
+    //finding the image coordinates
+    //https://stackoverflow.com/questions/45360792/get-x-y-coordinates-on-imageview-touch
     public void onClickButtonA(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
 
+        int[] imageCoordinates = new int[2];
+        character.getLocationOnScreen(imageCoordinates);
+
+        int x = imageCoordinates[0];
+        int y = imageCoordinates[1];
+
+        if (x >= 454 && x <= 477 && y >= 295 && y <= 325) {
+                if (gotGreenKey()) {
+                    Intent puzzle3 = new Intent(this, PuzzleThreeActivity.class);
+                    startActivity(puzzle3);
+                } else {
+                    Toast.makeText(getApplicationContext(), "I need a green key...", Toast.LENGTH_SHORT).show();
+                }
+        } else if (x >= 1704 && x <= 1736 && y >= 494 && y <= 592) {
+            if (gotTorch()) {
+                Intent cave = new Intent(this, FirstCaveActivity.class);
+                startActivity(cave);
+            } else {
+                Toast.makeText(getApplicationContext(), "It's too dark, I need a light...", Toast.LENGTH_SHORT).show();
+            }
+        }
+
     }
-
-
 
 }
 

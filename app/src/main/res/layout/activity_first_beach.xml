@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/forest_world2"
-    tools:context=".Storyboard.SecondForestActivity">
+    android:background="@drawable/beach_world"
+    tools:context=".Storyboard.FirstBeachActivity">
 
     <ImageView
         android:id="@+id/character"
@@ -13,10 +13,10 @@
         android:layout_height="49dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintHorizontal_bias="0.378"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.892"
+        app:layout_constraintVertical_bias="0.091"
         app:srcCompat="@drawable/character_bo" />
 
     <ImageButton
@@ -80,6 +80,7 @@
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/a_button"
+        android:onClick="onClickButtonGreyA"
         android:scaleType="fitCenter"
         android:src="@drawable/a_button"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -90,27 +91,28 @@
         app:layout_constraintVertical_bias="0.85" />
 
     <ImageView
-        android:id="@+id/puzzleChest3"
-        android:layout_width="37dp"
-        android:layout_height="32dp"
+        android:id="@+id/puzzleChest6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/puzzle_chest"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.779"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.127" />
+
+    <ImageView
+        android:id="@+id/puzzleChest7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:rotation="-90"
         android:src="@drawable/puzzle_chest"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.423"
+        app:layout_constraintHorizontal_bias="0.008"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.234" />
+        app:layout_constraintVertical_bias="0.631" />
 
-    <ImageView
-        android:id="@+id/greenKey"
-        android:layout_width="32dp"
-        android:layout_height="52dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.908"
-        app:srcCompat="@drawable/key_green" />
 </android.support.constraint.ConstraintLayout>
