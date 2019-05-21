@@ -69,6 +69,16 @@
             tools:layout_editor_absoluteY="332dp" />
 
         <Button
+            android:id="@+id/buttonCheck4"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="onClickButtonCheck4"
+            android:text="check"
+            tools:layout_editor_absoluteX="297dp"
+            tools:layout_editor_absoluteY="333dp" />
+
+        <Button
             android:id="@+id/buttonSkip4"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
@@ -86,7 +96,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
-        android:text="seconds remaining: 300"
+        android:text="seconds remaining: 1200"
         android:textColor="#FF5722"
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/controlButtons4"
@@ -122,39 +132,55 @@
                 android:gravity="center"
                 android:text="2" />
 
-            <TextView android:text="8" />
+            <TextView
+                android:gravity="center"
+                android:text="8" />
 
-            <TextView android:text="9" />
+            <TextView
+                android:gravity="center"
+                android:text="9" />
 
-            <TextView android:text="5" />
+            <TextView
+                android:gravity="center"
+                android:text="5" />
 
-            <TextView android:text="3" />
+            <TextView
+                android:gravity="center"
+                android:text="3" />
 
             <EditText
                 android:id="@+id/editText16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
             <EditText
                 android:id="@+id/editText17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="1" />
+            <TextView
+                android:gravity="center"
+                android:text="1" />
 
             <EditText
                 android:id="@+id/editText19"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
         </TableRow>
 
         <TableRow
@@ -167,43 +193,60 @@
                 android:id="@+id/editText21"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
                 android:maxLength="1" />
 
-            <TextView android:text="5" />
+            <TextView
+                android:gravity="center"
+                android:text="5" />
 
-            <TextView android:text="4" />
+            <TextView
+                android:gravity="center"
+                android:text="4" />
 
-            <TextView android:text="1" />
+            <TextView
+                android:gravity="center"
+                android:text="1" />
 
             <EditText
                 android:id="@+id/editText25"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="7" />
+            <TextView
+                android:gravity="center"
+                android:text="7" />
 
             <EditText
                 android:id="@+id/editText27"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
             <EditText
                 android:id="@+id/editText28"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="8" />
+            <TextView
+                android:gravity="center"
+                android:text="8" />
         </TableRow>
 
         <TableRow
@@ -216,43 +259,61 @@
                 android:id="@+id/editText31"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="7" />
+            <TextView
+                android:gravity="center"
+                android:text="7" />
 
             <EditText
                 android:id="@+id/editText33"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
             <EditText
                 android:id="@+id/editText34"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="9" />
+            <TextView
+                android:gravity="center"
+                android:text="9" />
 
             <EditText
                 android:id="@+id/editText36"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="5" />
+            <TextView
+                android:gravity="center"
+                android:text="5" />
 
-            <TextView android:text="2" />
+            <TextView
+                android:gravity="center"
+                android:text="2" />
 
-            <TextView android:text="3" />
+            <TextView
+                android:gravity="center"
+                android:text="3" />
         </TableRow>
 
         <View
@@ -267,143 +328,197 @@
                 android:id="@+id/editText41"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
             <EditText
                 android:id="@+id/editText42"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
             <EditText
                 android:id="@+id/editText43"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
             <EditText
                 android:id="@+id/editText44"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="1" />
+            <TextView
+                android:gravity="center"
+                android:text="1" />
 
-            <TextView android:text="2" />
+            <TextView
+                android:gravity="center"
+                android:text="2" />
 
             <EditText
                 android:id="@+id/editText47"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="5" />
+            <TextView
+                android:gravity="center"
+                android:text="5" />
 
             <EditText
                 android:id="@+id/editText49"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView android:text="1" />
+            <TextView
+                android:gravity="center"
+                android:text="1" />
 
-            <TextView android:text="9" />
+            <TextView
+                android:gravity="center"
+                android:text="9" />
 
             <EditText
                 android:id="@+id/editText53"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="7" />
+            <TextView
+                android:gravity="center"
+                android:text="7" />
 
             <EditText
                 android:id="@+id/editText55"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="4" />
+            <TextView
+                android:gravity="center"
+                android:text="4" />
 
-            <TextView android:text="3" />
+            <TextView
+                android:gravity="center"
+                android:text="3" />
 
-            <TextView android:text="6" />
+            <TextView
+                android:gravity="center"
+                android:text="6" />
 
-            <TextView android:text="2" />
+            <TextView
+                android:gravity="center"
+                android:text="2" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView android:text="7" />
+            <TextView
+                android:gravity="center"
+                android:text="7" />
 
             <EditText
                 android:id="@+id/editText62"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
             <EditText
                 android:id="@+id/editText63"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="3" />
+            <TextView
+                android:gravity="center"
+                android:text="3" />
 
             <EditText
                 android:id="@+id/editText65"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="9" />
+            <TextView
+                android:gravity="center"
+                android:text="9" />
 
             <EditText
                 android:id="@+id/editText67"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
             <EditText
                 android:id="@+id/editText68"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="1" />
+            <TextView
+                android:gravity="center"
+                android:text="1" />
         </TableRow>
 
         <View
@@ -414,76 +529,112 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView android:text="5" />
+            <TextView
+                android:gravity="center"
+                android:text="5" />
 
-            <TextView android:text="3" />
+            <TextView
+                android:gravity="center"
+                android:text="3" />
 
-            <TextView android:text="8" />
+            <TextView
+                android:gravity="center"
+                android:text="8" />
 
             <EditText
                 android:id="@+id/editText74"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="4" />
+            <TextView
+                android:gravity="center"
+                android:text="4" />
 
-            <TextView android:text="1" />
+            <TextView
+                android:gravity="center"
+                android:text="1" />
 
-            <TextView android:text="9" />
+            <TextView
+                android:gravity="center"
+                android:text="9" />
 
             <EditText
                 android:id="@+id/editText78"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="6" />
+            <TextView
+                android:gravity="center"
+                android:text="6" />
         </TableRow>
 
         <TableRow
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-            <TextView android:text="4" />
+            <TextView
+                android:gravity="center"
+                android:text="4" />
 
-            <TextView android:text="2" />
+            <TextView
+                android:gravity="center"
+                android:text="2" />
 
-            <TextView android:text="7" />
+            <TextView
+                android:gravity="center"
+                android:text="7" />
 
-            <TextView android:text="9" />
+            <TextView
+                android:gravity="center"
+                android:text="9" />
 
             <EditText
                 android:id="@+id/editText85"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="3" />
+            <TextView
+                android:gravity="center"
+                android:text="3" />
 
-            <TextView android:text="1" />
+            <TextView
+                android:gravity="center"
+                android:text="1" />
 
             <EditText
                 android:id="@+id/editText88"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
             <EditText
                 android:id="@+id/editText89"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
         </TableRow>
 
         <TableRow
@@ -496,53 +647,69 @@
                 android:id="@+id/editText92"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
             <EditText
                 android:id="@+id/editText93"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
             <EditText
                 android:id="@+id/editText94"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
             <EditText
                 android:id="@+id/editText95"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
-            <TextView android:text="5" />
+            <TextView
+                android:gravity="center"
+                android:text="5" />
 
-            <TextView android:text="2" />
+            <TextView
+                android:gravity="center"
+                android:text="2" />
 
             <EditText
                 android:id="@+id/editText98"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
 
             <EditText
                 android:id="@+id/editText99"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:gravity="center"
                 android:ems="1"
                 android:inputType="number"
-                android:maxLength="1" />
+                android:maxLength="1"
+                android:autofillHints=""/>
         </TableRow>
 
         <View
