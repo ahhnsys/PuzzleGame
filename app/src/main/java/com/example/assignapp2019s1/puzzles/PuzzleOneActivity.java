@@ -1,5 +1,6 @@
 package com.example.assignapp2019s1.puzzles;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.CountDownTimer;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +10,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
+import com.example.assignapp2019s1.Storyboard.FirstForestActivity;
 
 public class PuzzleOneActivity extends AppCompatActivity {
 
@@ -118,6 +120,10 @@ public class PuzzleOneActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(),"Congratulations! Your answer(SOFTWARE) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
         mCountDownTimer.cancel();
         timeCancel = true;
+
+        Intent intent = new Intent(this,FirstForestActivity.class);
+        intent.putExtra("sendData",1);
+
         finish();
     }
 
