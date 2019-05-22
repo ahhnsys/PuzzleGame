@@ -82,6 +82,7 @@
         android:background="@drawable/a_button"
         android:scaleType="fitCenter"
         android:src="@drawable/a_button"
+        android:onClick="onClickButtonGreyA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.914"
@@ -101,6 +102,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.234" />
+
+    <ImageView
+        android:id="@+id/redKey"
+        android:layout_width="29dp"
+        android:layout_height="52dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.269"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.908"
+        app:srcCompat="@drawable/key_red" />
 
     <ImageView
         android:id="@+id/greenKey"

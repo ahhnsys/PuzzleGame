@@ -24,10 +24,6 @@ public class FirstForestActivity extends AppCompatActivity {
     float characterX;
     float characterY;
 
-    public ImageView redKey = (ImageView) findViewById(R.id.redKey);
-
-    ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +44,9 @@ public class FirstForestActivity extends AppCompatActivity {
 
         ImageView imageView = (ImageView) findViewById(R.id.character);
 
+        ImageView redKey = (ImageView) findViewById(R.id.redKey);
+
+        ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
 
         redKey.setVisibility(View.INVISIBLE);
 
@@ -115,14 +114,9 @@ public class FirstForestActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_right);
     }
 
-    public boolean gotRedKey(View v) {
-        ImageView redKey = (ImageView) findViewById(R.id.redKey);
-        return redKey.getVisibility() == VISIBLE;
-    }
-
-
     public void onClickButtonGreyA (View v) {
         ImageView character = (ImageView) findViewById(R.id.character);
+        ImageView redKey = (ImageView) findViewById(R.id.redKey);
 
         int[] imageCoordinates = new int[2];
         character.getLocationOnScreen(imageCoordinates);
@@ -133,8 +127,12 @@ public class FirstForestActivity extends AppCompatActivity {
         if (x >= 454 && x <= 477 && y >= 295 && y <= 325) {
             Intent puzzle1 = new Intent(this, PuzzleOneActivity.class);
             startActivity(puzzle1);
+            int getData = getIntent().getIntExtra("sendData",0);
+            if (getData == 1) {
+                redKey.setVisibility(View.VISIBLE);
+            }
         } else if (x >= 1704 && x <= 1736 && y >= 494 && y <= 592) {
-            if (gotRedKey(v)) {
+            if (gotRedKey()) {
                 Intent puzzle2 = new Intent(this, PuzzleTwoActivity.class);
                 startActivity(puzzle2);
                 redKey.setVisibility(View.GONE);
@@ -146,4 +144,10 @@ public class FirstForestActivity extends AppCompatActivity {
             startActivity(nextScreen);
         }
     }
+
+    private boolean gotRedKey() {
+        ImageView redKey = (ImageView) findViewById(R.id.redKey);
+            return redKey.getVisibility() == VISIBLE;
+    }
+
 }

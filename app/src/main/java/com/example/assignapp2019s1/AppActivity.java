@@ -6,17 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.assignapp2019s1.Storyboard.FirstBeachActivity;
-import com.example.assignapp2019s1.Storyboard.FirstCaveActivity;
-import com.example.assignapp2019s1.Storyboard.FirstForestActivity;
-import com.example.assignapp2019s1.Storyboard.SecondBeachActivity;
-import com.example.assignapp2019s1.Storyboard.SecondForestActivity;
+import com.example.assignapp2019s1.Storyboard.BridgeActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleEightActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleOneActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleTwoActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleThreeActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleFourActivity;
-import com.example.assignapp2019s1.puzzles.PuzzleEightActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleFiveActivity;
 
 public class AppActivity extends AppCompatActivity {
@@ -49,7 +44,7 @@ public class AppActivity extends AppCompatActivity {
     }
 
     public void onClickButtonGameplay(View view){
-        Intent intent = new Intent(this, FirstBeachActivity.class);
+        Intent intent = new Intent(this, BridgeActivity.class);
         startActivity(intent);
     }
 

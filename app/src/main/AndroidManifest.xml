@@ -11,6 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
         <activity android:name=".Storyboard.BridgeActivity"></activity>
+        <activity android:name=".Storyboard.SecondBeachActivity" />
         <activity android:name=".Storyboard.FirstBeachActivity" />
         <activity android:name=".Storyboard.SecondCaveActivity" />
         <activity android:name=".Storyboard.FirstCaveActivity" />

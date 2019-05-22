@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -14,8 +15,6 @@ import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.puzzles.PuzzleFiveActivity;
 
 public class FirstCaveActivity extends AppCompatActivity {
-
-    public ImageView orangeKey = (ImageView) findViewById(R.id.orangeKey);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,7 +33,19 @@ public class FirstCaveActivity extends AppCompatActivity {
         leftButton.setOnTouchListener(touchListener);
         rightButton.setOnTouchListener(touchListener);
 
+        ImageView orangeKey = (ImageView) findViewById(R.id.orangeKey);
+
         orangeKey.setVisibility(View.INVISIBLE);
+
+        ImageView imageView = (ImageView) findViewById(R.id.character);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int[] values = new int[2];
+                view.getLocationOnScreen(values);
+                Log.d("X & Y",values[0]+" "+values[1]);
+            }
+        });
     }
 
     float characterX;
@@ -57,9 +68,6 @@ public class FirstCaveActivity extends AppCompatActivity {
                     break;
                 case R.id.imageButtonRight:
                     onClickButtonRight(v);
-                    break;
-                case R.id.imageButtonA:
-                    onClickButtonA(v);
                     break;
                 default:
                     break;
@@ -101,7 +109,7 @@ public class FirstCaveActivity extends AppCompatActivity {
     }
 
     //incomplete
-    public void onClickButtonA(View v) {
+    public void onClickButtonGreyA(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
 
         int[] imageCoordinates = new int[2];
@@ -110,10 +118,10 @@ public class FirstCaveActivity extends AppCompatActivity {
         int x = imageCoordinates[0];
         int y = imageCoordinates[1];
 
-        if (x >= 454 && x <= 477 && y >= 295 && y <= 325) {
+        if (x >= 780 && x <= 820 && y >= 850 && y <= 880) {
                 Intent puzzle5 = new Intent(this, PuzzleFiveActivity.class);
                 startActivity(puzzle5);
-         } else if (x >=  1924 && x <= 2314 && y <= 50) {
+         } else if (x >=  1063 && x <= 1345 && y >= 1240) {
             Intent nextScreen = new Intent(this, SecondCaveActivity.class);
             startActivity(nextScreen);
         }

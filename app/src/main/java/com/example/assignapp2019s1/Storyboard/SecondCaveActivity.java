@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
@@ -12,7 +13,6 @@ import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.puzzles.PuzzleFiveActivity;
-import com.example.assignapp2019s1.puzzles.PuzzleFourActivity;
 
 public class SecondCaveActivity extends AppCompatActivity {
 
@@ -32,6 +32,16 @@ public class SecondCaveActivity extends AppCompatActivity {
         downButton.setOnTouchListener(touchListener);
         leftButton.setOnTouchListener(touchListener);
         rightButton.setOnTouchListener(touchListener);
+
+        ImageView imageView = (ImageView) findViewById(R.id.character);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int[] values = new int[2];
+                view.getLocationOnScreen(values);
+                Log.d("X & Y",values[0]+" "+values[1]);
+            }
+        });
 
     }
 
@@ -110,17 +120,26 @@ public class SecondCaveActivity extends AppCompatActivity {
         int x = imageCoordinates[0];
         int y = imageCoordinates[1];
 
-        if (x >= 454 && x <= 477 && y >= 295 && y <= 325) {
+        if (x >= 1920 && x <= 1968 && y >= 847 && y <= 930) {
             if (gotOrangeKey()) {
                 Intent puzzle5 = new Intent(this, PuzzleFiveActivity.class);
                 startActivity(puzzle5);
             } else {
                 Toast.makeText(getApplicationContext(), "I need an orange key...", Toast.LENGTH_SHORT).show();
             }
+        } else if (x >= 620 && x <= 818 && y >= 1127 && y <= 1165) {
+            if (rockIsGone()) {
+                Intent nextScreen = new Intent(this, FirstBeachActivity.class);
+                startActivity(nextScreen);
+            }
         }
     }
 
     private boolean gotOrangeKey() {
+        return false;
+    }
+
+    private boolean rockIsGone() {
         return false;
     }
 

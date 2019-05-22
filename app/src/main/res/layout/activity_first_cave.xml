@@ -82,6 +82,7 @@
         android:background="@drawable/a_button"
         android:scaleType="fitCenter"
         android:src="@drawable/a_button"
+        android:onClick="onClickButtonGreyA"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.914"
