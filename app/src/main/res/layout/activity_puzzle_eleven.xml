@@ -4,16 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".puzzles.PuzzleNineActivity">
+    tools:context=".puzzles.PuzzleElevenActivity">
 
     <TextView
-        android:id="@+id/textViewLevelNine"
+        android:id="@+id/textViewLevelEleven"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="61dp"
         android:layout_marginLeft="61dp"
         android:layout_marginTop="61dp"
-        android:text="Level 9"
+        android:text="Level 4"
         android:textColor="#3F51B5"
         android:textSize="18sp"
         android:textStyle="bold"
@@ -21,21 +21,21 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/textViewLevelNineInstruction"
+        android:id="@+id/textViewLevelElevenInstruction"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:text="Use the five letters of the letters provided to form a word (Each letter can only be used once)"
+        android:text="Use all six letters provided to form a word (Each letter can only be used once)"
         android:textColor="#3F51B5"
         android:textSize="14sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toBottomOf="@+id/textViewLevelNine"
-        app:layout_constraintStart_toEndOf="@+id/textViewLevelNine"
-        app:layout_constraintTop_toTopOf="@+id/textViewLevelNine" />
+        app:layout_constraintBottom_toBottomOf="@+id/textViewLevelEleven"
+        app:layout_constraintStart_toEndOf="@+id/textViewLevelEleven"
+        app:layout_constraintTop_toTopOf="@+id/textViewLevelEleven" />
 
     <TextView
-        android:id="@+id/textViewLevelNineHint"
+        android:id="@+id/textViewLevelElevenHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -43,19 +43,19 @@
         android:layout_marginTop="16dp"
         android:text=""
         android:textColor="#03A9F4"
-        app:layout_constraintStart_toStartOf="@+id/textViewLevelNine"
-        app:layout_constraintTop_toBottomOf="@+id/textViewLevelNine" />
+        app:layout_constraintStart_toStartOf="@+id/textViewLevelEleven"
+        app:layout_constraintTop_toBottomOf="@+id/textViewLevelEleven" />
 
     <TextView
-        android:id="@+id/answerScreen9"
+        android:id="@+id/answerScreen11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center_horizontal"
         android:text=""
-        app:layout_constraintTop_toBottomOf="@+id/textViewLevelNineHint" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewLevelElevenHint" />
 
     <LinearLayout
-        android:id="@+id/lettersProvided9"
+        android:id="@+id/lettersProvided11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -68,15 +68,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/answerScreen9">
+        app:layout_constraintTop_toBottomOf="@+id/answerScreen11">
 
         <Button
-            android:id="@+id/buttonA9"
+            android:id="@+id/buttonA11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonA9"
+            android:onClick="onClickButtonA11"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -86,87 +86,72 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonE9"
+            android:id="@+id/buttonB11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonE9"
+            android:onClick="onClickButtonB11"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
-            android:text="E"
+            android:text="B"
             android:textColor="#2196F3"
             tools:layout_editor_absoluteX="127dp"
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonF9"
+            android:id="@+id/buttonG11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonF9"
+            android:onClick="onClickButtonG11"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
-            android:text="F"
+            android:text="G"
             android:textColor="#2196F3"
             tools:layout_editor_absoluteX="223dp"
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonO9"
+            android:id="@+id/buttonI11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonO9"
+            android:onClick="onClickButtonI11"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
-            android:text="O"
+            android:text="I"
             android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="683dp"
+            tools:layout_editor_absoluteX="223dp"
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonR9"
+            android:id="@+id/buttonL11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonR9"
+            android:onClick="onClickButtonL11"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
-            android:text="R"
+            android:text="L"
             android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="319dp"
+            tools:layout_editor_absoluteX="223dp"
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
-            android:id="@+id/buttonS9"
+            android:id="@+id/buttonT11"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonS9"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="10"
-            android:shadowDy="20"
-            android:text="S"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="590dp"
-            tools:layout_editor_absoluteY="221dp" />
-
-        <Button
-            android:id="@+id/buttonT9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_button"
-            android:onClick="onClickButtonT9"
+            android:onClick="onClickButtonT11"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
@@ -175,78 +160,64 @@
             tools:layout_editor_absoluteX="415dp"
             tools:layout_editor_absoluteY="221dp" />
 
-        <Button
-            android:id="@+id/buttonW9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_button"
-            android:onClick="onClickButtonW9"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="10"
-            android:shadowDy="20"
-            android:text="W"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="515dp"
-            tools:layout_editor_absoluteY="221dp" />
 
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/controlButtons9"
+        android:id="@+id/controlButtons11"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="24dp"
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimer9">
+        app:layout_constraintTop_toBottomOf="@+id/textViewTimer11">
 
         <Button
-            android:id="@+id/buttonClear9"
+            android:id="@+id/buttonClear11"
             style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonClear9"
+            android:onClick="onClickButtonClear11"
             android:text="clear"
             tools:layout_editor_absoluteX="60dp"
             tools:layout_editor_absoluteY="333dp" />
 
         <Button
-            android:id="@+id/buttonBack9"
+            android:id="@+id/buttonBack11"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonBack9"
+            android:onClick="onClickButtonBack11"
             android:text="back"
             tools:layout_editor_absoluteX="178dp"
-            tools:layout_editor_absoluteY="332dp"
-            style="?android:attr/buttonBarButtonStyle"/>
+            tools:layout_editor_absoluteY="332dp" />
 
         <Button
-            android:id="@+id/buttonHelp9"
+            android:id="@+id/buttonHelp11"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonHelp9"
-            android:text="help"
-            style="?android:attr/buttonBarButtonStyle"/>
+            android:onClick="onClickButtonHelp11"
+            android:text="help" />
 
         <Button
-            android:id="@+id/buttonSkip9"
+            android:id="@+id/buttonSkip11"
+            style="?android:attr/buttonBarButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="onClickButtonSkip9"
+            android:onClick="onClickButtonSkip11"
             android:text="skip"
             tools:layout_editor_absoluteX="297dp"
-            tools:layout_editor_absoluteY="333dp"
-            style="?android:attr/buttonBarButtonStyle"/>
+            tools:layout_editor_absoluteY="333dp" />
 
 
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textViewTimer9"
+        android:id="@+id/textViewTimer11"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
@@ -254,25 +225,8 @@
         android:text="seconds remaining: 300"
         android:textColor="#FF5722"
         android:textSize="24sp"
-        app:layout_constraintBottom_toTopOf="@+id/controlButtons9"
-        app:layout_constraintTop_toBottomOf="@+id/lettersProvided9"
+        app:layout_constraintBottom_toTopOf="@+id/controlButtons11"
+        app:layout_constraintTop_toBottomOf="@+id/lettersProvided11"
         tools:layout_editor_absoluteX="87dp" />
-
-    <ImageButton
-        android:id="@+id/imageButton9"
-        android:layout_width="91dp"
-        android:layout_height="85dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="32dp"
-        android:background="#FFFFFF"
-        android:onClick="onClickImageButton9"
-        android:padding="0dp"
-        android:scaleType="centerInside"
-        android:src="@drawable/bomb"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/controlButtons9"
-        app:layout_constraintTop_toBottomOf="@+id/textViewTimer9" />
-
 
 </android.support.constraint.ConstraintLayout>

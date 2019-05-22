@@ -16,109 +16,104 @@ import java.util.TreeSet;
 public class PuzzleTenActivity extends AppCompatActivity {
 
     private Set<String> solutions = new TreeSet<String>(){{
-        add("EAST");
-        add("ETAS");
-        add("FAST");
-        add("FATE");
-        add("FATS");
-        add("FEAT");
-        add("FETA");
-        add("FOES");
-        add("OAFS");
-        add("OATS");
-        add("SAFE");
-        add("SATE");
-        add("SEAT");
-        add("SETA");
-        add("SOFA");
-        add("SOFT");
-        add("TEAS");
-        add("TOES");
+        add("AIL");
+        add("ALB");
+        add("BAG");
+        add("BAT");
+        add("BIG");
+        add("BIT");
+        add("GAB");
+        add("GAL");
+        add("LAB");
+        add("LAG");
+        add("LIT");
+        add("TAB");
+        add("TAG");
     }};
 
     private Set<String> answers = new TreeSet<String>();
 
     private String currentAnswer = "";
 
-    public CountDownTimer mCountDownTimer3;
+    public CountDownTimer mCountDownTimer10;
 
-    public boolean timeCancel3 = false;
+    public boolean timeCancel10 = false;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_puzzle_three);
+        setContentView(R.layout.activity_puzzle_ten);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         iniTimer();
     }
 
     public void iniTimer(){
 
-        if (mCountDownTimer3!=null){
-            mCountDownTimer3.cancel();
+        if (mCountDownTimer10!=null){
+            mCountDownTimer10.cancel();
         }
 
-        mCountDownTimer3 = new CountDownTimer(300000+500, 1000) {
+        mCountDownTimer10 = new CountDownTimer(300000+500, 1000) {
 
-            TextView tvt3 = findViewById(R.id.textViewTimer3) ;
+            TextView tvt10 = findViewById(R.id.textViewTimer10) ;
 
             public void onTick(long millisUntilFinished) {
                 if(!PuzzleTenActivity.this.isFinishing()){
-                    tvt3.setText("seconds remaining: " + millisUntilFinished / 1000);
-                    if (timeCancel3==true)
+                    tvt10.setText("seconds remaining: " + millisUntilFinished / 1000);
+                    if (timeCancel10==true)
                         this.cancel();
                 }
             }
 
             public void onFinish() {
-                tvt3.setText("Time is up!");
+                tvt10.setText("Time is up!");
                 Toast.makeText(getApplicationContext(),"Time is up and you haven't solved this puzzle yet. Try it again!",Toast.LENGTH_LONG).show();
                 finish();
             }
         };
-        mCountDownTimer3.start();
+        mCountDownTimer10.start();
     }
 
-    public void onClickButtonA3(View view){
+    public void onClickButtonA10(View view){
         currentAnswer = currentAnswer + 'A';
-        updateScreen(findViewById(R.id.answerScreen3));
+        updateScreen(findViewById(R.id.answerScreen10));
         check();
     }
 
-    public void onClickButtonE3(View view){
-        currentAnswer = currentAnswer + 'E';
-        updateScreen(findViewById(R.id.answerScreen3));
+    public void onClickButtonB10(View view){
+        currentAnswer = currentAnswer + 'B';
+        updateScreen(findViewById(R.id.answerScreen10));
         check();
     }
 
-    public void onClickButtonF3(View view){
-        currentAnswer = currentAnswer + 'F';
-        updateScreen(findViewById(R.id.answerScreen3));
+    public void onClickButtonG10(View view){
+        currentAnswer = currentAnswer + 'G';
+        updateScreen(findViewById(R.id.answerScreen10));
         check();
     }
 
-    public void onClickButtonO3(View view){
-        currentAnswer = currentAnswer + 'O';
-        updateScreen(findViewById(R.id.answerScreen3));
+    public void onClickButtonI10(View view){
+        currentAnswer = currentAnswer + 'I';
+        updateScreen(findViewById(R.id.answerScreen10));
         check();
     }
 
-    public void onClickButtonS3(View view){
-        currentAnswer = currentAnswer + 'S';
-        updateScreen(findViewById(R.id.answerScreen3));
+    public void onClickButtonL10(View view){
+        currentAnswer = currentAnswer + 'L';
+        updateScreen(findViewById(R.id.answerScreen10));
         check();
     }
 
-    public void onClickButtonT3(View view){
+    public void onClickButtonT10(View view){
         currentAnswer = currentAnswer + 'T';
-        updateScreen(findViewById(R.id.answerScreen3));
+        updateScreen(findViewById(R.id.answerScreen10));
         check();
     }
 
 
     public void check(){
-        if (currentAnswer.length() == 4){
+        if (currentAnswer.length() == 3){
             if (answers.contains(currentAnswer)){
                 Toast.makeText(getApplicationContext(),"Your have found this word.",Toast.LENGTH_SHORT).show();
                 clear();
@@ -137,13 +132,13 @@ public class PuzzleTenActivity extends AppCompatActivity {
     public void checkedRightAnswer(){
         Toast.makeText(getApplicationContext(),"You find a new word "+currentAnswer,Toast.LENGTH_SHORT).show();
         answers.add(currentAnswer);
-        TextView tvc = findViewById(R.id.textViewLevelThreeCount);
-        tvc.setText("Number of words found: " + answers.size());
+        TextView tvc10 = findViewById(R.id.textViewLevelTenCount);
+        tvc10.setText("Number of words found: " + answers.size());
         clear();
         if (answers.size() >= 5){
             Toast.makeText(getApplicationContext(),"Congratulations! You have found enough words. You have passed this level.",Toast.LENGTH_LONG).show();
-            mCountDownTimer3.cancel();
-            timeCancel3 = true;
+            mCountDownTimer10.cancel();
+            timeCancel10 = true;
             finish();
         }
     }
@@ -153,24 +148,24 @@ public class PuzzleTenActivity extends AppCompatActivity {
         clear();
     }
 
-    public void onClickButtonClear3(View view){
+    public void onClickButtonClear10(View view){
         clear();
     }
 
     public void clear(){
         currentAnswer = "";
-        updateScreen(findViewById(R.id.answerScreen3));
+        updateScreen(findViewById(R.id.answerScreen10));
     }
 
-    public void onClickButtonBack3(View view){
-        mCountDownTimer3.cancel();
-        timeCancel3 = true;
+    public void onClickButtonBack10(View view){
+        mCountDownTimer10.cancel();
+        timeCancel10 = true;
         finish();
     }
 
-    public void onClickButtonSkip3(View view){
-        mCountDownTimer3.cancel();
-        timeCancel3 = true;
+    public void onClickButtonSkip10(View view){
+        mCountDownTimer10.cancel();
+        timeCancel10 = true;
         finish();
     }
 
@@ -182,9 +177,9 @@ public class PuzzleTenActivity extends AppCompatActivity {
     @Override
     protected void onDestroy(){
         super.onDestroy();
-        if (mCountDownTimer3 != null){
-            timeCancel3 = true;
-            mCountDownTimer3.cancel();
+        if (mCountDownTimer10 != null){
+            timeCancel10 = true;
+            mCountDownTimer10.cancel();
         }
     }
 
