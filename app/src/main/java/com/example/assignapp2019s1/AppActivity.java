@@ -13,7 +13,6 @@ import com.example.assignapp2019s1.puzzles.PuzzleOneActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleTwoActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleThreeActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleFourActivity;
-import com.example.assignapp2019s1.puzzles.PuzzleEightActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleFiveActivity;
 
 public class AppActivity extends AppCompatActivity {
