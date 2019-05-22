@@ -9,18 +9,15 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
-import com.example.assignapp2019s1.puzzles.PuzzleSevenActivity;
-import com.example.assignapp2019s1.puzzles.PuzzleSixActivity;
+import com.example.assignapp2019s1.puzzles.PuzzleTenActivity;
 
-import static android.view.View.VISIBLE;
 
 
 //authored by Natalie
 //https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons
-public class FirstBeachActivity extends AppCompatActivity {
+public class BridgeActivity extends AppCompatActivity {
 
     float characterX;
     float characterY;
@@ -28,7 +25,7 @@ public class FirstBeachActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_first_beach);
+        setContentView(R.layout.activity_bridge);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
 
         ImageButton upButton = (ImageButton) findViewById(R.id.imageButtonUp);
@@ -42,9 +39,9 @@ public class FirstBeachActivity extends AppCompatActivity {
         leftButton.setOnTouchListener(touchListener);
         rightButton.setOnTouchListener(touchListener);
 
-        ImageView yellowKey = (ImageView) findViewById(R.id.yellowKey);
-        yellowKey.setVisibility(View.INVISIBLE);
 
+        ImageView blueKey = (ImageView) findViewById(R.id.blueKey);
+        blueKey.setVisibility(View.INVISIBLE);
         ImageView imageView = (ImageView) findViewById(R.id.character);
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,8 +52,6 @@ public class FirstBeachActivity extends AppCompatActivity {
             }
         });
 
-        ImageView puzzleChest7 = (ImageView) findViewById(R.id.puzzleChest7);
-        puzzleChest7.setVisibility(View.INVISIBLE);
     }
 
 
@@ -90,7 +85,6 @@ public class FirstBeachActivity extends AppCompatActivity {
         characterY = character.getY();
         characterY -= 10;
         character.setY(characterY);
-        final int[] characterBackAnimation = new int[]{R.drawable.character_bo_back, R.drawable.character_bo_back_walking, R.drawable.character_bo_back_walking2};
         character.setImageResource(R.drawable.character_bo_back);
 
     }
@@ -130,30 +124,10 @@ public class FirstBeachActivity extends AppCompatActivity {
         int x = imageCoordinates[0];
         int y = imageCoordinates[1];
 
-        ImageView puzzleChest7 = (ImageView) findViewById(R.id.puzzleChest7);
-
-        if (x >= 1775 && x <= 1885 && y >= 230 && y <= 300) {
-            Intent puzzle6 = new Intent(this, PuzzleSixActivity.class);
-            startActivity(puzzle6);
-        } else if (gotShovel() && x >= 15 && x <= 85 && y >= 720 && y <=820) {
-            puzzleChest7.setVisibility(View.VISIBLE);
-        } else if (x >= 135 && x <= 175 && y >= 780 && y <=820 && foundPuzzleChest7()) {
-            Intent puzzle7 = new Intent(this, PuzzleSevenActivity.class);
-            startActivity(puzzle7);
-        }
-
-        else if (x <= 2405 && y >= 530 && y <= 910) {
-            Intent nextScreen = new Intent(this, SecondBeachActivity.class);
-            startActivity(nextScreen);
+        if (x >= 1354 && x <= 1443 && y >= 592 && y <= 692) {
+            Intent puzzle10 = new Intent(this, PuzzleTenActivity.class);
+            startActivity(puzzle10);
         }
     }
 
-    private boolean gotShovel() {
-        return true;
-    }
-
-    private boolean foundPuzzleChest7() {
-        ImageView puzzleChest7 = (ImageView) findViewById(R.id.puzzleChest7);
-        return  (puzzleChest7.getVisibility() == View.VISIBLE);
-    }
 }

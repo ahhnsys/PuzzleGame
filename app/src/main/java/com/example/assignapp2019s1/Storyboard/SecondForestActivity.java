@@ -12,11 +12,10 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
-import com.example.assignapp2019s1.puzzles.PuzzleOneActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleThreeActivity;
-import com.example.assignapp2019s1.puzzles.PuzzleTwoActivity;
 
 public class SecondForestActivity extends AppCompatActivity {
+
     float characterX;
     float characterY;
 
@@ -31,6 +30,12 @@ public class SecondForestActivity extends AppCompatActivity {
         ImageButton leftButton = (ImageButton) findViewById(R.id.imageButtonLeft);
         ImageButton rightButton = (ImageButton) findViewById(R.id.imageButtonRight);
 
+        ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
+        ImageView redKey = (ImageView) findViewById(R.id.redKey);
+
+        greenKey.setVisibility(View.INVISIBLE);
+        redKey.setVisibility(View.INVISIBLE);
+
         SecondForestActivity.MyTouchListener touchListener = new SecondForestActivity.MyTouchListener();
         upButton.setOnTouchListener(touchListener);
         downButton.setOnTouchListener(touchListener);
@@ -38,9 +43,15 @@ public class SecondForestActivity extends AppCompatActivity {
         rightButton.setOnTouchListener(touchListener);
 
         ImageView imageView = (ImageView) findViewById(R.id.character);
-        int[] values = new int[2];
-        imageView.getLocationOnScreen(values);
-        Log.d("X & Y",values[0]+" "+values[1]);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int[] values = new int[2];
+                view.getLocationOnScreen(values);
+                Log.d("X & Y",values[0]+" "+values[1]);
+            }
+        });
+
     }
 
     public class MyTouchListener implements View.OnTouchListener {
@@ -58,9 +69,6 @@ public class SecondForestActivity extends AppCompatActivity {
                     break;
                 case R.id.imageButtonRight:
                     onClickButtonRight(v);
-                    break;
-                case R.id.imageButtonA:
-                    onClickButtonA(v);
                     break;
                 default:
                     break;
@@ -101,16 +109,8 @@ public class SecondForestActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_right);
     }
 
-    private boolean gotGreenKey() {
-        return false;
-    }
-
-    private boolean gotTorch() {
-    return false;
-    }
-
     //incomplete
-    public void onClickButtonA(View v) {
+    public void onClickButtonGreyA(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
 
         int[] imageCoordinates = new int[2];
@@ -119,15 +119,15 @@ public class SecondForestActivity extends AppCompatActivity {
         int x = imageCoordinates[0];
         int y = imageCoordinates[1];
 
-        if (x >= 454 && x <= 477 && y >= 295 && y <= 325) {
+        if (x >= 1130 && x <= 1175 && y >= 275 && y <= 350) {
                 if (gotGreenKey()) {
                     Intent puzzle3 = new Intent(this, PuzzleThreeActivity.class);
                     startActivity(puzzle3);
                 } else {
                     Toast.makeText(getApplicationContext(), "I need a green key...", Toast.LENGTH_SHORT).show();
                 }
-        } else if (x >= 1704 && x <= 1736 && y >= 494 && y <= 592) {
-            if (gotTorch()) {
+        } else if (x >= 113 && x <= 125 && y >= 450 && y <= 530) {
+            if (gotFlashlight()) {
                 Intent cave = new Intent(this, FirstCaveActivity.class);
                 startActivity(cave);
             } else {
@@ -135,6 +135,18 @@ public class SecondForestActivity extends AppCompatActivity {
             }
         }
 
+    }
+
+    private boolean gotGreenKey() {
+        return false;
+    }
+
+    private boolean gotRedKey() {
+        return false;
+    }
+
+    private boolean gotFlashlight() {
+        return false;
     }
 
 }
