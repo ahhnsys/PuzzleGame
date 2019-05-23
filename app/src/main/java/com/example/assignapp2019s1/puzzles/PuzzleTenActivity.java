@@ -170,7 +170,7 @@ public class PuzzleTenActivity extends AppCompatActivity {
     }
 
     public void updateScreen(View view){
-        TextView tv = view.findViewById(R.id.answerScreen3);
+        TextView tv = view.findViewById(R.id.answerScreen10);
         tv.setText(currentAnswer);
     }
 
