@@ -23,7 +23,7 @@ _The story is about a boy named Bo who is whisked away into a world full of puzz
 + [Meeting 1 - 26/04/2019 - decide team structure and app, divide up tasks](meeting1.md)
 + [Meeting 2 - 03/05/2019 - communicate with each other's progress](meeting2.md)
 + [Meeting 3 - 16/05/2019 - show each person's own completed parts and combine them into a complete APP](meeting3.md)
-+ [Meeting 4 - date - review and practice demo](meeting4.md)
++ [Meeting 4 - 23/05/2019 - review and test](meeting4.md)
 
 ## Statement of Originality
 
