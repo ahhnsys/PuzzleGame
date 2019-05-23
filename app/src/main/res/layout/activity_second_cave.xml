@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/cave_world2"
-    tools:context=".Storyboard.FirstCaveActivity">
+    tools:context=".Storyboard.SecondCaveActivity">
 
     <ImageView
         android:id="@+id/character"
@@ -76,10 +76,11 @@
         app:srcCompat="@drawable/arrow_right" />
 
     <ImageButton
-        android:id="@+id/imageButtonA"
+        android:id="@+id/imageButtonGreyA"
         android:layout_width="50dp"
         android:layout_height="50dp"
         android:background="@drawable/a_button"
+        android:onClick="onClickButtonGreyA"
         android:scaleType="fitCenter"
         android:src="@drawable/a_button"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -101,6 +102,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.702" />
+
+    <ImageView
+        android:id="@+id/rock"
+        android:layout_width="105dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.268"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/rock" />
 
     <ImageView
         android:id="@+id/orangeKey"

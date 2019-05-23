@@ -1,5 +1,7 @@
 package com.example.assignapp2019s1.Storyboard;
 
+//authored by Natalie Phan
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
@@ -12,8 +14,11 @@ import android.widget.ImageView;
 import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
-import com.example.assignapp2019s1.puzzles.PuzzleFiveActivity;
+import com.example.assignapp2019s1.puzzles.PuzzleElevenActivity;
 
+/*
+    This activity is contains the controls and methods for the Cave Map of the story. It is the first part of the second map.
+ */
 public class FirstCaveActivity extends AppCompatActivity {
 
     @Override
@@ -27,15 +32,16 @@ public class FirstCaveActivity extends AppCompatActivity {
         ImageButton leftButton = (ImageButton) findViewById(R.id.imageButtonLeft);
         ImageButton rightButton = (ImageButton) findViewById(R.id.imageButtonRight);
 
+        //set touch for buttons
+        //https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons
         FirstCaveActivity.MyTouchListener touchListener = new FirstCaveActivity.MyTouchListener();
         upButton.setOnTouchListener(touchListener);
         downButton.setOnTouchListener(touchListener);
         leftButton.setOnTouchListener(touchListener);
         rightButton.setOnTouchListener(touchListener);
 
-        ImageView orangeKey = (ImageView) findViewById(R.id.orangeKey);
-
-        orangeKey.setVisibility(View.INVISIBLE);
+        ImageView orangeKey = (ImageView) findViewById(R.id.orangeKey); //gets the id of image
+        orangeKey.setVisibility(View.INVISIBLE); //sets the visibility to invisible until needed
 
         ImageView imageView = (ImageView) findViewById(R.id.character);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -52,7 +58,7 @@ public class FirstCaveActivity extends AppCompatActivity {
     float characterY;
 
 
-
+    //defines actions for buttons
     public class MyTouchListener implements View.OnTouchListener {
         @Override
         public boolean onTouch(View v, MotionEvent event) {
@@ -76,6 +82,7 @@ public class FirstCaveActivity extends AppCompatActivity {
         }
     }
 
+    //moves the image north on the Y axis
     public void onClickButtonUp(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterY = character.getY();
@@ -84,6 +91,7 @@ public class FirstCaveActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_back);
     }
 
+    //moves the image south on the Y axis
     public void onClickButtonDown(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterY = character.getY();
@@ -92,6 +100,7 @@ public class FirstCaveActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo);
     }
 
+    //moves the image west on the X axis
     public void onClickButtonLeft(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterX = character.getX();
@@ -100,6 +109,7 @@ public class FirstCaveActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_left);
     }
 
+    //moves the image east on the X axis
     public void onClickButtonRight(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterX = character.getX();
@@ -108,7 +118,7 @@ public class FirstCaveActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_right);
     }
 
-    //incomplete
+    //intents to other activities
     public void onClickButtonGreyA(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
 
@@ -118,12 +128,38 @@ public class FirstCaveActivity extends AppCompatActivity {
         int x = imageCoordinates[0];
         int y = imageCoordinates[1];
 
-        if (x >= 780 && x <= 820 && y >= 850 && y <= 880) {
-                Intent puzzle5 = new Intent(this, PuzzleFiveActivity.class);
-                startActivity(puzzle5);
+        if (x >= 780 && x <= 820 && y >= 840 && y <= 890) {
+                Intent puzzle4 = new Intent(this, PuzzleElevenActivity.class);
+                startActivityForResult(puzzle4,0);
          } else if (x >=  1063 && x <= 1345 && y >= 1240) {
-            Intent nextScreen = new Intent(this, SecondCaveActivity.class);
-            startActivity(nextScreen);
+            if (gotOrangeKey()) {
+                Intent nextScreen = new Intent(this, SecondCaveActivity.class);
+                startActivity(nextScreen);
+            } else {
+                Toast.makeText(getApplicationContext(), "Please complete all puzzles before continuing", Toast.LENGTH_LONG).show();
+            }
+        }
+    }
+
+    //checks whether image is viewable on screen
+    private boolean gotOrangeKey() {
+        ImageView orangeKey = (ImageView) findViewById(R.id.orangeKey);
+        return orangeKey.getVisibility() == View.VISIBLE;
+    }
+
+    //gets data which has been sent from another activity without restarting this activity and sets images according to the result
+    //https://stackoverflow.com/questions/10407159/how-to-manage-startactivityforresult-on-android
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        ImageView orangeKey = (ImageView) findViewById(R.id.orangeKey);
+        if (requestCode == 0) {
+            if (resultCode == Activity.RESULT_OK) {
+                int getData = data.getIntExtra("sendData", -1);
+                if (getData == 0) {
+                    orangeKey.setVisibility(View.VISIBLE);
+                    Toast.makeText(getApplicationContext(),"Found an Orange Key!",Toast.LENGTH_LONG).show();
+                }
+            }
         }
     }
 

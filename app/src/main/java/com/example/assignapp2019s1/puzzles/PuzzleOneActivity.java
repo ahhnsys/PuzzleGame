@@ -118,9 +118,12 @@ public class PuzzleOneActivity extends AppCompatActivity {
     }
 
     public void checkedRightAnswer(){
-        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(SOFTWARE) is correct. You got a Red Key.",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(SOFTWARE) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
         mCountDownTimer.cancel();
         timeCancel = true;
+
+        //authored by Natalie Phan
+        //sends data that puzzle has been completed to original class
         Intent intent = new Intent(this,FirstForestActivity.class);
         intent.putExtra("sendData",0);
         setResult(Activity.RESULT_OK,intent);

@@ -10,14 +10,14 @@
         android:screenOrientation="landscape"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.NoActionBar">
-        <activity android:name=".Storyboard.BridgeActivity"></activity>
+        <activity android:name=".FinalActivity"></activity>
+        <activity android:name=".Storyboard.BridgeActivity" />
         <activity android:name=".Storyboard.SecondBeachActivity" />
         <activity android:name=".Storyboard.FirstBeachActivity" />
         <activity android:name=".Storyboard.SecondCaveActivity" />
         <activity android:name=".Storyboard.FirstCaveActivity" />
         <activity android:name=".Storyboard.SecondForestActivity" />
         <activity android:name=".Storyboard.FirstForestActivity" />
-        <activity android:name=".Storyboard.StartStoryActivity" />
         <activity android:name=".puzzles.PuzzleOneActivity" />
         <activity android:name=".puzzles.PuzzleTwoActivity" />
         <activity android:name=".puzzles.PuzzleThreeActivity" />

@@ -127,4 +127,16 @@
         app:layout_constraintVertical_bias="0.908"
         app:srcCompat="@drawable/key_yellow" />
 
+    <ImageView
+        android:id="@+id/shovel"
+        android:layout_width="71dp"
+        android:layout_height="79dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.348"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.939"
+        app:srcCompat="@drawable/shovel" />
+
 </android.support.constraint.ConstraintLayout>

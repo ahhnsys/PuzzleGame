@@ -6,8 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-import com.example.assignapp2019s1.Storyboard.StartStoryActivity;
-
 public class WelcomeActivity extends AppCompatActivity {
 
     @Override
@@ -18,7 +16,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     public void startButton(View v) {
-        Intent intent = new Intent(getBaseContext(), StartStoryActivity.class);
+        Intent intent = new Intent(getBaseContext(), AppActivity.class);
         startActivity(intent);
     }
 }

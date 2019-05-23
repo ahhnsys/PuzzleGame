@@ -11,7 +11,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
-import com.example.assignapp2019s1.Storyboard.FirstForestActivity;
 import com.example.assignapp2019s1.Storyboard.SecondForestActivity;
 
 import java.util.Set;
@@ -145,9 +144,12 @@ public class PuzzleThreeActivity extends AppCompatActivity {
         tvc.setText("Number of words found: " + answers.size());
         clear();
         if (answers.size() >= 5){
-            Toast.makeText(getApplicationContext(),"Congratulations! You have found enough words. You found a Flashlight.",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Congratulations! You have found enough words. You have passed this level.",Toast.LENGTH_LONG).show();
             mCountDownTimer3.cancel();
             timeCancel3 = true;
+
+            //authored by Natalie Phan
+            //sends data that puzzle has been completed to original class
             Intent intent = new Intent(this, SecondForestActivity.class);
             intent.putExtra("sendData",0);
             setResult(Activity.RESULT_OK,intent);

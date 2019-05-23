@@ -1,5 +1,6 @@
 package com.example.assignapp2019s1.Storyboard;
 
+//authored by Natalie Phan
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -17,6 +18,9 @@ import com.example.assignapp2019s1.puzzles.PuzzleThreeActivity;
 
 import static android.view.View.VISIBLE;
 
+/*
+    This activity is contains the controls and methods for the Forest Map of the story. It is the second part of the first map.
+ */
 public class SecondForestActivity extends AppCompatActivity {
 
     float characterX;
@@ -33,12 +37,14 @@ public class SecondForestActivity extends AppCompatActivity {
         ImageButton leftButton = (ImageButton) findViewById(R.id.imageButtonLeft);
         ImageButton rightButton = (ImageButton) findViewById(R.id.imageButtonRight);
 
-        ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
-        greenKey.setVisibility(View.VISIBLE);
+        ImageView greenKey = (ImageView) findViewById(R.id.greenKey); //gets the id of image
+        greenKey.setVisibility(View.VISIBLE); //sets the visibility to invisible until needed
 
         ImageView flashlight = (ImageView)  findViewById(R.id.flashlight);
         flashlight.setVisibility(View.INVISIBLE);
 
+        //set touch for buttons
+        //https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons
         SecondForestActivity.MyTouchListener touchListener = new SecondForestActivity.MyTouchListener();
         upButton.setOnTouchListener(touchListener);
         downButton.setOnTouchListener(touchListener);
@@ -54,10 +60,9 @@ public class SecondForestActivity extends AppCompatActivity {
                 Log.d("X & Y",values[0]+" "+values[1]);
             }
         });
-
-
     }
 
+    //defines actions for buttons
     public class MyTouchListener implements View.OnTouchListener {
         @Override
         public boolean onTouch(View v, MotionEvent event) {
@@ -81,6 +86,7 @@ public class SecondForestActivity extends AppCompatActivity {
         }
     }
 
+    //moves the image north on the Y axis
     public void onClickButtonUp(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterY = character.getY();
@@ -89,6 +95,7 @@ public class SecondForestActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_back);
     }
 
+    //moves the image south on the Y axis
     public void onClickButtonDown(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterY = character.getY();
@@ -97,6 +104,7 @@ public class SecondForestActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo);
     }
 
+    //moves the image west on the X axis
     public void onClickButtonLeft(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterX = character.getX();
@@ -105,6 +113,7 @@ public class SecondForestActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_left);
     }
 
+    //moves the image east on the X axis
     public void onClickButtonRight(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterX = character.getX();
@@ -113,7 +122,7 @@ public class SecondForestActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_right);
     }
 
-    //incomplete
+    //intents to other activities
     public void onClickButtonGreyA(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
 
@@ -128,19 +137,20 @@ public class SecondForestActivity extends AppCompatActivity {
                     Intent puzzle3 = new Intent(this, PuzzleThreeActivity.class);
                     startActivityForResult(puzzle3,0);
                 } else {
-                    Toast.makeText(getApplicationContext(), "I need a green key...", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(getApplicationContext(), "I need a green key...", Toast.LENGTH_LONG).show();
                 }
         } else if (x >= 100 && x <= 125 && y >= 450 && y <= 550) {
             if (gotFlashlight()) {
                 Intent cave = new Intent(this, FirstCaveActivity.class);
                 startActivity(cave);
             } else {
-                Toast.makeText(getApplicationContext(), "It's too dark, I need a light...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "It's too dark, I need a light...", Toast.LENGTH_LONG).show();
             }
         }
 
     }
 
+    //checks whether image is viewable on screen
     private boolean gotGreenKey() {
         ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
         return greenKey.getVisibility() == VISIBLE;
@@ -151,6 +161,8 @@ public class SecondForestActivity extends AppCompatActivity {
         return flashlight.getVisibility() == VISIBLE;
     }
 
+    //gets data which has been sent from another activity without restarting this activity and sets images according to the result
+    //https://stackoverflow.com/questions/10407159/how-to-manage-startactivityforresult-on-android
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         ImageView flashlight = (ImageView) findViewById(R.id.flashlight);
@@ -159,6 +171,7 @@ public class SecondForestActivity extends AppCompatActivity {
                 int getData = data.getIntExtra("sendData", -1);
                 if (getData == 0) {
                     flashlight.setVisibility(View.VISIBLE);
+                    Toast.makeText(getApplicationContext(),"Found a Flashlight!",Toast.LENGTH_LONG).show();
                 }
             }
         }

@@ -1,5 +1,7 @@
 package com.example.assignapp2019s1.Storyboard;
 
+//authored by Natalie Phan
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
@@ -15,11 +17,9 @@ import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.puzzles.PuzzleSevenActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleSixActivity;
 
-import static android.view.View.VISIBLE;
-
-
-//authored by Natalie
-//https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons
+/*
+    This activity is contains the controls and methods for the Beach Map of the story. It is the first part of the third map.
+ */
 public class FirstBeachActivity extends AppCompatActivity {
 
     float characterX;
@@ -36,14 +36,19 @@ public class FirstBeachActivity extends AppCompatActivity {
         ImageButton leftButton = (ImageButton) findViewById(R.id.imageButtonLeft);
         ImageButton rightButton = (ImageButton) findViewById(R.id.imageButtonRight);
 
+        //set touch for buttons
+        //https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons
         MyTouchListener touchListener = new MyTouchListener();
         upButton.setOnTouchListener(touchListener);
         downButton.setOnTouchListener(touchListener);
         leftButton.setOnTouchListener(touchListener);
         rightButton.setOnTouchListener(touchListener);
 
-        ImageView yellowKey = (ImageView) findViewById(R.id.yellowKey);
-        yellowKey.setVisibility(View.INVISIBLE);
+        ImageView yellowKey = (ImageView) findViewById(R.id.yellowKey); //gets the id of image
+        yellowKey.setVisibility(View.INVISIBLE); //sets the visibility to invisible until needed
+
+        ImageView shovel = (ImageView) findViewById(R.id.shovel);
+        shovel.setVisibility(View.INVISIBLE);
 
         ImageView imageView = (ImageView) findViewById(R.id.character);
         imageView.setOnClickListener(new View.OnClickListener() {
@@ -59,7 +64,7 @@ public class FirstBeachActivity extends AppCompatActivity {
         puzzleChest7.setVisibility(View.INVISIBLE);
     }
 
-
+    //defines actions for buttons
     public class MyTouchListener implements View.OnTouchListener {
         @Override
         public boolean onTouch(View v, MotionEvent event) {
@@ -84,18 +89,17 @@ public class FirstBeachActivity extends AppCompatActivity {
         }
     }
 
-
+    //moves the image north on the Y axis
     public void onClickButtonUp(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterY = character.getY();
         characterY -= 10;
         character.setY(characterY);
-        final int[] characterBackAnimation = new int[]{R.drawable.character_bo_back, R.drawable.character_bo_back_walking, R.drawable.character_bo_back_walking2};
         character.setImageResource(R.drawable.character_bo_back);
 
     }
 
-
+    //moves the image south on the Y axis
     public void onClickButtonDown(View v) {
         ImageView character = (ImageView) findViewById(R.id.character);
         characterY = character.getY();
@@ -104,6 +108,7 @@ public class FirstBeachActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo);
     }
 
+    //moves the image west on the X axis
     public void onClickButtonLeft(View v) {
         ImageView character = (ImageView) findViewById(R.id.character);
         characterX = character.getX();
@@ -112,6 +117,7 @@ public class FirstBeachActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_left);
     }
 
+    //moves the image east on the X axis
     public void onClickButtonRight(View v) {
         ImageView character = (ImageView) findViewById(R.id.character);
         characterX = character.getX();
@@ -120,7 +126,7 @@ public class FirstBeachActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_right);
     }
 
-    //incomplete
+    //intents to other activities
     public void onClickButtonGreyA (View v) {
         ImageView character = (ImageView) findViewById(R.id.character);
 
@@ -131,29 +137,71 @@ public class FirstBeachActivity extends AppCompatActivity {
         int y = imageCoordinates[1];
 
         ImageView puzzleChest7 = (ImageView) findViewById(R.id.puzzleChest7);
+        ImageView shovel = (ImageView) findViewById(R.id.shovel);
 
-        if (x >= 1775 && x <= 1885 && y >= 230 && y <= 300) {
+        if (x >= 1775 && x <= 1900 && y >= 230 && y <= 300) {
             Intent puzzle6 = new Intent(this, PuzzleSixActivity.class);
-            startActivity(puzzle6);
-        } else if (gotShovel() && x >= 15 && x <= 85 && y >= 720 && y <=820) {
-            puzzleChest7.setVisibility(View.VISIBLE);
-        } else if (x >= 135 && x <= 175 && y >= 780 && y <=820 && foundPuzzleChest7()) {
-            Intent puzzle7 = new Intent(this, PuzzleSevenActivity.class);
-            startActivity(puzzle7);
-        }
-
-        else if (x <= 2405 && y >= 530 && y <= 910) {
-            Intent nextScreen = new Intent(this, SecondBeachActivity.class);
-            startActivity(nextScreen);
+            startActivityForResult(puzzle6,0);
+        } else if ( x >= 15 && x <= 175 && y >= 720 && y <=820) {
+            if (gotShovel()) {
+                Toast.makeText(getApplicationContext(),"Found a Puzzle Chest!",Toast.LENGTH_LONG).show();
+                puzzleChest7.setVisibility(View.VISIBLE);
+                shovel.setVisibility(View.GONE);
+            } else if (foundPuzzleChest7()) {
+                Intent puzzle7 = new Intent(this, PuzzleSevenActivity.class);
+                startActivityForResult(puzzle7, 1);
+            } else {
+                Toast.makeText(getApplicationContext(), "It looks like I can dig here...", Toast.LENGTH_LONG).show();
+            }
+        } else if (x >= 2405 && y >= 530 && y <= 910) {
+            if (gotYellowKey()) {
+                Intent nextScreen = new Intent(this, SecondBeachActivity.class);
+                startActivity(nextScreen);
+            }
+            else {
+                Toast.makeText(getApplicationContext(),"Please complete all puzzles before continuing",Toast.LENGTH_LONG).show();
+            }
         }
     }
 
+    //checks whether image is viewable on screen
     private boolean gotShovel() {
-        return true;
+        ImageView shovel = (ImageView) findViewById(R.id.shovel);
+        return  (shovel.getVisibility() == View.VISIBLE);
     }
 
     private boolean foundPuzzleChest7() {
         ImageView puzzleChest7 = (ImageView) findViewById(R.id.puzzleChest7);
         return  (puzzleChest7.getVisibility() == View.VISIBLE);
+    }
+
+    private boolean gotYellowKey() {
+        ImageView yellowKey = (ImageView) findViewById(R.id.yellowKey);
+        return yellowKey.getVisibility() == View.VISIBLE;
+    }
+
+    //gets data which has been sent from another activity without restarting this activity and sets images according to the result
+    //https://stackoverflow.com/questions/10407159/how-to-manage-startactivityforresult-on-android
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        ImageView shovel = (ImageView) findViewById(R.id.shovel);
+        ImageView yellowKey = (ImageView) findViewById(R.id.yellowKey);
+        if (requestCode == 0) {
+            if (resultCode == Activity.RESULT_OK) {
+                int getData = data.getIntExtra("sendData", -1);
+                if (getData == 0) {
+                    shovel.setVisibility(View.VISIBLE);
+                    Toast.makeText(getApplicationContext(),"Found a Shovel!",Toast.LENGTH_LONG).show();
+                }
+            }
+        } else if (requestCode == 1) {
+            if (resultCode == Activity.RESULT_OK) {
+                int getData = data.getIntExtra("sendData", -1);
+                if (getData == 0) {
+                    yellowKey.setVisibility(View.VISIBLE);
+                    Toast.makeText(getApplicationContext(),"Found a Yellow Key!",Toast.LENGTH_LONG).show();
+                }
+            }
+        }
     }
 }

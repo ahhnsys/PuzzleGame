@@ -1,5 +1,7 @@
 package com.example.assignapp2019s1.puzzles;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -9,6 +11,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
+import com.example.assignapp2019s1.Storyboard.BridgeActivity;
 
 import java.util.Set;
 import java.util.TreeSet;
@@ -139,6 +142,12 @@ public class PuzzleTenActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"Congratulations! You have found enough words. You have passed this level.",Toast.LENGTH_LONG).show();
             mCountDownTimer10.cancel();
             timeCancel10 = true;
+
+            //authored by Natalie Phan
+            //sends data that puzzle has been completed to original class
+            Intent intent = new Intent(this, BridgeActivity.class);
+            intent.putExtra("sendData",0);
+            setResult(Activity.RESULT_OK,intent);
             finish();
         }
     }

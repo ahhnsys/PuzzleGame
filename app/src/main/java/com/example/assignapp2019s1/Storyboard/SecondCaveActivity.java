@@ -1,5 +1,7 @@
 package com.example.assignapp2019s1.Storyboard;
 
+//authored by Natalie Phan
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +16,9 @@ import android.widget.Toast;
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.puzzles.PuzzleFiveActivity;
 
+/*
+    This activity is contains the controls and methods for the Cave Map of the story. It is the second part of the second map.
+ */
 public class SecondCaveActivity extends AppCompatActivity {
 
     @Override
@@ -27,6 +32,8 @@ public class SecondCaveActivity extends AppCompatActivity {
         ImageButton leftButton = (ImageButton) findViewById(R.id.imageButtonLeft);
         ImageButton rightButton = (ImageButton) findViewById(R.id.imageButtonRight);
 
+        //set touch for buttons
+        //https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons
         SecondCaveActivity.MyTouchListener touchListener = new SecondCaveActivity.MyTouchListener();
         upButton.setOnTouchListener(touchListener);
         downButton.setOnTouchListener(touchListener);
@@ -43,13 +50,14 @@ public class SecondCaveActivity extends AppCompatActivity {
             }
         });
 
+        ImageView rock = (ImageView) findViewById(R.id.rock); //gets the id of image
+        rock.setVisibility(View.VISIBLE); //sets the visibility to visible until removed
     }
 
     float characterX;
     float characterY;
 
-
-
+    //defines actions for buttons
     public class MyTouchListener implements View.OnTouchListener {
         @Override
         public boolean onTouch(View v, MotionEvent event) {
@@ -66,9 +74,6 @@ public class SecondCaveActivity extends AppCompatActivity {
                 case R.id.imageButtonRight:
                     onClickButtonRight(v);
                     break;
-                case R.id.imageButtonA:
-                    onClickButtonA(v);
-                    break;
                 default:
                     break;
             }
@@ -76,6 +81,7 @@ public class SecondCaveActivity extends AppCompatActivity {
         }
     }
 
+    //moves the image north on the Y axis
     public void onClickButtonUp(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterY = character.getY();
@@ -84,6 +90,7 @@ public class SecondCaveActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_back);
     }
 
+    //moves the image south on the Y axis
     public void onClickButtonDown(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterY = character.getY();
@@ -92,6 +99,7 @@ public class SecondCaveActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo);
     }
 
+    //moves the image west on the X axis
     public void onClickButtonLeft(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterX = character.getX();
@@ -100,6 +108,7 @@ public class SecondCaveActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_left);
     }
 
+    //moves the image east on the X axis
     public void onClickButtonRight(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterX = character.getX();
@@ -108,9 +117,8 @@ public class SecondCaveActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_right);
     }
 
-
-    //incomplete
-    public void onClickButtonA(View v) {
+    //intents to other activities
+    public void onClickButtonGreyA(View v) {
 
         final ImageView character = (ImageView) findViewById(R.id.character);
 
@@ -120,27 +128,50 @@ public class SecondCaveActivity extends AppCompatActivity {
         int x = imageCoordinates[0];
         int y = imageCoordinates[1];
 
-        if (x >= 1920 && x <= 1968 && y >= 847 && y <= 930) {
+        if (x >= 1920 && x <= 1980 && y >= 847 && y <= 930) {
             if (gotOrangeKey()) {
                 Intent puzzle5 = new Intent(this, PuzzleFiveActivity.class);
-                startActivity(puzzle5);
+                startActivityForResult(puzzle5,0);
+                ImageView orangeKey = (ImageView) findViewById(R.id.orangeKey);
+                orangeKey.setVisibility(View.GONE);
             } else {
-                Toast.makeText(getApplicationContext(), "I need an orange key...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "I need an orange key...", Toast.LENGTH_LONG).show();
             }
-        } else if (x >= 620 && x <= 818 && y >= 1127 && y <= 1165) {
+        } else if (x >= 468 && x <= 970 && y >= 925 && y <= 1165) {
             if (rockIsGone()) {
                 Intent nextScreen = new Intent(this, FirstBeachActivity.class);
                 startActivity(nextScreen);
+            } else {
+                Toast.makeText(getApplicationContext(), "I need to move the rock...", Toast.LENGTH_LONG).show();
             }
         }
     }
 
+    //gets data which has been sent from another activity without restarting this activity and sets images according to the result
+    //https://stackoverflow.com/questions/10407159/how-to-manage-startactivityforresult-on-android
+    //checks whether image is viewable on screen
     private boolean gotOrangeKey() {
-        return false;
+        ImageView orangeKey = (ImageView) findViewById(R.id.orangeKey);
+        return orangeKey.getVisibility() == View.VISIBLE;
     }
 
     private boolean rockIsGone() {
-        return false;
+        ImageView rock = (ImageView) findViewById(R.id.rock);
+        return rock.getVisibility() == View.GONE;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        ImageView rock = (ImageView) findViewById(R.id.rock);
+        if (requestCode == 0) {
+            if (resultCode == Activity.RESULT_OK) {
+                int getData = data.getIntExtra("sendData", -1);
+                if (getData == 0) {
+                    rock.setVisibility(View.GONE);
+                    Toast.makeText(getApplicationContext(),"The Rock Disappeared!",Toast.LENGTH_LONG).show();
+                }
+            }
+        }
     }
 
 }

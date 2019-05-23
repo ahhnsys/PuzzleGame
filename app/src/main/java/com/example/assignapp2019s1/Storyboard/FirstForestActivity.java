@@ -1,5 +1,6 @@
 package com.example.assignapp2019s1.Storyboard;
 
+//authored by Natalie Phan
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -15,11 +16,9 @@ import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.puzzles.PuzzleOneActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleTwoActivity;
 
-
-import static android.view.View.VISIBLE;
-
-//authored by Natalie
-//https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons
+/*
+    This activity is contains the controls and methods for the Forest Map of the story. It is the first part of the first map.
+ */
 public class FirstForestActivity extends AppCompatActivity {
 
     float characterX;
@@ -30,13 +29,15 @@ public class FirstForestActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_forest);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE); //sets the orientation to landscape
 
         ImageButton upButton = (ImageButton) findViewById(R.id.imageButtonUp);
         ImageButton downButton = (ImageButton) findViewById(R.id.imageButtonDown);
         ImageButton leftButton = (ImageButton) findViewById(R.id.imageButtonLeft);
         ImageButton rightButton = (ImageButton) findViewById(R.id.imageButtonRight);
 
+        //set touch for buttons
+        //https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons
         MyTouchListener touchListener = new MyTouchListener();
         upButton.setOnTouchListener(touchListener);
         downButton.setOnTouchListener(touchListener);
@@ -47,15 +48,15 @@ public class FirstForestActivity extends AppCompatActivity {
 
         ImageView redKey = (ImageView) findViewById(R.id.redKey);
 
-        ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
+        ImageView greenKey = (ImageView) findViewById(R.id.greenKey); //gets the id of image
 
-        redKey.setVisibility(View.INVISIBLE);
+        redKey.setVisibility(View.INVISIBLE); //sets the visibility to invisible until needed
 
         greenKey.setVisibility(View.INVISIBLE);
 
     }
 
-
+    //defines actions for buttons
     public class MyTouchListener implements View.OnTouchListener {
         @Override
         public boolean onTouch(View v, MotionEvent event) {
@@ -81,16 +82,16 @@ public class FirstForestActivity extends AppCompatActivity {
     }
 
 
+    //moves the image north on the Y axis
     public void onClickButtonUp(View v) {
         final ImageView character = (ImageView) findViewById(R.id.character);
         characterY = character.getY();
         characterY -= 10;
         character.setY(characterY);
         character.setImageResource(R.drawable.character_bo_back);
-
     }
 
-
+    //moves the image south on the Y axis
     public void onClickButtonDown(View v) {
         ImageView character = (ImageView) findViewById(R.id.character);
         characterY = character.getY();
@@ -99,6 +100,7 @@ public class FirstForestActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo);
     }
 
+    //moves the image west on the X axis
     public void onClickButtonLeft(View v) {
         ImageView character = (ImageView) findViewById(R.id.character);
         characterX = character.getX();
@@ -107,6 +109,7 @@ public class FirstForestActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_left);
     }
 
+    //moves the image east on the X axis
     public void onClickButtonRight(View v) {
         ImageView character = (ImageView) findViewById(R.id.character);
         characterX = character.getX();
@@ -115,6 +118,7 @@ public class FirstForestActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_right);
     }
 
+    //intents to other activities
     public void onClickButtonGreyA(View v) {
         ImageView character = (ImageView) findViewById(R.id.character);
         ImageView redKey = (ImageView) findViewById(R.id.redKey);
@@ -134,9 +138,9 @@ public class FirstForestActivity extends AppCompatActivity {
             if (gotRedKey()) {
                 Intent puzzle2 = new Intent(this, PuzzleTwoActivity.class);
                 startActivityForResult(puzzle2, 1);
-                redKey.setVisibility(View.GONE);
+                redKey.setVisibility(View.GONE); //make image disappear
             } else {
-                Toast.makeText(getApplicationContext(), "I need a red key...", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "I need a red key...", Toast.LENGTH_LONG).show();
             }
         } else if (x >= 1924 && x <= 2314 && y <= 50) {
             if (gotGreenKey()) {
@@ -148,17 +152,18 @@ public class FirstForestActivity extends AppCompatActivity {
         }
     }
 
+    //checks whether image is viewable on screen
     private boolean gotRedKey() {
         ImageView redKey = (ImageView) findViewById(R.id.redKey);
-        return redKey.getVisibility() == VISIBLE;
+        return redKey.getVisibility() == View.VISIBLE;
     }
 
     private boolean gotGreenKey() {
         ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
-        return greenKey.getVisibility() == VISIBLE;
+        return greenKey.getVisibility() == View.VISIBLE;
     }
 
-
+    //gets data which has been sent from another activity without restarting this activity and sets images according to the result
     //https://stackoverflow.com/questions/10407159/how-to-manage-startactivityforresult-on-android
     @Override
         protected void onActivityResult(int requestCode, int resultCode, Intent data) {
@@ -169,6 +174,7 @@ public class FirstForestActivity extends AppCompatActivity {
                     int getData = data.getIntExtra("sendData", -1);
                     if (getData == 0) {
                         redKey.setVisibility(View.VISIBLE);
+                        Toast.makeText(getApplicationContext(),"Found a Red Key!",Toast.LENGTH_LONG).show();
                     }
                 }
             } else if (requestCode == 1) {
@@ -176,6 +182,7 @@ public class FirstForestActivity extends AppCompatActivity {
                     int getData = data.getIntExtra("sendData", -1);
                     if (getData == 0) {
                         greenKey.setVisibility(View.VISIBLE);
+                        Toast.makeText(getApplicationContext(),"Found a Green Key!",Toast.LENGTH_LONG).show();
                     }
                 }
             }
