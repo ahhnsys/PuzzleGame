@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 
 import com.example.assignapp2019s1.Storyboard.BridgeActivity;
+import com.example.assignapp2019s1.Storyboard.FirstForestActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleEightActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleOneActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleTwoActivity;
@@ -44,7 +45,7 @@ public class AppActivity extends AppCompatActivity {
     }
 
     public void onClickButtonGameplay(View view){
-        Intent intent = new Intent(this, BridgeActivity.class);
+        Intent intent = new Intent(this, FirstForestActivity.class);
         startActivity(intent);
     }
 

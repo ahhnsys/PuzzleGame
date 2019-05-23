@@ -1,5 +1,6 @@
 package com.example.assignapp2019s1.Storyboard;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
@@ -51,6 +52,7 @@ public class FirstForestActivity extends AppCompatActivity {
         redKey.setVisibility(View.INVISIBLE);
 
         greenKey.setVisibility(View.INVISIBLE);
+
     }
 
 
@@ -84,7 +86,6 @@ public class FirstForestActivity extends AppCompatActivity {
         characterY = character.getY();
         characterY -= 10;
         character.setY(characterY);
-        final int[] characterBackAnimation = new int[]{R.drawable.character_bo_back, R.drawable.character_bo_back_walking, R.drawable.character_bo_back_walking2};
         character.setImageResource(R.drawable.character_bo_back);
 
     }
@@ -114,9 +115,10 @@ public class FirstForestActivity extends AppCompatActivity {
         character.setImageResource(R.drawable.character_bo_right);
     }
 
-    public void onClickButtonGreyA (View v) {
+    public void onClickButtonGreyA(View v) {
         ImageView character = (ImageView) findViewById(R.id.character);
         ImageView redKey = (ImageView) findViewById(R.id.redKey);
+        ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
 
         int[] imageCoordinates = new int[2];
         character.getLocationOnScreen(imageCoordinates);
@@ -124,22 +126,19 @@ public class FirstForestActivity extends AppCompatActivity {
         int x = imageCoordinates[0];
         int y = imageCoordinates[1];
 
-        if (x >= 454 && x <= 477 && y >= 295 && y <= 325) {
+        if (x >= 420 && x <= 477 && y >= 295 && y <= 330) {
             Intent puzzle1 = new Intent(this, PuzzleOneActivity.class);
-            startActivity(puzzle1);
-            int getData = getIntent().getIntExtra("sendData",0);
-            if (getData == 1) {
-                redKey.setVisibility(View.VISIBLE);
-            }
-        } else if (x >= 1704 && x <= 1736 && y >= 494 && y <= 592) {
+            startActivityForResult(puzzle1, 0);
+
+        } else if (x >= 1700 && x <= 1740 && y >= 494 && y <= 600) {
             if (gotRedKey()) {
                 Intent puzzle2 = new Intent(this, PuzzleTwoActivity.class);
-                startActivity(puzzle2);
+                startActivityForResult(puzzle2, 1);
                 redKey.setVisibility(View.GONE);
             } else {
                 Toast.makeText(getApplicationContext(), "I need a red key...", Toast.LENGTH_SHORT).show();
             }
-        } else if (x >=  1924 && x <= 2314 && y <= 50) {
+        } else if (x >= 1924 && x <= 2314 && y <= 50) {
             Intent nextScreen = new Intent(this, SecondForestActivity.class);
             startActivity(nextScreen);
         }
@@ -147,7 +146,30 @@ public class FirstForestActivity extends AppCompatActivity {
 
     private boolean gotRedKey() {
         ImageView redKey = (ImageView) findViewById(R.id.redKey);
-            return redKey.getVisibility() == VISIBLE;
+        return redKey.getVisibility() == VISIBLE;
     }
 
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        ImageView redKey = (ImageView) findViewById(R.id.redKey);
+        ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
+        if (requestCode == 0) {
+            if (resultCode == Activity.RESULT_OK) {
+                int getData = data.getIntExtra("sendData", -1);
+                if (getData == 0) {
+                    redKey.setVisibility(View.VISIBLE);
+                } else if (getData == 1) {
+                    greenKey.setVisibility(View.VISIBLE);
+                }
+            }
+        } else if (requestCode == 1) {
+            if (resultCode == Activity.RESULT_OK) {
+                int getData = data.getIntExtra("sendData", -1);
+                if (getData == 0) {
+                    greenKey.setVisibility(View.VISIBLE);
+                }
+            }
+
+        }
+    }
 }
