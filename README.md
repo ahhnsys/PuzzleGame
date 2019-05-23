@@ -39,7 +39,7 @@ _The idea of the app is from a popular puzzle game Words Story - Addictive Word 
 
 ### Code
 
-_reference all the code or ideas for code from other sources_
+_We use some code provided in this course (like parse, token etc.)_
 
 ### Assets 
 
