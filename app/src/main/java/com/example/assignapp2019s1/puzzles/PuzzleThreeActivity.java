@@ -1,5 +1,7 @@
 package com.example.assignapp2019s1.puzzles;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.os.CountDownTimer;
@@ -9,6 +11,8 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
+import com.example.assignapp2019s1.Storyboard.FirstForestActivity;
+import com.example.assignapp2019s1.Storyboard.SecondForestActivity;
 
 import java.util.Set;
 import java.util.TreeSet;
@@ -141,9 +145,12 @@ public class PuzzleThreeActivity extends AppCompatActivity {
         tvc.setText("Number of words found: " + answers.size());
         clear();
         if (answers.size() >= 5){
-            Toast.makeText(getApplicationContext(),"Congratulations! You have found enough words. You have passed this level.",Toast.LENGTH_LONG).show();
+            Toast.makeText(getApplicationContext(),"Congratulations! You have found enough words. You found a Flashlight.",Toast.LENGTH_LONG).show();
             mCountDownTimer3.cancel();
             timeCancel3 = true;
+            Intent intent = new Intent(this, SecondForestActivity.class);
+            intent.putExtra("sendData",0);
+            setResult(Activity.RESULT_OK,intent);
             finish();
         }
     }

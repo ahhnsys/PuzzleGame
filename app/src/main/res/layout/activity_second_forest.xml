@@ -104,7 +104,7 @@
         app:layout_constraintVertical_bias="0.234" />
 
     <ImageView
-        android:id="@+id/redKey"
+        android:id="@+id/greenKey"
         android:layout_width="29dp"
         android:layout_height="52dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -113,17 +113,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.908"
-        app:srcCompat="@drawable/key_red" />
+        app:srcCompat="@drawable/key_green" />
 
     <ImageView
-        android:id="@+id/greenKey"
-        android:layout_width="32dp"
-        android:layout_height="52dp"
+        android:id="@+id/flashlight"
+        android:layout_width="54dp"
+        android:layout_height="66dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintHorizontal_bias="0.338"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.908"
-        app:srcCompat="@drawable/key_green" />
+        app:layout_constraintVertical_bias="0.936"
+        app:srcCompat="@drawable/flashlight" />
 </android.support.constraint.ConstraintLayout>

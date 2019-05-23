@@ -1,5 +1,6 @@
 package com.example.assignapp2019s1.Storyboard;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
@@ -13,6 +14,8 @@ import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.puzzles.PuzzleThreeActivity;
+
+import static android.view.View.VISIBLE;
 
 public class SecondForestActivity extends AppCompatActivity {
 
@@ -31,10 +34,10 @@ public class SecondForestActivity extends AppCompatActivity {
         ImageButton rightButton = (ImageButton) findViewById(R.id.imageButtonRight);
 
         ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
-        ImageView redKey = (ImageView) findViewById(R.id.redKey);
+        greenKey.setVisibility(View.VISIBLE);
 
-        greenKey.setVisibility(View.INVISIBLE);
-        redKey.setVisibility(View.INVISIBLE);
+        ImageView flashlight = (ImageView)  findViewById(R.id.flashlight);
+        flashlight.setVisibility(View.INVISIBLE);
 
         SecondForestActivity.MyTouchListener touchListener = new SecondForestActivity.MyTouchListener();
         upButton.setOnTouchListener(touchListener);
@@ -51,6 +54,7 @@ public class SecondForestActivity extends AppCompatActivity {
                 Log.d("X & Y",values[0]+" "+values[1]);
             }
         });
+
 
     }
 
@@ -122,11 +126,11 @@ public class SecondForestActivity extends AppCompatActivity {
         if (x >= 1130 && x <= 1175 && y >= 275 && y <= 350) {
                 if (gotGreenKey()) {
                     Intent puzzle3 = new Intent(this, PuzzleThreeActivity.class);
-                    startActivity(puzzle3);
+                    startActivityForResult(puzzle3,0);
                 } else {
                     Toast.makeText(getApplicationContext(), "I need a green key...", Toast.LENGTH_SHORT).show();
                 }
-        } else if (x >= 113 && x <= 125 && y >= 450 && y <= 530) {
+        } else if (x >= 100 && x <= 125 && y >= 450 && y <= 550) {
             if (gotFlashlight()) {
                 Intent cave = new Intent(this, FirstCaveActivity.class);
                 startActivity(cave);
@@ -138,15 +142,26 @@ public class SecondForestActivity extends AppCompatActivity {
     }
 
     private boolean gotGreenKey() {
-        return false;
-    }
-
-    private boolean gotRedKey() {
-        return false;
+        ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
+        return greenKey.getVisibility() == VISIBLE;
     }
 
     private boolean gotFlashlight() {
-        return false;
+        ImageView flashlight = (ImageView) findViewById(R.id.flashlight);
+        return flashlight.getVisibility() == VISIBLE;
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        ImageView flashlight = (ImageView) findViewById(R.id.flashlight);
+        if (requestCode == 0) {
+            if (resultCode == Activity.RESULT_OK) {
+                int getData = data.getIntExtra("sendData", -1);
+                if (getData == 0) {
+                    flashlight.setVisibility(View.VISIBLE);
+                }
+            }
+        }
     }
 
 }

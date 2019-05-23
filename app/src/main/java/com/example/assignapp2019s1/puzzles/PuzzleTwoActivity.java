@@ -119,7 +119,7 @@ public class PuzzleTwoActivity extends AppCompatActivity {
     }
 
     public void checkedRightAnswer(){
-        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(FOREST) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(FOREST) is correct. You got a Green Key.",Toast.LENGTH_LONG).show();
         mCountDownTimer2.cancel();
         timeCancel2 = true;
         Intent intent = new Intent(this,FirstForestActivity.class);

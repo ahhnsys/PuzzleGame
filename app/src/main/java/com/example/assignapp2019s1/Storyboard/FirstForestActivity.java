@@ -139,8 +139,12 @@ public class FirstForestActivity extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "I need a red key...", Toast.LENGTH_SHORT).show();
             }
         } else if (x >= 1924 && x <= 2314 && y <= 50) {
-            Intent nextScreen = new Intent(this, SecondForestActivity.class);
-            startActivity(nextScreen);
+            if (gotGreenKey()) {
+                Intent nextScreen = new Intent(this, SecondForestActivity.class);
+                startActivity(nextScreen);
+            } else {
+                Toast.makeText(getApplicationContext(), "Please complete all puzzles before continuing", Toast.LENGTH_LONG).show();
+            }
         }
     }
 
@@ -149,27 +153,31 @@ public class FirstForestActivity extends AppCompatActivity {
         return redKey.getVisibility() == VISIBLE;
     }
 
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-        ImageView redKey = (ImageView) findViewById(R.id.redKey);
+    private boolean gotGreenKey() {
         ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
-        if (requestCode == 0) {
-            if (resultCode == Activity.RESULT_OK) {
-                int getData = data.getIntExtra("sendData", -1);
-                if (getData == 0) {
-                    redKey.setVisibility(View.VISIBLE);
-                } else if (getData == 1) {
-                    greenKey.setVisibility(View.VISIBLE);
-                }
-            }
-        } else if (requestCode == 1) {
-            if (resultCode == Activity.RESULT_OK) {
-                int getData = data.getIntExtra("sendData", -1);
-                if (getData == 0) {
-                    greenKey.setVisibility(View.VISIBLE);
-                }
-            }
-
-        }
+        return greenKey.getVisibility() == VISIBLE;
     }
+
+
+    //https://stackoverflow.com/questions/10407159/how-to-manage-startactivityforresult-on-android
+    @Override
+        protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+            ImageView redKey = (ImageView) findViewById(R.id.redKey);
+            ImageView greenKey = (ImageView) findViewById(R.id.greenKey);
+            if (requestCode == 0) {
+                if (resultCode == Activity.RESULT_OK) {
+                    int getData = data.getIntExtra("sendData", -1);
+                    if (getData == 0) {
+                        redKey.setVisibility(View.VISIBLE);
+                    }
+                }
+            } else if (requestCode == 1) {
+                if (resultCode == Activity.RESULT_OK) {
+                    int getData = data.getIntExtra("sendData", -1);
+                    if (getData == 0) {
+                        greenKey.setVisibility(View.VISIBLE);
+                    }
+                }
+            }
+        }
 }
