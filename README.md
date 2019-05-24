@@ -3,17 +3,24 @@
 # App - _Bo's Puzzle World_
 
 ## Team structure and roles 
-+ Yishun Shi u6598369 - Puzzle levels, Setting, Timer, Feedback, Music, etc
-+ Natalie phan u6671390 - Storyboard, Rewards, Controls, Instructions & Information, Music
-## App Overview 
-Crossword puzzle or word guess puzzle linking to a story which
-contains a "prizes" to achieve, progress in the story.
++ Yishun Shi u6598369 - Puzzle levels, Setting, Timer,
++ Natalie phan u6671390 - Storyboard, Items, Controls, Instructions & Information, Music
 
-_The App contains various types of puzzles which all link to a story. The puzzles must be completed to progress in the story and medals and "prizes" can be won. TBC_
+## App Overview
+_The App contains various types of puzzles which all link to a story. The puzzles must be completed to progress in the story and within each puzzle there are items which are need for the next puzzle, or next activity.
 
-_The story takes form in a platform style game, the main character will encounter puzzles whist in the platform game and must complete the puzzle in order to continue_
+_The story takes form in a rpg-style game, the main character will encounter puzzles whilst in the world and must complete the puzzle in order to continue_
 
 _The story is about a boy named Bo who is whisked away into a world full of puzzles. Bo must navigate within the world in order to find a complete all the puzzles and collect pieces(or rewards) to finish the game and return back to his own world._
+
+_The App contains puzzles need to be completed to progress in the story._
+
+_The following are screenshots from the App:_
+![Welcome Screenshot](images/welcome-screenshot.png)
+![Instructions Screenshot](images/forest-screenshot.png)
+![FirstForest Screenshot](images/forest-screenshot.png)
+![PuzzleOne Screenshot](images/puzzle-screenshot.png)
+![Completed PuzzleOne Screenshot](images/completed-puzzle-screenshot.png)
 
 ## Design Documentation 
 + [Design Summary](designsummary.md)
@@ -35,14 +42,14 @@ assignment is entirely my own work, with exceptions given below.
 
 ### Inspiration
 
-_The idea of the app is from a popular puzzle game Words Story - Addictive Word Game, the idea of the story is from the famous Nintendo Mario platform game_
+_The idea of the app is from a popular puzzle game Words Story - Addictive Word Game, the idea of the story is from the famous Pokemon Game_
 
 ### Code
 
 _We use some code provided in this course (like parse, token etc.)_
+_//https://stackoverflow.com/questions/10407159/how-to-manage-startactivityforresult-on-android_
+_//https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons_
 
-### Assets 
-
-_this includes images, sounds, etc._
+### Assets
 
 
