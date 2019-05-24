@@ -47,9 +47,14 @@ _The idea of the app is from a popular puzzle game Words Story - Addictive Word 
 ### Code
 
 _We use some code provided in this course (like parse, token etc.)_
-_//https://stackoverflow.com/questions/10407159/how-to-manage-startactivityforresult-on-android_
-_//https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons_
+
+_https://stackoverflow.com/questions/10407159/how-to-manage-startactivityforresult-on-android_
+
+_https://stackoverflow.com/questions/17864143/single-method-to-implement-ontouchlistener-for-multiple-buttons_
+
+_https://stackoverflow.com/questions/8209858/android-background-music-service/8209975#8209975_
 
 ### Assets
 
+_https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500073&Search=Search_
 
