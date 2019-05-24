@@ -17,7 +17,7 @@ _The App contains puzzles need to be completed to progress in the story._
 
 _The following are screenshots from the App:_
 ![Welcome Screenshot](images/welcome-screenshot.png)
-![Instructions Screenshot](images/forest-screenshot.png)
+![Instructions Screenshot](images/instructions-screenshot.png)
 ![FirstForest Screenshot](images/forest-screenshot.png)
 ![PuzzleOne Screenshot](images/puzzle-screenshot.png)
 ![Completed PuzzleOne Screenshot](images/completed-puzzle-screenshot.png)
