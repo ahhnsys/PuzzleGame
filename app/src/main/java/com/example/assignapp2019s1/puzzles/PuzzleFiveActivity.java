@@ -17,7 +17,8 @@ import com.example.assignapp2019s1.Storyboard.SecondCaveActivity;
  * @author Yishun Shi*/
 public class PuzzleFiveActivity extends AppCompatActivity {
 
-    private String solution = "SMARTPHONE";
+//    private String solution = "SMARTPHONE";
+    private String solution = "BOULDER";
 
     private String answer = "";
 
@@ -60,8 +61,20 @@ public class PuzzleFiveActivity extends AppCompatActivity {
         mCountDownTimer5.start();
     }
 
-    public void onClickButtonA5(View view){
-        answer = answer + 'A';
+//    public void onClickButtonA5(View view){
+//        answer = answer + 'A';
+//        updateScreen(findViewById(R.id.answerScreen5));
+//        check();
+//    }
+
+    public void onClickButtonB5(View view){
+        answer = answer + 'B';
+        updateScreen(findViewById(R.id.answerScreen5));
+        check();
+    }
+
+    public void onClickButtonD5(View view){
+        answer = answer + 'D';
         updateScreen(findViewById(R.id.answerScreen5));
         check();
     }
@@ -72,23 +85,29 @@ public class PuzzleFiveActivity extends AppCompatActivity {
         check();
     }
 
-    public void onClickButtonH5(View view){
-        answer = answer + 'H';
+//    public void onClickButtonH5(View view){
+//        answer = answer + 'H';
+//        updateScreen(findViewById(R.id.answerScreen5));
+//        check();
+//    }
+
+    public void onClickButtonL5(View view){
+        answer = answer + 'L';
         updateScreen(findViewById(R.id.answerScreen5));
         check();
     }
 
-    public void onClickButtonM5(View view){
-        answer = answer + 'M';
-        updateScreen(findViewById(R.id.answerScreen5));
-        check();
-    }
-
-    public void onClickButtonN5(View view){
-        answer = answer + 'N';
-        updateScreen(findViewById(R.id.answerScreen5));
-        check();
-    }
+//    public void onClickButtonM5(View view){
+//        answer = answer + 'M';
+//        updateScreen(findViewById(R.id.answerScreen5));
+//        check();
+//    }
+//
+//    public void onClickButtonN5(View view){
+//        answer = answer + 'N';
+//        updateScreen(findViewById(R.id.answerScreen5));
+//        check();
+//    }
 
     public void onClickButtonO5(View view){
         answer = answer + 'O';
@@ -96,11 +115,11 @@ public class PuzzleFiveActivity extends AppCompatActivity {
         check();
     }
 
-    public void onClickButtonP5(View view){
-        answer = answer + 'P';
-        updateScreen(findViewById(R.id.answerScreen5));
-        check();
-    }
+//    public void onClickButtonP5(View view){
+//        answer = answer + 'P';
+//        updateScreen(findViewById(R.id.answerScreen5));
+//        check();
+//    }
 
     public void onClickButtonR5(View view){
         answer = answer + 'R';
@@ -108,20 +127,26 @@ public class PuzzleFiveActivity extends AppCompatActivity {
         check();
     }
 
-    public void onClickButtonS5(View view){
-        answer = answer + 'S';
-        updateScreen(findViewById(R.id.answerScreen5));
-        check();
-    }
+//    public void onClickButtonS5(View view){
+//        answer = answer + 'S';
+//        updateScreen(findViewById(R.id.answerScreen5));
+//        check();
+//    }
+//
+//    public void onClickButtonT5(View view){
+//        answer = answer + 'T';
+//        updateScreen(findViewById(R.id.answerScreen5));
+//        check();
+//    }
 
-    public void onClickButtonT5(View view){
-        answer = answer + 'T';
+    public void onClickButtonU5(View view){
+        answer = answer + 'U';
         updateScreen(findViewById(R.id.answerScreen5));
         check();
     }
 
     public void check(){
-        if (answer.length() == 10){
+        if (answer.length() == 7){
             if (answer.equals(solution)){
                 checkedRightAnswer();
             }
@@ -132,7 +157,7 @@ public class PuzzleFiveActivity extends AppCompatActivity {
     }
 
     public void checkedRightAnswer(){
-        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(SMARTPHONE) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(BOULDER) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
         mCountDownTimer5.cancel();
         timeCancel5 = true;
 
@@ -166,7 +191,7 @@ public class PuzzleFiveActivity extends AppCompatActivity {
 
     public void onClickButtonHelp5(View view){
         TextView tv = findViewById(R.id.textViewLevelFiveHint);
-        tv.setText("Hint: This object may be lying in your pocket now.");
+        tv.setText("Hint: This object often appears by the river.");
     }
 
     public void onClickButtonSkip5(View view){

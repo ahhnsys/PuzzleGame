@@ -17,6 +17,7 @@ import com.example.assignapp2019s1.Storyboard.FirstCaveActivity;
  * @author Yishun Shi*/
 public class PuzzleElevenActivity extends AppCompatActivity {
 
+//    private String solution = "GITLAB";
     private String solution = "DARKNESS";
 
     private String answer = "";
