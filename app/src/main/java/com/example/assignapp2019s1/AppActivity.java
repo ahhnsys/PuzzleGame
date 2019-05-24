@@ -3,27 +3,22 @@ package com.example.assignapp2019s1;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-
 import com.example.assignapp2019s1.Storyboard.FirstForestActivity;
-import com.example.assignapp2019s1.puzzles.PuzzleEightActivity;
-import com.example.assignapp2019s1.puzzles.PuzzleOneActivity;
-import com.example.assignapp2019s1.puzzles.PuzzleTwoActivity;
-import com.example.assignapp2019s1.puzzles.PuzzleThreeActivity;
-import com.example.assignapp2019s1.puzzles.PuzzleFourActivity;
-import com.example.assignapp2019s1.puzzles.PuzzleFiveActivity;
-import com.example.assignapp2019s1.puzzles.PuzzleTenActivity;
+import com.example.assignapp2019s1.Storyboard.SecondBeachActivity;
 
 /*
     This activity will create an opening sequence when the start button in WelcomeActivity is pressed.
     It aims to show Instructions and Controls.
  */
 public class AppActivity extends AppCompatActivity {
+    MediaPlayer player;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,5 +38,6 @@ public class AppActivity extends AppCompatActivity {
             }
         });
     }
+
 
 }

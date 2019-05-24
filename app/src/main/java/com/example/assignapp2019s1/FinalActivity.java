@@ -1,5 +1,6 @@
 package com.example.assignapp2019s1;
 
+//authored by Natalie Phan
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.graphics.Color;
@@ -8,8 +9,12 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-//authored by Natalie Phan
+
 import com.example.assignapp2019s1.R;
+
+/*
+    The finale of the game. When the game has ended, it will go back to the Welcome Screen.
+ */
 
 public class FinalActivity extends AppCompatActivity {
 

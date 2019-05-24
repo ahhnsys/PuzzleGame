@@ -115,4 +115,30 @@
         app:layout_constraintVertical_bias="0.908"
         app:srcCompat="@drawable/key_orange" />
 
+    <ImageButton
+        android:id="@+id/soundOn"
+        android:layout_width="30dp"
+        android:layout_height="31dp"
+        android:onClick="onClickSoundOn"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.038"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06"
+        app:srcCompat="@android:drawable/ic_media_play" />
+
+    <ImageButton
+        android:id="@+id/soundOff"
+        android:layout_width="31dp"
+        android:layout_height="30dp"
+        android:onClick="onClickSoundOff"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.085"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.06"
+        app:srcCompat="@android:drawable/ic_media_pause" />
+
 </android.support.constraint.ConstraintLayout>

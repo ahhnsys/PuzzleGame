@@ -1,6 +1,6 @@
 package com.example.assignapp2019s1.Storyboard;
 
-//authored by Natalie
+//authored by Natalie Phan
 import android.app.Activity;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.assignapp2019s1.BackgroundMusic;
 import com.example.assignapp2019s1.FinalActivity;
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.puzzles.PuzzleTenActivity;
@@ -136,7 +137,7 @@ public class BridgeActivity extends AppCompatActivity {
         if (x >= 1174 && x <= 1294 && y >= 592 && y <= 692) {
             Intent puzzle10 = new Intent(this, PuzzleTenActivity.class);
             startActivityForResult(puzzle10,0);
-        } else if (x >= 1474 && x <= 1524 && y >= 522 && y <= 782) {
+        } else if (x >= 1430 && x <= 1524 && y >= 522 && y <= 782) {
             if (foundPortal()) {
                 Intent ending = new Intent(this, FinalActivity.class);
                 startActivity(ending);
@@ -164,5 +165,19 @@ public class BridgeActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    //stop playing music
+    public void onClickSoundOff(View v) {
+        ImageButton sound = (ImageButton)findViewById(R.id.soundOff);
+        Intent intent = new Intent(this,BackgroundMusic.class);
+        stopService(intent);
+    }
+
+    //start playing music
+    public void onClickSoundOn(View v) {
+        ImageButton sound = (ImageButton)findViewById(R.id.soundOn);
+        Intent intent = new Intent(this,BackgroundMusic.class);
+        startService(intent);
     }
 }

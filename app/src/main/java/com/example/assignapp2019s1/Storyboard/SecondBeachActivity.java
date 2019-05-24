@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.assignapp2019s1.BackgroundMusic;
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.puzzles.PuzzleEightActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleNineActivity;
@@ -138,7 +139,7 @@ public class SecondBeachActivity extends AppCompatActivity {
 
         ImageView yellowKey = (ImageView) findViewById(R.id.yellowKey);
 
-        if (x >= 121 && x <= 281 && y >= 140 && y <= 230) {
+        if (x >= 111 && x <= 281 && y >= 280 && y <= 350) {
             Intent puzzle8 = new Intent(this, PuzzleEightActivity.class);
             startActivityForResult(puzzle8,0);
             yellowKey.setVisibility(View.GONE);
@@ -201,5 +202,19 @@ public class SecondBeachActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    //stop playing music
+    public void onClickSoundOff(View v) {
+        ImageButton sound = (ImageButton)findViewById(R.id.soundOff);
+        Intent intent = new Intent(this,BackgroundMusic.class);
+        stopService(intent);
+    }
+
+    //stop playing music
+    public void onClickSoundOn(View v) {
+        ImageButton sound = (ImageButton)findViewById(R.id.soundOn);
+        Intent intent = new Intent(this,BackgroundMusic.class);
+        startService(intent);
     }
 }

@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.assignapp2019s1.BackgroundMusic;
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.puzzles.PuzzleFiveActivity;
 
@@ -137,7 +138,7 @@ public class SecondCaveActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(getApplicationContext(), "I need an orange key...", Toast.LENGTH_LONG).show();
             }
-        } else if (x >= 468 && x <= 970 && y >= 925 && y <= 1165) {
+        } else if (x >= 468 && x <= 970 && y >= 925) {
             if (rockIsGone()) {
                 Intent nextScreen = new Intent(this, FirstBeachActivity.class);
                 startActivity(nextScreen);
@@ -172,6 +173,20 @@ public class SecondCaveActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    //stop playing music
+    public void onClickSoundOff(View v) {
+        ImageButton sound = (ImageButton)findViewById(R.id.soundOff);
+        Intent intent = new Intent(this,BackgroundMusic.class);
+        stopService(intent);
+    }
+
+    //start playing music
+    public void onClickSoundOn(View v) {
+        ImageButton sound = (ImageButton)findViewById(R.id.soundOn);
+        Intent intent = new Intent(this,BackgroundMusic.class);
+        startService(intent);
     }
 
 }

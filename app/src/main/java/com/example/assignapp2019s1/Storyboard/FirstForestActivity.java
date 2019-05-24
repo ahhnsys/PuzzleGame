@@ -6,13 +6,16 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.assignapp2019s1.BackgroundMusic;
 import com.example.assignapp2019s1.R;
+import com.example.assignapp2019s1.WelcomeActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleOneActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleTwoActivity;
 
@@ -53,6 +56,16 @@ public class FirstForestActivity extends AppCompatActivity {
         redKey.setVisibility(View.INVISIBLE); //sets the visibility to invisible until needed
 
         greenKey.setVisibility(View.INVISIBLE);
+
+        //get the coordinates of the ImageView and sned to Logcat
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int[] values = new int[2];
+                view.getLocationOnScreen(values);
+                Log.d("X & Y",values[0]+" "+values[1]);
+            }
+        });
 
     }
 
@@ -142,7 +155,7 @@ public class FirstForestActivity extends AppCompatActivity {
             } else {
                 Toast.makeText(getApplicationContext(), "I need a red key...", Toast.LENGTH_LONG).show();
             }
-        } else if (x >= 1924 && x <= 2314 && y <= 50) {
+        } else if (x >= 1724 && x <= 2314 && y <= 50) {
             if (gotGreenKey()) {
                 Intent nextScreen = new Intent(this, SecondForestActivity.class);
                 startActivity(nextScreen);
@@ -187,4 +200,20 @@ public class FirstForestActivity extends AppCompatActivity {
                 }
             }
         }
+
+    //stop playing music
+    public void onClickSoundOff(View v) {
+      ImageButton sound = (ImageButton)findViewById(R.id.soundOff);
+       Intent intent = new Intent(this,BackgroundMusic.class);
+      stopService(intent);
+    }
+
+    //start playing music
+    public void onClickSoundOn(View v) {
+        ImageButton sound = (ImageButton)findViewById(R.id.soundOn);
+       Intent intent = new Intent(this,BackgroundMusic.class);
+        startService(intent);
+    }
+
+
 }

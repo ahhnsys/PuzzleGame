@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.assignapp2019s1.BackgroundMusic;
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.puzzles.PuzzleSevenActivity;
 import com.example.assignapp2019s1.puzzles.PuzzleSixActivity;
@@ -203,5 +204,19 @@ public class FirstBeachActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+
+    //stop playing music
+    public void onClickSoundOff(View v) {
+        ImageButton sound = (ImageButton)findViewById(R.id.soundOff);
+        Intent intent = new Intent(this,BackgroundMusic.class);
+        stopService(intent);
+    }
+
+    //start playing music
+    public void onClickSoundOn(View v) {
+        ImageButton sound = (ImageButton)findViewById(R.id.soundOn);
+        Intent intent = new Intent(this,BackgroundMusic.class);
+        startService(intent);
     }
 }

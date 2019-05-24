@@ -13,6 +13,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.example.assignapp2019s1.BackgroundMusic;
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.puzzles.PuzzleThreeActivity;
 
@@ -139,7 +140,7 @@ public class SecondForestActivity extends AppCompatActivity {
                 } else {
                     Toast.makeText(getApplicationContext(), "I need a green key...", Toast.LENGTH_LONG).show();
                 }
-        } else if (x >= 100 && x <= 125 && y >= 450 && y <= 550) {
+        } else if (x >= 100 && y >= 450 && y <= 550) {
             if (gotFlashlight()) {
                 Intent cave = new Intent(this, FirstCaveActivity.class);
                 startActivity(cave);
@@ -175,6 +176,17 @@ public class SecondForestActivity extends AppCompatActivity {
                 }
             }
         }
+    }
+    public void onClickSoundOff(View v) {
+        ImageButton sound = (ImageButton)findViewById(R.id.soundOff);
+        Intent intent = new Intent(this,BackgroundMusic.class);
+        stopService(intent);
+    }
+
+    public void onClickSoundOn(View v) {
+        ImageButton sound = (ImageButton)findViewById(R.id.soundOn);
+        Intent intent = new Intent(this,BackgroundMusic.class);
+        startService(intent);
     }
 
 }
