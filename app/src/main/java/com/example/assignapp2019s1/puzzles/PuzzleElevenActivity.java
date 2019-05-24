@@ -17,7 +17,7 @@ import com.example.assignapp2019s1.Storyboard.FirstCaveActivity;
  * @author Yishun Shi*/
 public class PuzzleElevenActivity extends AppCompatActivity {
 
-    private String solution = "GITLAB";
+    private String solution = "DARKNESS";
 
     private String answer = "";
 
@@ -66,38 +66,74 @@ public class PuzzleElevenActivity extends AppCompatActivity {
         check();
     }
 
-    public void onClickButtonB11(View view){
-        answer = answer + 'B';
+//    public void onClickButtonB11(View view){
+//        answer = answer + 'B';
+//        updateScreen(findViewById(R.id.answerScreen11));
+//        check();
+//    }
+
+    public void onClickButtonD11(View view){
+        answer = answer + 'D';
         updateScreen(findViewById(R.id.answerScreen11));
         check();
     }
 
-    public void onClickButtonG11(View view){
-        answer = answer + 'G';
+    public void onClickButtonE11(View view){
+        answer = answer + 'E';
         updateScreen(findViewById(R.id.answerScreen11));
         check();
     }
 
-    public void onClickButtonI11(View view){
-        answer = answer + 'I';
+    public void onClickButtonK11(View view){
+        answer = answer + 'K';
         updateScreen(findViewById(R.id.answerScreen11));
         check();
     }
 
-    public void onClickButtonL11(View view){
-        answer = answer + 'L';
+    public void onClickButtonN11(View view){
+        answer = answer + 'N';
         updateScreen(findViewById(R.id.answerScreen11));
         check();
     }
 
-    public void onClickButtonT11(View view){
-        answer = answer + 'T';
+    public void onClickButtonR11(View view){
+        answer = answer + 'R';
         updateScreen(findViewById(R.id.answerScreen11));
         check();
     }
+
+    public void onClickButtonS11(View view){
+        answer = answer + 'S';
+        updateScreen(findViewById(R.id.answerScreen11));
+        check();
+    }
+
+//    public void onClickButtonG11(View view){
+//        answer = answer + 'G';
+//        updateScreen(findViewById(R.id.answerScreen11));
+//        check();
+//    }
+//
+//    public void onClickButtonI11(View view){
+//        answer = answer + 'I';
+//        updateScreen(findViewById(R.id.answerScreen11));
+//        check();
+//    }
+//
+//    public void onClickButtonL11(View view){
+//        answer = answer + 'L';
+//        updateScreen(findViewById(R.id.answerScreen11));
+//        check();
+//    }
+//
+//    public void onClickButtonT11(View view){
+//        answer = answer + 'T';
+//        updateScreen(findViewById(R.id.answerScreen11));
+//        check();
+//    }
 
     public void check(){
-        if (answer.length() == 6){
+        if (answer.length() == 8){
             if (answer.equals(solution)){
                 checkedRightAnswer();
             }
@@ -108,7 +144,7 @@ public class PuzzleElevenActivity extends AppCompatActivity {
     }
 
     public void checkedRightAnswer(){
-        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(GITLAB) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(DARKNESS) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
         mCountDownTimer11.cancel();
         timeCancel11 = true;
 
@@ -140,9 +176,9 @@ public class PuzzleElevenActivity extends AppCompatActivity {
         finish();
     }
 
-    public void onClickButtonHelp5(View view){
+    public void onClickButtonHelp11(View view){
         TextView tv = findViewById(R.id.textViewLevelElevenHint);
-        tv.setText("Hint: We use it to finish this assignment");
+        tv.setText("Hint: Fear often appears with it.");
     }
 
     public void onClickButtonSkip11(View view){
