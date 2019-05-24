@@ -18,7 +18,8 @@ import com.example.assignapp2019s1.Storyboard.FirstForestActivity;
 public class PuzzleOneActivity extends AppCompatActivity {
 
     //the correct answer
-    private String solution = "SOFTWARE";
+//    private String solution = "SOFTWARE";
+    private String solution = "FLOWER";
 
     //user's current answer
     private String answer = "";
@@ -68,11 +69,11 @@ public class PuzzleOneActivity extends AppCompatActivity {
     }
 
     //set letter buttons
-    public void onClickButtonA(View view){
-        answer = answer + 'A';
-        updateScreen(findViewById(R.id.answerScreen));
-        check();
-    }
+//    public void onClickButtonA(View view){
+//        answer = answer + 'A';
+//        updateScreen(findViewById(R.id.answerScreen));
+//        check();
+//    }
 
     public void onClickButtonE(View view){
         answer = answer + 'E';
@@ -82,6 +83,12 @@ public class PuzzleOneActivity extends AppCompatActivity {
 
     public void onClickButtonF(View view){
         answer = answer + 'F';
+        updateScreen(findViewById(R.id.answerScreen));
+        check();
+    }
+
+    public void onClickButtonL(View view){
+        answer = answer + 'L';
         updateScreen(findViewById(R.id.answerScreen));
         check();
     }
@@ -98,17 +105,17 @@ public class PuzzleOneActivity extends AppCompatActivity {
         check();
     }
 
-    public void onClickButtonS(View view){
-        answer = answer + 'S';
-        updateScreen(findViewById(R.id.answerScreen));
-        check();
-    }
-
-    public void onClickButtonT(View view){
-        answer = answer + 'T';
-        updateScreen(findViewById(R.id.answerScreen));
-        check();
-    }
+//    public void onClickButtonS(View view){
+//        answer = answer + 'S';
+//        updateScreen(findViewById(R.id.answerScreen));
+//        check();
+//    }
+//
+//    public void onClickButtonT(View view){
+//        answer = answer + 'T';
+//        updateScreen(findViewById(R.id.answerScreen));
+//        check();
+//    }
 
     public void onClickButtonW(View view){
         answer = answer + 'W';
@@ -118,7 +125,7 @@ public class PuzzleOneActivity extends AppCompatActivity {
 
     //check whether the answer is correct
     public void check(){
-        if (answer.length() == 8){
+        if (answer.length() == 6){
             if (answer.equals(solution)){
                 checkedRightAnswer();
             }
@@ -130,7 +137,7 @@ public class PuzzleOneActivity extends AppCompatActivity {
 
     //If answer is correct, cancel the timer and complete this level.
     public void checkedRightAnswer(){
-        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(SOFTWARE) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(FLOWER) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
         mCountDownTimer.cancel();
         timeCancel = true;
 
@@ -168,7 +175,7 @@ public class PuzzleOneActivity extends AppCompatActivity {
     //Show the hint.
     public void onClickButtonHelp(View view){
         TextView tv = findViewById(R.id.textViewLevelOneHint);
-        tv.setText("Hint: This word is related to the computer");
+        tv.setText("Hint: This item appeared in the previous scene.");
     }
 
     //Skip this level.
