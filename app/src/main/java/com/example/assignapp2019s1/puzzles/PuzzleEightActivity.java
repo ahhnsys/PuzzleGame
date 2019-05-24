@@ -22,8 +22,9 @@ public class PuzzleEightActivity extends AppCompatActivity {
     private static Parser parser;
 
     //parse the user's input
-    private static Integer parse(String equation) {
-        System.out.println("Parsing equation: " + equation);
+//    private static Integer parse(String equation) {
+    public static Integer parse(String equation) {
+//        System.out.println("Parsing equation: " + equation);
         tokenizer.setBuffer(equation);
         Exp exp = parser.parse();
         if(exp==null) {
