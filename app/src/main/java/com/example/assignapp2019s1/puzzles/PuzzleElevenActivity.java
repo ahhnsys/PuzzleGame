@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.Storyboard.FirstCaveActivity;
 
+/**The 11st level (replace the 4th level)
+ * @author Yishun Shi*/
 public class PuzzleElevenActivity extends AppCompatActivity {
 
     private String solution = "GITLAB";

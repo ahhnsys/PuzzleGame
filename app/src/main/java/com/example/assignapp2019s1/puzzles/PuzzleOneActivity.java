@@ -13,12 +13,17 @@ import android.widget.Toast;
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.Storyboard.FirstForestActivity;
 
+/**The 1st level
+ * @author Yishun Shi*/
 public class PuzzleOneActivity extends AppCompatActivity {
 
+    //the correct answer
     private String solution = "SOFTWARE";
 
+    //user's current answer
     private String answer = "";
 
+    //timer
     public CountDownTimer mCountDownTimer;
 
     public boolean timeCancel = false;
@@ -31,16 +36,19 @@ public class PuzzleOneActivity extends AppCompatActivity {
         iniTimer();
     }
 
+    //initialize timer
     public void iniTimer(){
 
         if (mCountDownTimer!=null){
             mCountDownTimer.cancel();
         }
 
+        //set 5 minutes, modify display every second
         mCountDownTimer = new CountDownTimer(300000+500, 1000) {
 
             TextView tvt = findViewById(R.id.textViewTimer) ;
 
+            //activity per second
             public void onTick(long millisUntilFinished) {
                 if(!PuzzleOneActivity.this.isFinishing()){
                     tvt.setText("seconds remaining: " + millisUntilFinished / 1000);
@@ -49,6 +57,7 @@ public class PuzzleOneActivity extends AppCompatActivity {
                 }
             }
 
+            //activity when time is up
             public void onFinish() {
                 tvt.setText("Time is up!");
                 Toast.makeText(getApplicationContext(),"Time is up and you haven't solved this puzzle yet. Try it again!",Toast.LENGTH_LONG).show();
@@ -58,6 +67,7 @@ public class PuzzleOneActivity extends AppCompatActivity {
         mCountDownTimer.start();
     }
 
+    //set letter buttons
     public void onClickButtonA(View view){
         answer = answer + 'A';
         updateScreen(findViewById(R.id.answerScreen));
@@ -106,6 +116,7 @@ public class PuzzleOneActivity extends AppCompatActivity {
         check();
     }
 
+    //check whether the answer is correct
     public void check(){
         if (answer.length() == 8){
             if (answer.equals(solution)){
@@ -117,6 +128,7 @@ public class PuzzleOneActivity extends AppCompatActivity {
         }
     }
 
+    //If answer is correct, cancel the timer and complete this level.
     public void checkedRightAnswer(){
         Toast.makeText(getApplicationContext(),"Congratulations! Your answer(SOFTWARE) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
         mCountDownTimer.cancel();
@@ -130,6 +142,7 @@ public class PuzzleOneActivity extends AppCompatActivity {
         finish();
     }
 
+    //If the answer is wrong, clear the current answer.
     public void checkedWrongAnswer(){
         Toast.makeText(getApplicationContext(),"Sorry! Your answer is not correct. Try it again!",Toast.LENGTH_SHORT).show();
         clear();
@@ -139,22 +152,26 @@ public class PuzzleOneActivity extends AppCompatActivity {
         clear();
     }
 
+    //Clear the current answer and display.
     public void clear(){
         answer = "";
         updateScreen(findViewById(R.id.answerScreen));
     }
 
+    //Return to the last activity.
     public void onClickButtonBack(View view){
         mCountDownTimer.cancel();
         timeCancel = true;
         finish();
     }
 
+    //Show the hint.
     public void onClickButtonHelp(View view){
         TextView tv = findViewById(R.id.textViewLevelOneHint);
         tv.setText("Hint: This word is related to the computer");
     }
 
+    //Skip this level.
     public void onClickButtonSkip(View view){
         checkedRightAnswer();
     }
@@ -164,6 +181,7 @@ public class PuzzleOneActivity extends AppCompatActivity {
         tv.setText(answer);
     }
 
+    //Cancel the timer if this activity is finished.
     @Override
     protected void onDestroy(){
         super.onDestroy();

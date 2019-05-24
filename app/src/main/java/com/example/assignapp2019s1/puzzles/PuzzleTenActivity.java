@@ -16,6 +16,8 @@ import com.example.assignapp2019s1.Storyboard.BridgeActivity;
 import java.util.Set;
 import java.util.TreeSet;
 
+/**The 10th level
+ * @author Yishun Shi*/
 public class PuzzleTenActivity extends AppCompatActivity {
 
     private Set<String> solutions = new TreeSet<String>(){{

@@ -16,8 +16,11 @@ import com.example.assignapp2019s1.Storyboard.SecondForestActivity;
 import java.util.Set;
 import java.util.TreeSet;
 
+/**The 3rd level
+ * @author Yishun Shi*/
 public class PuzzleThreeActivity extends AppCompatActivity {
 
+    //prepare possible correct answers
     private Set<String> solutions = new TreeSet<String>(){{
         add("EAST");
         add("ETAS");
@@ -41,8 +44,10 @@ public class PuzzleThreeActivity extends AppCompatActivity {
 
     private Set<String> answers = new TreeSet<String>();
 
+    //user's current answer
     private String currentAnswer = "";
 
+    //timer
     public CountDownTimer mCountDownTimer3;
 
     public boolean timeCancel3 = false;
@@ -56,16 +61,19 @@ public class PuzzleThreeActivity extends AppCompatActivity {
         iniTimer();
     }
 
+    //initialize timer
     public void iniTimer(){
 
         if (mCountDownTimer3!=null){
             mCountDownTimer3.cancel();
         }
 
+        //set 5 minutes, modify display every second
         mCountDownTimer3 = new CountDownTimer(300000+500, 1000) {
 
             TextView tvt3 = findViewById(R.id.textViewTimer3) ;
 
+            //activity per second
             public void onTick(long millisUntilFinished) {
                 if(!PuzzleThreeActivity.this.isFinishing()){
                     tvt3.setText("seconds remaining: " + millisUntilFinished / 1000);
@@ -74,6 +82,7 @@ public class PuzzleThreeActivity extends AppCompatActivity {
                 }
             }
 
+            //activity when time is up
             public void onFinish() {
                 tvt3.setText("Time is up!");
                 Toast.makeText(getApplicationContext(),"Time is up and you haven't solved this puzzle yet. Try it again!",Toast.LENGTH_LONG).show();
@@ -83,6 +92,7 @@ public class PuzzleThreeActivity extends AppCompatActivity {
         mCountDownTimer3.start();
     }
 
+    //set letter buttons
     public void onClickButtonA3(View view){
         currentAnswer = currentAnswer + 'A';
         updateScreen(findViewById(R.id.answerScreen3));
@@ -120,6 +130,7 @@ public class PuzzleThreeActivity extends AppCompatActivity {
     }
 
 
+    //check whether the answer is correct
     public void check(){
         if (currentAnswer.length() == 4){
             if (answers.contains(currentAnswer)){
@@ -137,6 +148,7 @@ public class PuzzleThreeActivity extends AppCompatActivity {
         }
     }
 
+    //If answer is correct, modifier the number of words found. When the number become 5, cancel the timer and complete this level.
     public void checkedRightAnswer(){
         Toast.makeText(getApplicationContext(),"You find a new word "+currentAnswer,Toast.LENGTH_SHORT).show();
         answers.add(currentAnswer);
@@ -157,6 +169,7 @@ public class PuzzleThreeActivity extends AppCompatActivity {
         }
     }
 
+    //If the answer is wrong, clear the current answer.
     public void checkedWrongAnswer(){
         Toast.makeText(getApplicationContext(),"Sorry! Your answer is not correct. Try it again!",Toast.LENGTH_SHORT).show();
         clear();
@@ -166,17 +179,20 @@ public class PuzzleThreeActivity extends AppCompatActivity {
         clear();
     }
 
+    //Clear the current answer and display.
     public void clear(){
         currentAnswer = "";
         updateScreen(findViewById(R.id.answerScreen3));
     }
 
+    //Return to the last activity.
     public void onClickButtonBack3(View view){
         mCountDownTimer3.cancel();
         timeCancel3 = true;
         finish();
     }
 
+    //Skip this level.
     public void onClickButtonSkip3(View view){
         mCountDownTimer3.cancel();
         timeCancel3 = true;
@@ -188,6 +204,7 @@ public class PuzzleThreeActivity extends AppCompatActivity {
         tv.setText(currentAnswer);
     }
 
+    //Cancel the timer if this activity is finished.
     @Override
     protected void onDestroy(){
         super.onDestroy();

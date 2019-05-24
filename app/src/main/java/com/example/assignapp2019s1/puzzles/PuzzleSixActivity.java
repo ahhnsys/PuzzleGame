@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.Storyboard.FirstBeachActivity;
 
+/**The 6th level
+ * @author Yishun Shi*/
 public class PuzzleSixActivity extends AppCompatActivity {
 
     private String solution = "MASTER";

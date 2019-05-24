@@ -14,12 +14,17 @@ import android.widget.Toast;
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.Storyboard.FirstForestActivity;
 
+/**The 2nd level
+ * @author Yishun Shi*/
 public class PuzzleTwoActivity extends AppCompatActivity {
 
+    //the correct answer
     private String solution = "FOREST";
 
+    //user's current answer
     private String answer = "";
 
+    //timer
     public CountDownTimer mCountDownTimer2;
 
     public boolean timeCancel2 = false;
@@ -32,16 +37,19 @@ public class PuzzleTwoActivity extends AppCompatActivity {
         iniTimer();
     }
 
+    //initialize timer
     public void iniTimer(){
 
         if (mCountDownTimer2!=null){
             mCountDownTimer2.cancel();
         }
 
+        //set 5 minutes, modify display every second
         mCountDownTimer2 = new CountDownTimer(300000+500, 1000) {
 
             TextView tvt2 = findViewById(R.id.textViewTimer2) ;
 
+            //activity per second
             public void onTick(long millisUntilFinished) {
                 if(!PuzzleTwoActivity.this.isFinishing()){
                     tvt2.setText("seconds remaining: " + millisUntilFinished / 1000);
@@ -50,6 +58,7 @@ public class PuzzleTwoActivity extends AppCompatActivity {
                 }
             }
 
+            //activity when time is up
             public void onFinish() {
                 tvt2.setText("Time is up!");
                 Toast.makeText(getApplicationContext(),"Time is up and you haven't solved this puzzle yet. Try it again!",Toast.LENGTH_LONG).show();
@@ -59,6 +68,7 @@ public class PuzzleTwoActivity extends AppCompatActivity {
         mCountDownTimer2.start();
     }
 
+    //set letter buttons
     public void onClickButtonA2(View view){
         answer = answer + 'A';
         updateScreen(findViewById(R.id.answerScreen2));
@@ -107,6 +117,7 @@ public class PuzzleTwoActivity extends AppCompatActivity {
         check();
     }
 
+    //check whether the answer is correct
     public void check(){
         if (answer.length() == 6){
             if (answer.equals(solution)){
@@ -118,6 +129,7 @@ public class PuzzleTwoActivity extends AppCompatActivity {
         }
     }
 
+    //If answer is correct, cancel the timer and complete this level.
     public void checkedRightAnswer(){
         Toast.makeText(getApplicationContext(),"Congratulations! Your answer(FOREST) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
         mCountDownTimer2.cancel();
@@ -131,6 +143,7 @@ public class PuzzleTwoActivity extends AppCompatActivity {
         finish();
     }
 
+    //If the answer is wrong, clear the current answer.
     public void checkedWrongAnswer(){
         Toast.makeText(getApplicationContext(),"Sorry! Your answer is not correct. Try it again!",Toast.LENGTH_SHORT).show();
         clear();
@@ -140,22 +153,26 @@ public class PuzzleTwoActivity extends AppCompatActivity {
         clear();
     }
 
+    //Clear the current answer and display.
     public void clear(){
         answer = "";
         updateScreen(findViewById(R.id.answerScreen2));
     }
 
+    //Return to the last activity.
     public void onClickButtonBack2(View view){
         mCountDownTimer2.cancel();
         timeCancel2 = true;
         finish();
     }
 
+    //Show the hint.
     public void onClickButtonHelp2(View view){
         TextView tv = findViewById(R.id.textViewLevelTwoHint);
         tv.setText("Hint: This word may be used in the data structure");
     }
 
+    //Skip this level.
     public void onClickButtonSkip2(View view){
         checkedRightAnswer();
     }
@@ -165,6 +182,7 @@ public class PuzzleTwoActivity extends AppCompatActivity {
         tv.setText(answer);
     }
 
+    //Remove interference letters
     public void onClickImageButton(View view){
         Button btnA = findViewById(R.id.buttonA2);
         btnA.setText("");
@@ -172,6 +190,7 @@ public class PuzzleTwoActivity extends AppCompatActivity {
         btnW.setText("");
     }
 
+    //Cancel the timer if this activity is finished.
     @Override
     protected void onDestroy(){
         super.onDestroy();

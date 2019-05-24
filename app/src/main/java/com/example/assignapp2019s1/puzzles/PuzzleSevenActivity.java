@@ -16,8 +16,11 @@ import com.example.assignapp2019s1.Storyboard.FirstBeachActivity;
 import java.util.Set;
 import java.util.TreeSet;
 
+/**The 7th level
+ * @author Yishun Shi*/
 public class PuzzleSevenActivity extends AppCompatActivity {
 
+    //prepare possible correct answers
     private Set<String> solutions = new TreeSet<String>(){{
         add("ARMET");
         add("ASTER");

@@ -14,6 +14,8 @@ import android.widget.Toast;
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.Storyboard.SecondBeachActivity;
 
+/**The 9th level
+ * @author Yishun Shi*/
 public class PuzzleNineActivity extends AppCompatActivity {
 
     private String solution = "STORE";

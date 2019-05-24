@@ -13,6 +13,8 @@ import android.widget.Toast;
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.Storyboard.SecondCaveActivity;
 
+/**The 5th level
+ * @author Yishun Shi*/
 public class PuzzleFiveActivity extends AppCompatActivity {
 
     private String solution = "SMARTPHONE";

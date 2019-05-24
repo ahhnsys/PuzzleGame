@@ -11,6 +11,8 @@ import android.widget.Toast;
 
 import com.example.assignapp2019s1.R;
 
+/**The 4th level
+ * @author Yishun Shi*/
 public class PuzzleFourActivity extends AppCompatActivity {
 
     EditText et16 = findViewById(R.id.editText16);

@@ -14,11 +14,14 @@ import android.widget.Toast;
 import com.example.assignapp2019s1.R;
 import com.example.assignapp2019s1.Storyboard.SecondBeachActivity;
 
+/**The 8th level
+ * @author Yishun Shi*/
 public class PuzzleEightActivity extends AppCompatActivity {
 
     private static Tokenizer tokenizer;
     private static Parser parser;
 
+    //parse the user's input
     private static Integer parse(String equation) {
         System.out.println("Parsing equation: " + equation);
         tokenizer.setBuffer(equation);
@@ -30,8 +33,10 @@ public class PuzzleEightActivity extends AppCompatActivity {
         }
     }
 
+    //user's current answer
     private String answer = "";
 
+    //timer
     public CountDownTimer mCountDownTimer8;
 
     public boolean timeCancel8 = false;
@@ -44,16 +49,19 @@ public class PuzzleEightActivity extends AppCompatActivity {
         iniTimer();
     }
 
+    //initialize timer
     public void iniTimer(){
 
         if (mCountDownTimer8!=null){
             mCountDownTimer8.cancel();
         }
 
+        //set 5 minutes, modify display every second
         mCountDownTimer8 = new CountDownTimer(300000+500, 1000) {
 
             TextView tvt8 = findViewById(R.id.textViewTimer8) ;
 
+            //activity per second
             public void onTick(long millisUntilFinished) {
                 if(!PuzzleEightActivity.this.isFinishing()){
                     tvt8.setText("seconds remaining: " + millisUntilFinished / 1000);
@@ -62,6 +70,7 @@ public class PuzzleEightActivity extends AppCompatActivity {
                 }
             }
 
+            //activity when time is up
             public void onFinish() {
                 tvt8.setText("Time is up!");
                 Toast.makeText(getApplicationContext(),"Time is up and you haven't solved this puzzle yet. Try it again!",Toast.LENGTH_LONG).show();
@@ -72,6 +81,7 @@ public class PuzzleEightActivity extends AppCompatActivity {
     }
 
 
+    //check whether the answer is correct
     public void check(){
         EditText etLevel8 = findViewById(R.id.answerInput);
         tokenizer = new Tokenizer();
@@ -90,6 +100,7 @@ public class PuzzleEightActivity extends AppCompatActivity {
         }
     }
 
+    //If answer is correct, cancel the timer and complete this level.
     public void checkedRightAnswer(){
         Toast.makeText(getApplicationContext(),"Congratulations! Your answer is correct. You have passed this level.",Toast.LENGTH_LONG).show();
         mCountDownTimer8.cancel();
@@ -103,6 +114,7 @@ public class PuzzleEightActivity extends AppCompatActivity {
         finish();
     }
 
+    //If the answer is wrong, clear the current answer.
     public void checkedWrongAnswer(){
         Toast.makeText(getApplicationContext(),"Sorry! Your answer is not correct. Try it again!",Toast.LENGTH_SHORT).show();
         clear();
@@ -112,11 +124,13 @@ public class PuzzleEightActivity extends AppCompatActivity {
         clear();
     }
 
+    //Clear the current answer.
     public void clear(){
         answer = "";
         updateScreen(findViewById(R.id.answerInput));
     }
 
+    //Return to the last activity.
     public void onClickButtonBack8(View view){
         mCountDownTimer8.cancel();
         timeCancel8 = true;
@@ -127,6 +141,7 @@ public class PuzzleEightActivity extends AppCompatActivity {
         check();
     }
 
+    //Skip this level.
     public void onClickButtonSkip8(View view){
         checkedRightAnswer();
     }
@@ -136,6 +151,7 @@ public class PuzzleEightActivity extends AppCompatActivity {
         et8.setText(answer);
     }
 
+    //Cancel the timer if this activity is finished.
     @Override
     protected void onDestroy(){
         super.onDestroy();
