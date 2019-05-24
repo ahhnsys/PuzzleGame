@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:text="Use the six letters of the letters provided to form a word (Each letter can only be used once)"
+        android:text="Use five letters of the letters provided to form a word (Each letter can only be used once)"
         android:textColor="#3F51B5"
         android:textSize="14sp"
         android:textStyle="italic"
@@ -86,6 +86,45 @@
             tools:layout_editor_absoluteY="221dp" />
 
         <Button
+            android:id="@+id/buttonB6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonB6"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="B"
+            android:textColor="#2196F3" />
+
+        <Button
+            android:id="@+id/buttonC6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonC6"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="C"
+            android:textColor="#2196F3" />
+
+        <Button
+            android:id="@+id/buttonD6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonD6"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="D"
+            android:textColor="#2196F3" />
+
+        <Button
             android:id="@+id/buttonE6"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -99,6 +138,32 @@
             android:textColor="#2196F3"
             tools:layout_editor_absoluteX="127dp"
             tools:layout_editor_absoluteY="221dp" />
+
+        <Button
+            android:id="@+id/buttonF6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonF6"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="F"
+            android:textColor="#2196F3" />
+
+        <Button
+            android:id="@+id/buttonG6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonG6"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="G"
+            android:textColor="#2196F3" />
 
         <Button
             android:id="@+id/buttonH6"
@@ -115,110 +180,110 @@
             tools:layout_editor_absoluteX="223dp"
             tools:layout_editor_absoluteY="221dp" />
 
-        <Button
-            android:id="@+id/buttonM6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_button"
-            android:onClick="onClickButtonM6"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="10"
-            android:shadowDy="20"
-            android:text="M"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="223dp"
-            tools:layout_editor_absoluteY="221dp" />
+        <!--<Button-->
+            <!--android:id="@+id/buttonM6"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/shape_button"-->
+            <!--android:onClick="onClickButtonM6"-->
+            <!--android:shadowColor="#3F51B5"-->
+            <!--android:shadowDx="10"-->
+            <!--android:shadowDy="20"-->
+            <!--android:text="M"-->
+            <!--android:textColor="#2196F3"-->
+            <!--tools:layout_editor_absoluteX="223dp"-->
+            <!--tools:layout_editor_absoluteY="221dp" />-->
 
-        <Button
-            android:id="@+id/buttonN6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_button"
-            android:onClick="onClickButtonN6"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="10"
-            android:shadowDy="20"
-            android:text="N"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="223dp"
-            tools:layout_editor_absoluteY="221dp" />
+        <!--<Button-->
+            <!--android:id="@+id/buttonN6"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/shape_button"-->
+            <!--android:onClick="onClickButtonN6"-->
+            <!--android:shadowColor="#3F51B5"-->
+            <!--android:shadowDx="10"-->
+            <!--android:shadowDy="20"-->
+            <!--android:text="N"-->
+            <!--android:textColor="#2196F3"-->
+            <!--tools:layout_editor_absoluteX="223dp"-->
+            <!--tools:layout_editor_absoluteY="221dp" />-->
 
-        <Button
-            android:id="@+id/buttonO6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_button"
-            android:onClick="onClickButtonO6"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="10"
-            android:shadowDy="20"
-            android:text="O"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="683dp"
-            tools:layout_editor_absoluteY="221dp" />
+        <!--<Button-->
+            <!--android:id="@+id/buttonO6"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/shape_button"-->
+            <!--android:onClick="onClickButtonO6"-->
+            <!--android:shadowColor="#3F51B5"-->
+            <!--android:shadowDx="10"-->
+            <!--android:shadowDy="20"-->
+            <!--android:text="O"-->
+            <!--android:textColor="#2196F3"-->
+            <!--tools:layout_editor_absoluteX="683dp"-->
+            <!--tools:layout_editor_absoluteY="221dp" />-->
 
-        <Button
-            android:id="@+id/buttonP6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_button"
-            android:onClick="onClickButtonP6"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="10"
-            android:shadowDy="20"
-            android:text="P"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="319dp"
-            tools:layout_editor_absoluteY="221dp" />
+        <!--<Button-->
+            <!--android:id="@+id/buttonP6"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/shape_button"-->
+            <!--android:onClick="onClickButtonP6"-->
+            <!--android:shadowColor="#3F51B5"-->
+            <!--android:shadowDx="10"-->
+            <!--android:shadowDy="20"-->
+            <!--android:text="P"-->
+            <!--android:textColor="#2196F3"-->
+            <!--tools:layout_editor_absoluteX="319dp"-->
+            <!--tools:layout_editor_absoluteY="221dp" />-->
 
-        <Button
-            android:id="@+id/buttonR6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_button"
-            android:onClick="onClickButtonR6"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="10"
-            android:shadowDy="20"
-            android:text="R"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="223dp"
-            tools:layout_editor_absoluteY="221dp" />
+        <!--<Button-->
+            <!--android:id="@+id/buttonR6"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/shape_button"-->
+            <!--android:onClick="onClickButtonR6"-->
+            <!--android:shadowColor="#3F51B5"-->
+            <!--android:shadowDx="10"-->
+            <!--android:shadowDy="20"-->
+            <!--android:text="R"-->
+            <!--android:textColor="#2196F3"-->
+            <!--tools:layout_editor_absoluteX="223dp"-->
+            <!--tools:layout_editor_absoluteY="221dp" />-->
 
-        <Button
-            android:id="@+id/buttonS6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_button"
-            android:onClick="onClickButtonS6"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="10"
-            android:shadowDy="20"
-            android:text="S"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="590dp"
-            tools:layout_editor_absoluteY="221dp" />
+        <!--<Button-->
+            <!--android:id="@+id/buttonS6"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/shape_button"-->
+            <!--android:onClick="onClickButtonS6"-->
+            <!--android:shadowColor="#3F51B5"-->
+            <!--android:shadowDx="10"-->
+            <!--android:shadowDy="20"-->
+            <!--android:text="S"-->
+            <!--android:textColor="#2196F3"-->
+            <!--tools:layout_editor_absoluteX="590dp"-->
+            <!--tools:layout_editor_absoluteY="221dp" />-->
 
-        <Button
-            android:id="@+id/buttonT6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_button"
-            android:onClick="onClickButtonT6"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="10"
-            android:shadowDy="20"
-            android:text="T"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="415dp"
-            tools:layout_editor_absoluteY="221dp" />
+        <!--<Button-->
+            <!--android:id="@+id/buttonT6"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/shape_button"-->
+            <!--android:onClick="onClickButtonT6"-->
+            <!--android:shadowColor="#3F51B5"-->
+            <!--android:shadowDx="10"-->
+            <!--android:shadowDy="20"-->
+            <!--android:text="T"-->
+            <!--android:textColor="#2196F3"-->
+            <!--tools:layout_editor_absoluteX="415dp"-->
+            <!--tools:layout_editor_absoluteY="221dp" />-->
 
     </LinearLayout>
 

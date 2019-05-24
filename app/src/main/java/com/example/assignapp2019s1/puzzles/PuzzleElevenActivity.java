@@ -179,6 +179,7 @@ public class PuzzleElevenActivity extends AppCompatActivity {
 
     public void onClickButtonHelp11(View view){
         TextView tv = findViewById(R.id.textViewLevelElevenHint);
+//        tv.setText("Hint: We use it to finish this assignment");
         tv.setText("Hint: Fear often appears with it.");
     }
 

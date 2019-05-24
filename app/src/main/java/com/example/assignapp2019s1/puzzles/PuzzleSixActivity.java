@@ -18,7 +18,8 @@ import com.example.assignapp2019s1.Storyboard.FirstBeachActivity;
  * @author Yishun Shi*/
 public class PuzzleSixActivity extends AppCompatActivity {
 
-    private String solution = "MASTER";
+//    private String solution = "MASTER";
+    private String solution = "BEACH";
 
     private String answer = "";
 
@@ -67,8 +68,38 @@ public class PuzzleSixActivity extends AppCompatActivity {
         check();
     }
 
+    public void onClickButtonB6(View view){
+        answer = answer + 'B';
+        updateScreen(findViewById(R.id.answerScreen6));
+        check();
+    }
+
+    public void onClickButtonC6(View view){
+        answer = answer + 'C';
+        updateScreen(findViewById(R.id.answerScreen6));
+        check();
+    }
+
+    public void onClickButtonD6(View view){
+        answer = answer + 'D';
+        updateScreen(findViewById(R.id.answerScreen6));
+        check();
+    }
+
     public void onClickButtonE6(View view){
         answer = answer + 'E';
+        updateScreen(findViewById(R.id.answerScreen6));
+        check();
+    }
+
+    public void onClickButtonF6(View view){
+        answer = answer + 'F';
+        updateScreen(findViewById(R.id.answerScreen6));
+        check();
+    }
+
+    public void onClickButtonG6(View view){
+        answer = answer + 'G';
         updateScreen(findViewById(R.id.answerScreen6));
         check();
     }
@@ -79,50 +110,50 @@ public class PuzzleSixActivity extends AppCompatActivity {
         check();
     }
 
-    public void onClickButtonM6(View view){
-        answer = answer + 'M';
-        updateScreen(findViewById(R.id.answerScreen6));
-        check();
-    }
-
-    public void onClickButtonN6(View view){
-        answer = answer + 'N';
-        updateScreen(findViewById(R.id.answerScreen6));
-        check();
-    }
-
-    public void onClickButtonO6(View view){
-        answer = answer + 'O';
-        updateScreen(findViewById(R.id.answerScreen6));
-        check();
-    }
-
-    public void onClickButtonP6(View view){
-        answer = answer + 'P';
-        updateScreen(findViewById(R.id.answerScreen6));
-        check();
-    }
-
-    public void onClickButtonR6(View view){
-        answer = answer + 'R';
-        updateScreen(findViewById(R.id.answerScreen6));
-        check();
-    }
-
-    public void onClickButtonS6(View view){
-        answer = answer + 'S';
-        updateScreen(findViewById(R.id.answerScreen6));
-        check();
-    }
-
-    public void onClickButtonT6(View view){
-        answer = answer + 'T';
-        updateScreen(findViewById(R.id.answerScreen6));
-        check();
-    }
+//    public void onClickButtonM6(View view){
+//        answer = answer + 'M';
+//        updateScreen(findViewById(R.id.answerScreen6));
+//        check();
+//    }
+//
+//    public void onClickButtonN6(View view){
+//        answer = answer + 'N';
+//        updateScreen(findViewById(R.id.answerScreen6));
+//        check();
+//    }
+//
+//    public void onClickButtonO6(View view){
+//        answer = answer + 'O';
+//        updateScreen(findViewById(R.id.answerScreen6));
+//        check();
+//    }
+//
+//    public void onClickButtonP6(View view){
+//        answer = answer + 'P';
+//        updateScreen(findViewById(R.id.answerScreen6));
+//        check();
+//    }
+//
+//    public void onClickButtonR6(View view){
+//        answer = answer + 'R';
+//        updateScreen(findViewById(R.id.answerScreen6));
+//        check();
+//    }
+//
+//    public void onClickButtonS6(View view){
+//        answer = answer + 'S';
+//        updateScreen(findViewById(R.id.answerScreen6));
+//        check();
+//    }
+//
+//    public void onClickButtonT6(View view){
+//        answer = answer + 'T';
+//        updateScreen(findViewById(R.id.answerScreen6));
+//        check();
+//    }
 
     public void check(){
-        if (answer.length() == 6){
+        if (answer.length() == 5){
             if (answer.equals(solution)){
                 checkedRightAnswer();
             }
@@ -133,7 +164,7 @@ public class PuzzleSixActivity extends AppCompatActivity {
     }
 
     public void checkedRightAnswer(){
-        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(MASTER) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(BEACH) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
         mCountDownTimer6.cancel();
         timeCancel6 = true;
 
@@ -167,7 +198,8 @@ public class PuzzleSixActivity extends AppCompatActivity {
 
     public void onClickButtonHelp6(View view){
         TextView tv = findViewById(R.id.textViewLevelSixHint);
-        tv.setText("Hint: One kind of degree");
+//        tv.setText("Hint: One kind of degree");
+        tv.setText("Hint: This object often appears by the sea.");
     }
 
     public void onClickButtonSkip6(View view){
@@ -180,14 +212,20 @@ public class PuzzleSixActivity extends AppCompatActivity {
     }
 
     public void onClickImageButton6(View view){
-        Button btnH = findViewById(R.id.buttonH6);
-        btnH.setText("");
-        Button btnN = findViewById(R.id.buttonN6);
-        btnN.setText("");
-        Button btnO = findViewById(R.id.buttonO6);
-        btnO.setText("");
-        Button btnP = findViewById(R.id.buttonP6);
-        btnP.setText("");
+//        Button btnH = findViewById(R.id.buttonH6);
+//        btnH.setText("");
+//        Button btnN = findViewById(R.id.buttonN6);
+//        btnN.setText("");
+//        Button btnO = findViewById(R.id.buttonO6);
+//        btnO.setText("");
+//        Button btnP = findViewById(R.id.buttonP6);
+//        btnP.setText("");
+        Button btnD = findViewById(R.id.buttonD6);
+        btnD.setText("");
+        Button btnF = findViewById(R.id.buttonF6);
+        btnF.setText("");
+        Button btnG = findViewById(R.id.buttonG6);
+        btnG.setText("");
     }
 
     @Override

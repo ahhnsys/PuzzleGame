@@ -191,6 +191,7 @@ public class PuzzleFiveActivity extends AppCompatActivity {
 
     public void onClickButtonHelp5(View view){
         TextView tv = findViewById(R.id.textViewLevelFiveHint);
+//        tv.setText("Hint: This object may be lying in your pocket now.");
         tv.setText("Hint: This object often appears by the river.");
     }
 
