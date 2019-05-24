@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginLeft="40dp"
-        android:text="Use the five letters of the letters provided to form a word (Each letter can only be used once)"
+        android:text="Use six letters of the letters provided to form a word (Each letter can only be used once)"
         android:textColor="#3F51B5"
         android:textSize="14sp"
         android:textStyle="italic"
@@ -70,20 +70,46 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/answerScreen9">
 
+        <!--<Button-->
+            <!--android:id="@+id/buttonA9"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/shape_button"-->
+            <!--android:onClick="onClickButtonA9"-->
+            <!--android:shadowColor="#3F51B5"-->
+            <!--android:shadowDx="10"-->
+            <!--android:shadowDy="20"-->
+            <!--android:text="A"-->
+            <!--android:textColor="#2196F3"-->
+            <!--tools:layout_editor_absoluteX="31dp"-->
+            <!--tools:layout_editor_absoluteY="221dp" />-->
+
         <Button
-            android:id="@+id/buttonA9"
+            android:id="@+id/buttonB9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonA9"
+            android:onClick="onClickButtonB9"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
-            android:text="A"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="31dp"
-            tools:layout_editor_absoluteY="221dp" />
+            android:text="B"
+            android:textColor="#2196F3"/>
+
+        <Button
+            android:id="@+id/buttonD9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/shape_button"
+            android:onClick="onClickButtonD9"
+            android:shadowColor="#3F51B5"
+            android:shadowDx="10"
+            android:shadowDy="20"
+            android:text="D"
+            android:textColor="#2196F3"/>
 
         <Button
             android:id="@+id/buttonE9"
@@ -96,39 +122,63 @@
             android:shadowDx="10"
             android:shadowDy="20"
             android:text="E"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="127dp"
-            tools:layout_editor_absoluteY="221dp" />
+            android:textColor="#2196F3"/>
+
+        <!--<Button-->
+            <!--android:id="@+id/buttonF9"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/shape_button"-->
+            <!--android:onClick="onClickButtonF9"-->
+            <!--android:shadowColor="#3F51B5"-->
+            <!--android:shadowDx="10"-->
+            <!--android:shadowDy="20"-->
+            <!--android:text="F"-->
+            <!--android:textColor="#2196F3"-->
+            <!--tools:layout_editor_absoluteX="223dp"-->
+            <!--tools:layout_editor_absoluteY="221dp" />-->
 
         <Button
-            android:id="@+id/buttonF9"
+            android:id="@+id/buttonG9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonF9"
+            android:onClick="onClickButtonG9"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
-            android:text="F"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="223dp"
-            tools:layout_editor_absoluteY="221dp" />
+            android:text="G"
+            android:textColor="#2196F3"/>
 
         <Button
-            android:id="@+id/buttonO9"
+            android:id="@+id/buttonI9"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@drawable/shape_button"
-            android:onClick="onClickButtonO9"
+            android:onClick="onClickButtonI9"
             android:shadowColor="#3F51B5"
             android:shadowDx="10"
             android:shadowDy="20"
-            android:text="O"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="683dp"
-            tools:layout_editor_absoluteY="221dp" />
+            android:text="I"
+            android:textColor="#2196F3"/>
+
+        <!--<Button-->
+            <!--android:id="@+id/buttonO9"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/shape_button"-->
+            <!--android:onClick="onClickButtonO9"-->
+            <!--android:shadowColor="#3F51B5"-->
+            <!--android:shadowDx="10"-->
+            <!--android:shadowDy="20"-->
+            <!--android:text="O"-->
+            <!--android:textColor="#2196F3"-->
+            <!--tools:layout_editor_absoluteX="683dp"-->
+            <!--tools:layout_editor_absoluteY="221dp" />-->
 
         <Button
             android:id="@+id/buttonR9"
@@ -141,24 +191,22 @@
             android:shadowDx="10"
             android:shadowDy="20"
             android:text="R"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="319dp"
-            tools:layout_editor_absoluteY="221dp" />
+            android:textColor="#2196F3"/>
 
-        <Button
-            android:id="@+id/buttonS9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@drawable/shape_button"
-            android:onClick="onClickButtonS9"
-            android:shadowColor="#3F51B5"
-            android:shadowDx="10"
-            android:shadowDy="20"
-            android:text="S"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="590dp"
-            tools:layout_editor_absoluteY="221dp" />
+        <!--<Button-->
+            <!--android:id="@+id/buttonS9"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="@drawable/shape_button"-->
+            <!--android:onClick="onClickButtonS9"-->
+            <!--android:shadowColor="#3F51B5"-->
+            <!--android:shadowDx="10"-->
+            <!--android:shadowDy="20"-->
+            <!--android:text="S"-->
+            <!--android:textColor="#2196F3"-->
+            <!--tools:layout_editor_absoluteX="590dp"-->
+            <!--tools:layout_editor_absoluteY="221dp" />-->
 
         <Button
             android:id="@+id/buttonT9"
@@ -171,9 +219,7 @@
             android:shadowDx="10"
             android:shadowDy="20"
             android:text="T"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="415dp"
-            tools:layout_editor_absoluteY="221dp" />
+            android:textColor="#2196F3"/>
 
         <Button
             android:id="@+id/buttonW9"
@@ -186,9 +232,7 @@
             android:shadowDx="10"
             android:shadowDy="20"
             android:text="W"
-            android:textColor="#2196F3"
-            tools:layout_editor_absoluteX="515dp"
-            tools:layout_editor_absoluteY="221dp" />
+            android:textColor="#2196F3"/>
 
     </LinearLayout>
 

@@ -18,7 +18,8 @@ import com.example.assignapp2019s1.Storyboard.SecondBeachActivity;
  * @author Yishun Shi*/
 public class PuzzleNineActivity extends AppCompatActivity {
 
-    private String solution = "STORE";
+//    private String solution = "STORE";
+    private String solution = "BRIDGE";
 
     private String answer = "";
 
@@ -61,8 +62,20 @@ public class PuzzleNineActivity extends AppCompatActivity {
         mCountDownTimer9.start();
     }
 
-    public void onClickButtonA9(View view){
-        answer = answer + 'A';
+//    public void onClickButtonA9(View view){
+//        answer = answer + 'A';
+//        updateScreen(findViewById(R.id.answerScreen9));
+//        check();
+//    }
+
+    public void onClickButtonB9(View view){
+        answer = answer + 'B';
+        updateScreen(findViewById(R.id.answerScreen9));
+        check();
+    }
+
+    public void onClickButtonD9(View view){
+        answer = answer + 'D';
         updateScreen(findViewById(R.id.answerScreen9));
         check();
     }
@@ -73,17 +86,29 @@ public class PuzzleNineActivity extends AppCompatActivity {
         check();
     }
 
-    public void onClickButtonF9(View view){
-        answer = answer + 'F';
+//    public void onClickButtonF9(View view){
+//        answer = answer + 'F';
+//        updateScreen(findViewById(R.id.answerScreen9));
+//        check();
+//    }
+
+    public void onClickButtonG9(View view){
+        answer = answer + 'G';
         updateScreen(findViewById(R.id.answerScreen9));
         check();
     }
 
-    public void onClickButtonO9(View view){
-        answer = answer + 'O';
+    public void onClickButtonI9(View view){
+        answer = answer + 'I';
         updateScreen(findViewById(R.id.answerScreen9));
         check();
     }
+
+//    public void onClickButtonO9(View view){
+//        answer = answer + 'O';
+//        updateScreen(findViewById(R.id.answerScreen9));
+//        check();
+//    }
 
     public void onClickButtonR9(View view){
         answer = answer + 'R';
@@ -91,11 +116,11 @@ public class PuzzleNineActivity extends AppCompatActivity {
         check();
     }
 
-    public void onClickButtonS9(View view){
-        answer = answer + 'S';
-        updateScreen(findViewById(R.id.answerScreen9));
-        check();
-    }
+//    public void onClickButtonS9(View view){
+//        answer = answer + 'S';
+//        updateScreen(findViewById(R.id.answerScreen9));
+//        check();
+//    }
 
     public void onClickButtonT9(View view){
         answer = answer + 'T';
@@ -110,7 +135,7 @@ public class PuzzleNineActivity extends AppCompatActivity {
     }
 
     public void check(){
-        if (answer.length() == 5){
+        if (answer.length() == 6){
             if (answer.equals(solution)){
                 checkedRightAnswer();
             }
@@ -121,7 +146,7 @@ public class PuzzleNineActivity extends AppCompatActivity {
     }
 
     public void checkedRightAnswer(){
-        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(STORE) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
+        Toast.makeText(getApplicationContext(),"Congratulations! Your answer(BRIDGE) is correct. You have passed this level.",Toast.LENGTH_LONG).show();
         mCountDownTimer9.cancel();
         timeCancel9 = true;
 
@@ -155,7 +180,7 @@ public class PuzzleNineActivity extends AppCompatActivity {
 
     public void onClickButtonHelp9(View view){
         TextView tv = findViewById(R.id.textViewLevelNineHint);
-        tv.setText("Hint: The use of a disk.");
+        tv.setText("Hint: It's often used to cross the river.");
     }
 
     public void onClickButtonSkip9(View view){
@@ -168,10 +193,12 @@ public class PuzzleNineActivity extends AppCompatActivity {
     }
 
     public void onClickImageButton9(View view){
-        Button btnA = findViewById(R.id.buttonA9);
-        btnA.setText("");
-        Button btnF = findViewById(R.id.buttonF9);
-        btnF.setText("");
+//        Button btnA = findViewById(R.id.buttonA9);
+//        btnA.setText("");
+//        Button btnF = findViewById(R.id.buttonF9);
+//        btnF.setText("");
+        Button btnT = findViewById(R.id.buttonT9);
+        btnT.setText("");
         Button btnW = findViewById(R.id.buttonW9);
         btnW.setText("");
     }
