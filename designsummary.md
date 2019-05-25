@@ -5,7 +5,7 @@ The Activities within the 'Storyboard' directory each contain similar designs fo
 Each Activity contains three main parts of code; The Move Controls Method, The A Button Method, and the Data Method.
 The Move Controls have been implemented with a onTouch as to allow continuous movement whereas the A button was separated from the controls.
 The Maps have been divided into two parts, as the original idea of focusing on the character while the map was zoomed in was unachievable.
-Each Map contains puzzle chest which can be opened and other Activities can be accessed through the use of the A button.
+Each Map contains puzzle chest which can be opened and other Activities can be accessed through the use of the A button. To make the character open the puzzles a little more realistic, coordinates have been used to set limitations on the A button.
 For the A button, in order to send and receive Data from the puzzle without resetting the Storyboard Activities "OnActivityResult" is used.
 This is required for "items", as there are "items" that are needed to open certain puzzles,
 each activity already has item images within their xml, and the items are "used" based on their visibility. There are 6 "keys" needed to open puzzles, but to make it a little more interesting, other items can be used to move onto the next map or next puzzle.
