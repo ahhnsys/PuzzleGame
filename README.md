@@ -3,7 +3,7 @@
 # App - _Bo's Puzzle World_
 
 ## Team structure and roles 
-+ Yishun Shi u6598369 - Puzzle levels, Setting, Timer,
++ Yishun Shi u6598369 - Puzzle levels, Setting, Timer, Maintain wiki and milestone
 + Natalie phan u6671390 - Storyboard, Items, Controls, Instructions & Information, Music
 
 ## App Overview
