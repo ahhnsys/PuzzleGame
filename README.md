@@ -58,3 +58,5 @@ _https://stackoverflow.com/questions/8209858/android-background-music-service/82
 
 _https://incompetech.com/music/royalty-free/index.html?isrc=USUAN1500073&Search=Search_
 
+_The pictures used in the game are made by ourselves using Photoshop._
+
