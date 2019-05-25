@@ -20,7 +20,6 @@ _The following are screenshots from the App:_
 ![Instructions Screenshot](images/instructions-screenshot.png)
 ![FirstForest Screenshot](images/forest-screenshot.png)
 ![PuzzleOne Screenshot](images/puzzle-screenshot.png)
-![Completed PuzzleOne Screenshot](images/completed-puzzle-screenshot.png)
 
 ## Design Documentation 
 + [Design Summary](designsummary.md)
