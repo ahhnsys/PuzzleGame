@@ -22,4 +22,5 @@ The following have been manually tested:
 + The 24 point puzzle level correctly reads the user input and parses it correctly, and it can correctly judge whether the result is correct and the input meets the requirements.
 + All control buttons (including back, clear, skip, help and check) function properly
 + All timers are accurately timed, displayed and updated correctly, properly started and terminated, and the game is properly terminated and feedback is sent at the end of the timer
+
 Besides, JUnit tests are used to help developer judge the correctness of some methods
