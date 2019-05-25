@@ -24,5 +24,5 @@ What's more, there are some special puzzles, like sudoku, 24 points card game an
 In all the puzzles, timer is used to limit the time and increase the difficulty, player have to solve the puzzle in 5 minutes or the game is over.
 Three or four control buttons are provided in each puzzle, player can use them to return to the previous scene, skip this level, clear the input or get some hints.
 There is a bomb picture in some levels, player can use it to let the disturbing letters disappear, thus reducing the difficulty.
-The answer entered by the user will show on the acreen and be automatically detected in real time. If it is correct, a message will appear and the character will get the item. It it's wrong, a message will appear and the input will be cleared.
+The answer entered by the user will show on the screen and be automatically detected in real time. If it is correct, a message will appear and the character will get the item. It it's wrong, a message will appear and the input will be cleared.
 The correct answer of each puzzle is related with the storyboard.
