@@ -12,6 +12,7 @@ import android.widget.TextView;
 
 import com.example.assignapp2019s1.Storyboard.FirstForestActivity;
 import com.example.assignapp2019s1.Storyboard.SecondBeachActivity;
+import com.example.assignapp2019s1.puzzles.PuzzleFourActivity;
 
 /*
     This activity will create an opening sequence when the start button in WelcomeActivity is pressed.
@@ -33,7 +34,7 @@ public class AppActivity extends AppCompatActivity {
         layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getBaseContext(), FirstForestActivity.class);
+                Intent intent = new Intent(getBaseContext(),FirstForestActivity.class);
                 startActivity(intent);
             }
         });
